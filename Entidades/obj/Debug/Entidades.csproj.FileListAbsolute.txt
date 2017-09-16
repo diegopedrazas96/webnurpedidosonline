@@ -1,0 +1,5 @@
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT_OFICIAL\Entidades\bin\Debug\Entidades.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT_OFICIAL\Entidades\bin\Debug\Entidades.pdb
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT_OFICIAL\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT_OFICIAL\Entidades\obj\Debug\Entidades.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT_OFICIAL\Entidades\obj\Debug\Entidades.pdb

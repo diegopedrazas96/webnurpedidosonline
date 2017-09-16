@@ -7,7 +7,7 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="~/App_Themes/Default/css/styleIndex.css">
     <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+    </asp:ContentPlaceHolder> 
 </head>
 <body>
     <header>

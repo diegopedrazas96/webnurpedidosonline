@@ -8,7 +8,7 @@ namespace Access.Seguridad
 {
     class Usuario 
     {
-        public void Save(Entidades.Seguridad.Usuario objUsuario)
+        public void Save(Entidades.Seguridad.User objUsuario)
         {
             try
             {

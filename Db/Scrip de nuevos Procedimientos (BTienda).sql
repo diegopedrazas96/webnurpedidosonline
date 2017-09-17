@@ -590,3 +590,35 @@ BEGIN
 	WHERE [usuarioId] = @intUsuarioId
 END
 GO
+
+
+/************************Obtener usuarios por Email**********************/
+USE [bdTienda]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		José Manuel Cadima Aponte
+-- Create date: 17/09/2017
+-- Description:	Obtener usuarios por Email
+-- =============================================
+CREATE PROCEDURE [dbo].[usp_USUARIO_GetUsuariosByEmail] 
+	@varCorreo NVARCHAR (50)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+	SELECT [usuarioId]
+		  ,[nombre]
+		  ,[apellido]
+		  ,[correo]
+		  ,[contraseña]
+		  ,[tipoUsuario]
+	FROM [dbo].[tblUsuario]
+	WHERE [correo] = @varCorreo
+END
+GO

@@ -16,7 +16,7 @@ namespace Data.Seguridad
         {
 
         }
-        public void Save(ENTSEG.Usuario BEObj)
+        public void Save(ENTSEG.User BEObj)
         {
             string strQuery = "";
 
@@ -37,12 +37,12 @@ namespace Data.Seguridad
                 MySqlCommand commando = new MySqlCommand();
                 MySqlDataReader dato;
                 if (BEObj.statusType == ENT.Accion.Insert)
-                    BEObj.Id = (long)base.GenID("tblusuario");
+                    BEObj.UsuarioId = (int)base.GenID("tblusuario");
 
                 if (BEObj.statusType != ENT.Accion.NoAction)
                 {
                     
-                    String finalQuery = String.Format(strQuery, BEObj.Id, BEObj.Nombre, BEObj.Login, BEObj.Telefono);
+                    String finalQuery = String.Format(strQuery, BEObj.UsuarioId, BEObj.Nombre);
 
                     commando.Connection = conexion.conexion;
                     commando.CommandText = finalQuery;

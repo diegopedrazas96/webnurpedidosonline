@@ -25,7 +25,7 @@ BEGIN
 	DELETE FROM [dbo].[tblRecuperacion]
     WHERE [recuperacionId] = @intRecuperacionID
 END
-
+GO
 
 USE [bdTienda]
 GO
@@ -69,7 +69,7 @@ BEGIN
            )
 	 SET	@recuperacionId = SCOPE_IDENTITY()
 END
-
+GO
 
 USE [bdTienda]
 GO
@@ -94,7 +94,7 @@ BEGIN
 	FROM [dbo].[tblRecuperacion]
 	WHERE  [recuperacionId] = @intRecuperacionId;
 END
-
+GO
 
 USE [bdTienda]
 GO
@@ -118,7 +118,7 @@ BEGIN
 	SELECT *
 	FROM [dbo].[tblRecuperacion]
 END
-
+GO
 
 USE [bdTienda]
 GO
@@ -154,6 +154,7 @@ BEGIN
       ,[estado] = @estado
  WHERE [recuperacionId] =  @recuperacionId
 END
+GO
 
 /****************************************ROL****************************************/
 
@@ -169,7 +170,7 @@ GO
 -- Create date: 12-09-2016
 -- Description:	Eliminar un Rol
 -- =============================================
-ALTER PROCEDURE [dbo].[rsp_ROL_EliminarRol] 
+CREATE PROCEDURE [dbo].[rsp_ROL_EliminarRol] 
 	@intRolId	int
 AS
 BEGIN
@@ -180,7 +181,7 @@ BEGIN
 	DELETE FROM [dbo].[tblRol]
     WHERE [rolId] = @intRolId
 END
-
+GO
 
 USE [bdTienda]
 GO
@@ -194,7 +195,7 @@ GO
 -- Create date: 12-09-2016
 -- Description:	Insertar un Rol
 -- =============================================
-ALTER PROCEDURE [dbo].[rsp_ROL_InsertarRol] 
+CREATE PROCEDURE [dbo].[rsp_ROL_InsertarRol] 
 	@nombre			nvarchar(50),
 	@estado			char(18),
 	@descripcion	nvarchar(250),
@@ -217,7 +218,7 @@ BEGIN
            )
 	 SET	@intUsuarioId = SCOPE_IDENTITY()
 END
-
+GO
 
 USE [bdTienda]
 GO
@@ -231,7 +232,7 @@ GO
 -- Create date: 12-09-2016
 -- Description:	Mostrar Usuario por Id
 -- =============================================
-ALTER PROCEDURE [dbo].[rsp_ROL_MostrarRolId] 
+CREATE PROCEDURE [dbo].[rsp_ROL_MostrarRolId] 
 	@intUsuarioId	int
 AS
 BEGIN
@@ -242,6 +243,7 @@ BEGIN
 	FROM [dbo].[tblRol]
 	WHERE  [rolId] = @intUsuarioId;
 END
+GO
 
 USE [bdTienda]
 GO
@@ -255,7 +257,7 @@ GO
 -- Create date: 11-09-2016
 -- Description:	MostrarTodos
 -- =============================================
-ALTER PROCEDURE [dbo].[rsp_ROL_MostrarTodos] 
+CREATE PROCEDURE [dbo].[rsp_ROL_MostrarTodos] 
 	
 AS
 BEGIN
@@ -265,7 +267,7 @@ BEGIN
 	SELECT r.*
 	FROM [dbo].[tblRol] r 
 END
-
+GO
 
 USE [bdTienda]
 GO
@@ -279,7 +281,7 @@ GO
 -- Create date: 12-09-2016
 -- Description:	Actualizar un Rol
 -- =============================================
-ALTER PROCEDURE [dbo].[rsp_ROL_UpdateRol] 
+CREATE PROCEDURE [dbo].[rsp_ROL_UpdateRol] 
 	@varNombre		nvarchar(50),
 	@varEstado		char(18),
 	@varDescripcion	nvarchar(250),
@@ -296,7 +298,7 @@ BEGIN
       ,[estado] = @varDescripcion
 	WHERE [rolId] =  @varUsuarioId
 END
-
+GO
 /****************************************USUARIOROL****************************************/
 
 USE [bdTienda]
@@ -311,7 +313,7 @@ GO
 -- Create date: 12-09-2016
 -- Description:	Mostrar UsuarioRol por Id
 -- =============================================
-ALTER PROCEDURE [dbo].[ursp_ROL_MostrarUsuarioRolId] 
+CREATE PROCEDURE [dbo].[ursp_ROL_MostrarUsuarioRolId] 
 	@intUsuarioRolId	int
 AS
 BEGIN
@@ -322,7 +324,7 @@ BEGIN
 	FROM [dbo].[tblUsuarioRol]
 	WHERE  [idUsuarioRol] = @intUsuarioRolId;
 END
-
+GO
 
 USE [bdTienda]
 GO
@@ -336,7 +338,7 @@ GO
 -- Create date: 12-09-2016
 -- Description:	Eliminar un UsuarioRol
 -- =============================================
-ALTER PROCEDURE [dbo].[ursp_USUARIOROL_EliminarUsuarioRol] 
+CREATE PROCEDURE [dbo].[ursp_USUARIOROL_EliminarUsuarioRol] 
 	@intUsuarioRolId	int
 AS
 BEGIN
@@ -347,7 +349,7 @@ BEGIN
 	DELETE FROM [dbo].[tblUsuarioRol]
     WHERE [idUsuarioRol] = @intUsuarioRolId
 END
-
+GO
 
 USE [bdTienda]
 GO
@@ -361,7 +363,7 @@ GO
 -- Create date: 12-09-2016
 -- Description:	Insertar un UsuarioRol
 -- =============================================
-ALTER PROCEDURE [dbo].[ursp_USUARIOROL_InsertarUsuarioRol]
+CREATE PROCEDURE [dbo].[ursp_USUARIOROL_InsertarUsuarioRol]
 
 	@varEstado		int,
 	@varRolId		int,
@@ -383,7 +385,7 @@ BEGIN
            )          
 	SET	@intUsuarioRolId = SCOPE_IDENTITY()
 END
-
+GO
 
 USE [bdTienda]
 GO
@@ -397,7 +399,7 @@ GO
 -- Create date: 11-09-2016
 -- Description:	MostrarTodosTodos
 -- =============================================
-ALTER PROCEDURE [dbo].[ursp_USUARIOROL_MostrarTodos] 
+CREATE PROCEDURE [dbo].[ursp_USUARIOROL_MostrarTodos] 
 	
 AS
 BEGIN
@@ -407,7 +409,7 @@ BEGIN
 	SELECT *
 	FROM [dbo].[tblUsuarioRol]
 END
-
+GO
 
 USE [bdTienda]
 GO
@@ -421,7 +423,7 @@ GO
 -- Create date: 12-09-2016
 -- Description:	Actualizar un UsuarioRol
 -- =============================================
-ALTER PROCEDURE [dbo].[ursp_USUARIOROL_UpdateUsuarioRol] 
+CREATE PROCEDURE [dbo].[ursp_USUARIOROL_UpdateUsuarioRol] 
 
 	@varEstado		char(18),
 	@varRolId		int,	
@@ -438,6 +440,8 @@ BEGIN
       ,[estado] = @varEstado
 	WHERE [idUsuarioRol] = @UsuarioRolId
 END
+GO
+
 
 /****************************************USUARIO****************************************/
 
@@ -464,7 +468,7 @@ BEGIN
 	DELETE FROM [dbo].[tblUsuario]
     WHERE [usuarioId] = @intUsuarioId
 END
-
+GO
 
 USE [bdTienda]
 GO
@@ -508,7 +512,7 @@ BEGIN
            )           
 	 SET	@intUsuarioId = SCOPE_IDENTITY()
 END
-
+GO
 
 USE [bdTienda]
 GO
@@ -522,7 +526,7 @@ GO
 -- Create date: 11-09-2016
 -- Description:	MostrarTodos
 -- =============================================
-ALTER PROCEDURE [dbo].[usp_USUARIO_MostrarTodos] 
+CREATE PROCEDURE [dbo].[usp_USUARIO_MostrarTodos] 
 	
 AS
 BEGIN
@@ -532,7 +536,7 @@ BEGIN
 	SELECT t.*
 	FROM tblUsuario t 
 END
-
+GO
 
 USE [bdTienda]
 GO
@@ -546,7 +550,7 @@ GO
 -- Create date: 08-09-2016
 -- Description:	Mostrar Usuario por Id
 -- =============================================
-ALTER PROCEDURE [dbo].[usp_USUARIO_MostrarUsuariosId] 
+CREATE PROCEDURE [dbo].[usp_USUARIO_MostrarUsuariosId] 
 	@intUsuarioId	int
 AS
 BEGIN
@@ -557,7 +561,7 @@ BEGIN
 	FROM tblUsuario u
 	WHERE u.usuarioId = @intUsuarioId;
 END
-
+GO
 
 USE [bdTienda]
 GO
@@ -585,3 +589,4 @@ BEGIN
 		,[apellido] = @apellido      
 	WHERE [usuarioId] = @intUsuarioId
 END
+GO

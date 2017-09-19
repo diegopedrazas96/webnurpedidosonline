@@ -7,16 +7,16 @@ using Entidades.Seguridad;
 using Data.Seguridad;
 using Data.Seguridad.UserDSTableAdapters;
 
-namespace Access.Seguridad
+namespace Negocio.Seguridad
 {
-    class UserBRL
+    public class UserBRL
     {
         public UserBRL()
         {
 
         }
 
-        public static int insertUser(User obj)
+        public int insertUser(User obj)
         {
             //Inserte Codigo y validaciones para insertar usuarios
             UsuariosTableAdapter adapter = new UsuariosTableAdapter();            
@@ -26,7 +26,7 @@ namespace Access.Seguridad
             return usuarioId.Value;
         }
 
-        public static User getUserByEmail(string email)
+        public  User getUserByEmail(string email)
         {
             User obj = new User();            
             //Continue el codigo para obtener usuarios por email aquí
@@ -34,7 +34,7 @@ namespace Access.Seguridad
             return obj;
         }
 
-        public static List<User> getUsuarios()
+        public  List<User> getUsuarios()
         {
             List<User> listUsers = new List<User>();
             //Continue el codigo para optener la lista de usuarios aquí

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Access.Seguridad
+namespace Negocio.Seguridad
 {
-    class Usuario 
+    public class Usuario 
     {
         public void Save(Entidades.Seguridad.User objUsuario)
         {

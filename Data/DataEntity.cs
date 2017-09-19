@@ -36,7 +36,7 @@ namespace Data
 
 
                 dato.Close();
-                conexion.dispose();
+               // conexion.dispose();
                 return lngGenId;
             }
             catch (Exception ex)

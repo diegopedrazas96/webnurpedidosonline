@@ -37,7 +37,7 @@ namespace WebNurServiciosPedidos.Controllers
         }
 
         // POST api/values
-        public void Post([FromBody]ES.Usuario objUsuario)
+        public void Post([FromBody]ES.User objUsuario)
         {
             try
             {

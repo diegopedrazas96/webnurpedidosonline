@@ -18,3 +18,13 @@ C:\Software3\EasyBuyWEB\Access\bin\Debug\Entidades.pdb
 C:\Software3\EasyBuyWEB\Access\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 C:\Software3\EasyBuyWEB\Access\obj\Debug\Negocio.dll
 C:\Software3\EasyBuyWEB\Access\obj\Debug\Negocio.pdb
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Access\bin\Debug\Negocio.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Access\bin\Debug\Negocio.pdb
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Access\bin\Debug\Data.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Access\bin\Debug\Entidades.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Access\bin\Debug\MySql.Data.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Access\bin\Debug\Data.pdb
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Access\bin\Debug\Entidades.pdb
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Access\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Access\obj\Debug\Negocio.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Access\obj\Debug\Negocio.pdb

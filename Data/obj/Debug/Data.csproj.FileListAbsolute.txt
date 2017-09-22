@@ -29,3 +29,18 @@ C:\Software3\EasyBuyWEB\Data\bin\Debug\EntityFramework.SqlServer.xml
 C:\Software3\EasyBuyWEB\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
 C:\Software3\EasyBuyWEB\Data\obj\Debug\Data.dll
 C:\Software3\EasyBuyWEB\Data\obj\Debug\Data.pdb
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Data\bin\Debug\Data.dll.config
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Data\bin\Debug\Data.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Data\bin\Debug\Data.pdb
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Data\bin\Debug\Entidades.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Data\bin\Debug\EntityFramework.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Data\bin\Debug\MySql.Data.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Data\bin\Debug\MySql.Data.Entity.EF6.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Data\bin\Debug\MySql.Web.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Data\bin\Debug\Entidades.pdb
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Data\bin\Debug\EntityFramework.xml
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Data\obj\Debug\Data.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Data\obj\Debug\Data.pdb

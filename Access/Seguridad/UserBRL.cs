@@ -19,7 +19,7 @@ namespace Negocio.Seguridad
 
         }        
 
-        public static int insertUser(User obj)
+        public  int insertUser(User obj)
         {
             if (obj == null)
             {
@@ -70,7 +70,7 @@ namespace Negocio.Seguridad
             return listUsers;
         }
 
-        public static User getUserByEmail(String correo)
+        public User getUserByEmail(String correo)
         {
             if (correo.Equals(""))
             {
@@ -92,9 +92,32 @@ namespace Negocio.Seguridad
 
             return obj;
 
-        }        
-        
-        public static bool enviarEmail(string emailReceptor)
+        }
+        public User getUserByEmailAndPassword(String correo, String password)
+        {
+            if (correo.Equals(""))
+            {
+                throw new ArgumentException("Ingrese un Correo");
+            }
+
+            UsuariosTableAdapter adapter = new UsuariosTableAdapter();
+            UserDS.UsuariosDataTable table = adapter.GetUserByEmailPass(correo,password);
+            UserDS.UsuariosRow row = table[0];
+
+            User obj = new User();
+
+            obj.UsuarioId = row.usuarioId;
+            obj.Nombre = row.nombre;
+            obj.Apellido = row.apellido;
+            obj.Email = row.correo;
+            obj.Contraseña = row.contraseña;
+            obj.TipoUsuario = row.tipoUsuario;
+
+            return obj;
+
+        }
+
+        public  bool enviarEmail(string emailReceptor)
         {
             try
             {

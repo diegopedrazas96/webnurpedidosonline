@@ -12,7 +12,8 @@ namespace WebNurServiciosPedidos
     {
         public void Configuration(IAppBuilder app)
         {
-            ConfigureAuth(app);
+           // app.UseCors(CorsOptions.AllowAll);
+            // ConfigureAuth(app);
         }
     }
 }

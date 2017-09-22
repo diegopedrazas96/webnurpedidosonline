@@ -35,12 +35,12 @@ public class Service extends Web {
         return (Date) super.getObject("/api/default/day", Date.class, user, password);
     }
 
-    public Usuario getUser(String email,String password) throws Exception {
-        return super.get("/api/usuario/" + email +"/"+password, Usuario.class,"","");
+    public Usuario getUserByEmailPass(String email,String password) throws Exception {
+        return super.get("/api/usuario/getByEmailPass/" + email +"/"+password, Usuario.class,"","");
     }
 
     public long postUser(Usuario entity, String user, String password) throws Exception {
-    return super.post("/api/usuario", entity.getClass(), entity, "", "");
+    return super.post("/api/usuario/insertar", entity.getClass(), entity, "", "");
     }
     public long postRestorePass(Usuario entity, String user, String password) throws Exception {
         return super.post("/api/recuperar", entity.getClass(), entity, "", "");

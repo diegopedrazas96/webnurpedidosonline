@@ -123,7 +123,7 @@ public class Login extends AppCompatActivity {
                 Service service = new Service(Login.this);
                 //Llamada a las Dal
                 if (action == 1) {
-                    loginUser = service.getUser(email,password);
+                    loginUser = service.getUserByEmailPass(email,password);
                     if (loginUser != null & loginUser.getUsuarioId() > 0){
                         return true;
                     }
@@ -131,7 +131,7 @@ public class Login extends AppCompatActivity {
                 }
                 if (action == 2) {
                     Usuario user = new Usuario();
-                    user.setCorreo(email);
+                    user.setEmail(email);
                     long send = service.postRestorePass(user,"","");
                     if (send > 0){
                         return true;
@@ -150,11 +150,13 @@ public class Login extends AppCompatActivity {
                 //Sincronizacion Terminada
                 Log.i(Application.tag, "Actualizando pantalla principal");
                 if (action ==1){
-                    Toast.makeText(context,"Usuario y Contraseña Correctos.!",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context,"Usuario y Contraseña Correctos.!",Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(Login.this,RegistroPedido.class);
+                    startActivity(intent);
 
                 }
                 if (action ==2){
-                    Toast.makeText(context,"Recuperacion Exitosa.! Se ha enviado un correo a su email.",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context,"Recuperacion Exitosa.! Se ha enviado un correo a su email.",Toast.LENGTH_LONG).show();
 
                 }
 

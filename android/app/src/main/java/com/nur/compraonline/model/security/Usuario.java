@@ -1,5 +1,6 @@
 package com.nur.compraonline.model.security;
 
+import com.google.gson.annotations.SerializedName;
 import com.nur.compraonline.model.Entity;
 
 import java.util.Date;
@@ -10,11 +11,15 @@ import java.util.Date;
 
 public class Usuario extends Entity {
 
-
+    @SerializedName("UsuarioId")
     private Long usuarioId;
+    @SerializedName("Nombre")
     private String nombre;
+    @SerializedName("Apellido")
     private String apellido;
-    private String correo;
+    @SerializedName("Email")
+    private String email;
+    @SerializedName("Contraseña")
     private String contraseña;
     private String tipoUsuario;
 
@@ -45,12 +50,12 @@ public class Usuario extends Entity {
         this.apellido = apellido;
     }
 
-    public String getCorreo() {
-        return correo;
+    public String getEmail() {
+        return email;
     }
 
-    public void setCorreo(String correo) {
-        this.correo = correo;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getContraseña() {

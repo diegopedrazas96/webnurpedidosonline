@@ -1,19 +1,4 @@
 E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT_OFICIAL\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
-E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\bin\Debug\Data.dll.config
-E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\bin\Debug\Data.dll
-E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\bin\Debug\Data.pdb
-E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\bin\Debug\Entidades.dll
-E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\bin\Debug\EntityFramework.dll
-E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\bin\Debug\EntityFramework.SqlServer.dll
-E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\bin\Debug\MySql.Data.dll
-E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\bin\Debug\MySql.Data.Entity.EF6.dll
-E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\bin\Debug\MySql.Web.dll
-E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\bin\Debug\Entidades.pdb
-E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\bin\Debug\EntityFramework.xml
-E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\bin\Debug\EntityFramework.SqlServer.xml
-E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
-E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\obj\Debug\Data.dll
-E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\obj\Debug\Data.pdb
 C:\Software3\EasyBuyWEB\Data\bin\Debug\Data.dll.config
 C:\Software3\EasyBuyWEB\Data\bin\Debug\Data.dll
 C:\Software3\EasyBuyWEB\Data\bin\Debug\Data.pdb
@@ -44,3 +29,18 @@ E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Data\bin\Debug\Entity
 E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
 E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Data\obj\Debug\Data.dll
 E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Data\obj\Debug\Data.pdb
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\bin\Debug\Data.dll.config
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\bin\Debug\Data.dll
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\bin\Debug\Data.pdb
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\bin\Debug\Entidades.dll
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\bin\Debug\EntityFramework.dll
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\bin\Debug\MySql.Data.dll
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\bin\Debug\MySql.Data.Entity.EF6.dll
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\bin\Debug\MySql.Web.dll
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\bin\Debug\Entidades.pdb
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\bin\Debug\EntityFramework.xml
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\obj\Debug\Data.dll
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Data\obj\Debug\Data.pdb

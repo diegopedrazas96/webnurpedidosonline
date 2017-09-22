@@ -22,7 +22,7 @@ public class RegistroPedido extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_pedidos);
        this.setTitle("ACT. REGISTRO DE PEDIDO");
     }
 
@@ -47,19 +47,6 @@ public class RegistroPedido extends AppCompatActivity {
             stopService(serviceIntent);
         }*/
         //startActivity(new Intent(Main.this, Main.class));
-    }
-
-    @Override
-    public void onBackPressed() {
-        new AlertDialog.Builder(this).setTitle(null).setMessage(R.string.message_close).setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                finish();
-            }
-        }).setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        }).setIcon(android.R.drawable.ic_dialog_alert).show();
     }
 
 

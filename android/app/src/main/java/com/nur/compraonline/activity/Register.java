@@ -2,6 +2,7 @@ package com.nur.compraonline.activity;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -56,7 +57,7 @@ public class Register extends AppCompatActivity {
 
                 customer.setNombre(etNombre.getText().toString());
                 customer.setApellido(etApellido.getText().toString());
-                customer.setCorreo(etCorreo.getText().toString());
+                customer.setEmail(etCorreo.getText().toString());
                 customer.setContraseña(etPassword.getText().toString());
                 customer.setTipoUsuario("1");
 
@@ -74,7 +75,7 @@ public class Register extends AppCompatActivity {
 
     private boolean validate(){
         //campos en blanco vacios
-        if (customer.getCorreo().length() < 3) {
+        if (customer.getEmail().length() < 3) {
             return false;
         }
         if (customer.getNombre().length() < 3) {
@@ -105,8 +106,7 @@ public class Register extends AppCompatActivity {
         private ProgressDialog progressDialog;
         private int action;
         private Context context;
-        private int productRegistries;
-        private int countSyncronize = 0;
+
         public Call(int varAction,Context cont) {
             this.action = varAction;
             this.context= cont;
@@ -141,8 +141,10 @@ public class Register extends AppCompatActivity {
                 //Sincronizacion Terminada
                 Log.i(Application.tag, "Actualizando pantalla principal");
                 if (action ==1){
-                    Toast toas = Toast.makeText(context,productRegistries + " Registros Obtenidos Correctamente.!",Toast.LENGTH_SHORT);
-                    toas.show();
+                    Toast.makeText(context, " Registradp Correctamente.!",Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(Register.this,Main.class);
+                    startActivity(intent);
+
                 }
 
             }

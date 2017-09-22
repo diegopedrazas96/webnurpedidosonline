@@ -58,7 +58,7 @@ public class Register extends AppCompatActivity {
                 customer.setApellido(etApellido.getText().toString());
                 customer.setCorreo(etCorreo.getText().toString());
                 customer.setContraseña(etPassword.getText().toString());
-                customer.setTipoUsuario(1L);
+                customer.setTipoUsuario("1");
 
                 if (validate()==true) {
                     Call task = new Call(1,Register.this);

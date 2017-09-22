@@ -1,4 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/MasterPage.master" AutoEventWireup="true" CodeFile="RegistUsers.aspx.cs" Inherits="AdminUsers_RegistUsers" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/MasterPage.master" 
+    AutoEventWireup="true" 
+    CodeFile="RegistUsers.aspx.cs" 
+    Inherits="AdminUsers_RegistUsers" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
@@ -7,23 +10,34 @@
         <h2>Registrar Administradores</h2>
         <br />
         <div class="form-group">
-            <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" placeholder="Nombre">
+            <asp:TextBox ID="txtNombre" runat="server" 
+                CssClass="form-control" 
+                placeholder="Nombre">
             </asp:TextBox>
         </div>
 
         <div class="form-group">
-            <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control" placeholder="Apellidos">
+            <asp:TextBox ID="txtApellido" runat="server" 
+                CssClass="form-control" 
+                placeholder="Apellidos">
             </asp:TextBox>
+     
         </div>
 
         <div class="form-group">
-            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Email">
+            <asp:TextBox ID="txtEmail" runat="server" 
+                CssClass="form-control" 
+                placeholder="Email">
             </asp:TextBox>
+ 
         </div>
 
         <div class="form-group">
-            <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Password">
+            <asp:TextBox ID="txtPassword" runat="server" 
+                CssClass="form-control" 
+                placeholder="Password">
             </asp:TextBox>
+ 
         </div>
         <div class="form-group">
             <h3>Roles de Usuario</h3>
@@ -38,8 +52,11 @@
             </asp:HyperLink>
         </div>
 
-        <asp:Button ID="btnRegistrar" runat="server" Text="Registrar" CssClass="btn btn-primary" OnClick="btnRegistrar_Click" />
-
+        <asp:Button ID="btnRegistrar" runat="server" 
+            Text="Registrar" 
+            CssClass="btn btn-primary" 
+            OnClick="btnRegistrar_Click" />
+         
     </form>
 </asp:Content>
 

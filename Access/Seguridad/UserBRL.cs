@@ -7,6 +7,9 @@ using Entidades.Seguridad;
 using Data.Seguridad.UserDSTableAdapters;
 using Data.Seguridad;
 
+using System.Net;
+using System.Net.Mail;
+
 namespace Negocio.Seguridad
 {
     public class UserBRL
@@ -14,34 +17,7 @@ namespace Negocio.Seguridad
         public UserBRL()
         {
 
-        }
-
-        /*
-        public int insertUser(User obj)
-        {
-            //Inserte Codigo y validaciones para insertar usuarios
-            UsuariosTableAdapter adapter = new UsuariosTableAdapter();            
-            //adapter.Insert(); completar esta lines
-
-            int? usuarioId = 0;
-            return usuarioId.Value;
-        }
-
-        public  User getUserByEmail(string email)
-        {
-            User obj = new User();            
-            //Continue el codigo para obtener usuarios por email aquí
-
-            return obj;
-        }
-
-        public  List<User> getUsuarios()
-        {
-            List<User> listUsers = new List<User>();
-            //Continue el codigo para optener la lista de usuarios aquí
-            return listUsers;
-        }
-        */
+        }        
 
         public static int insertUser(User obj)
         {
@@ -116,6 +92,46 @@ namespace Negocio.Seguridad
 
             return obj;
 
+        }        
+        
+        public static bool enviarEmail(string emailReceptor)
+        {
+            try
+            {
+                MailMessage mail = new MailMessage();
+                SmtpClient smtpCli = new SmtpClient();
+
+                mail.From = new MailAddress("easywebsoft3@gmail.com");
+                mail.To.Add(new MailAddress(emailReceptor));
+
+                string message =
+                    "<p>" +
+                        "Hemos recibido tu solicitud para cambiar la contraseña de tu cuenta. Para cambiar de contraseña" +
+                        " use el siguiente link" +
+                    "</p>" +
+                    "http://localhost:55917/AdminSecurity/LoginUsers.aspx";
+                mail.Body = message;
+                mail.IsBodyHtml = true;
+                mail.Subject = "Change Password";
+                smtpCli.Host = "smtp.gmail.com";
+                smtpCli.Port = 587; //Lo use gmail por defecto
+                smtpCli.Credentials = new NetworkCredential("easywebsoft3@gmail.com", "easyweb123");
+                smtpCli.EnableSsl = true;
+                smtpCli.Send(mail);
+                //Generador de Codigos de 12 digitos
+
+                Guid gidCode = Guid.NewGuid();
+                string code = gidCode.ToString().Substring(0, 14).Replace("-", "");
+                
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+            
         }
     }
 }

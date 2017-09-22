@@ -42,8 +42,8 @@ GO
 CREATE PROCEDURE [dbo].[rsp_RECUPERACION_InsertarRecuperacion] 
 	
 	@codigoGenerado int,
-	@fechaGenerado	date,
-	@fechaActual	date,
+	@fechaGenerado	datetime,
+	@fechaActual	datetime,
 	@tiempo			int,
 	@estado			char(18),
 	
@@ -134,8 +134,8 @@ GO
 -- =============================================
 CREATE PROCEDURE [dbo].[rsp_RECUPERACION_UpdateRecuperacion] 
 	@codigoGenerado int,
-	@fechaGenerado	date,
-	@fechaActual	date,
+	@fechaGenerado	datetime,
+	@fechaActual	datetime,
 	@tiempo			int,
 	@estado			char(18),
 	

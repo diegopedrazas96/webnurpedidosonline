@@ -27,3 +27,12 @@ namespace Data.Seguridad.UserDSTableAdapters {
     public partial class UsuariosTableAdapter {
     }
 }
+
+namespace Data.Seguridad.UserDSTableAdapters
+{
+
+
+    public partial class UsuariosTableAdapter
+    {
+    }
+}

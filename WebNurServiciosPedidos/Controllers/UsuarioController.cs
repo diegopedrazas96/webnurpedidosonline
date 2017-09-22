@@ -45,7 +45,7 @@ namespace WebNurServiciosPedidos.Controllers
 
         // GET api/values/5
         [HttpGet()]
-        [Route("getByEmail/{email}")]
+        [Route("getUserByEmail/{email}")]
         public HttpResponseMessage GetByEmail(String email)
         {
             HttpResponseMessage msg = null;
@@ -53,11 +53,11 @@ namespace WebNurServiciosPedidos.Controllers
             ES.User beUser;
             try
             {
-                bcUser = new NS.UserBRL();
+                bcUser = new NS.UserBRL();            
                 beUser = bcUser.getUserByEmail(email);
                 if (beUser != null && beUser.UsuarioId > 0)
                 {
-                    if (bcUser.enviarEmail(email) == true)
+                    if (bcUser.enviarEmail(email,beUser) == true)
                     {
                         msg = Request.CreateResponse<ES.User>(HttpStatusCode.OK, beUser);
                         return msg;

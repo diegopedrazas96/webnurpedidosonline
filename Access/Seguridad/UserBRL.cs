@@ -56,7 +56,7 @@ namespace Negocio.Seguridad
             }
 
             UsuariosTableAdapter adapter = new UsuariosTableAdapter();
-            adapter.Update(obj.Nombre, obj.Apellido, obj.Email, obj.Contraseña, obj.UsuarioId);
+           // adapter.Update(obj.Nombre, obj.Apellido, obj.Email, obj.Contraseña, obj.UsuarioId);
 
         }
 
@@ -83,9 +83,7 @@ namespace Negocio.Seguridad
             return listUsers;
         }
 
-<<<<<<< HEAD
-        public User getUserByEmail(String correo)
-=======
+      //  public User getUserByEmail(String correo)
         public static User getUserById(int id)
         {
             if (id <= 0)
@@ -94,7 +92,7 @@ namespace Negocio.Seguridad
             }
 
             UsuariosTableAdapter adapter = new UsuariosTableAdapter();
-            UserDS.UsuariosDataTable table = adapter.GetUserById(id);
+            UserDS.UsuariosDataTable table = null; //adapter.GetUserById(id);
 
 
             if (table.Rows.Count == 0)
@@ -114,8 +112,7 @@ namespace Negocio.Seguridad
             return obj;
         }
 
-        public static User getUserByEmail(string correo)
->>>>>>> 24598133af619e1f7b7ec756cb44b69ca327b204
+        public  User getUserByEmail(string correo)
         {
             if (correo.Equals(""))
             {
@@ -142,7 +139,6 @@ namespace Negocio.Seguridad
 
             return obj;
 
-<<<<<<< HEAD
         }
         public User getUserByEmailAndPassword(String correo, String password)
         {
@@ -152,7 +148,7 @@ namespace Negocio.Seguridad
             }
 
             UsuariosTableAdapter adapter = new UsuariosTableAdapter();
-            UserDS.UsuariosDataTable table = adapter.GetUserByEmailPass(correo,password);
+            UserDS.UsuariosDataTable table = adapter.GetByEmailPass(correo,password);
             UserDS.UsuariosRow row = table[0];
 
             User obj = new User();
@@ -168,12 +164,10 @@ namespace Negocio.Seguridad
 
         }
 
-        public  bool enviarEmail(string emailReceptor)
-=======
-        }        
+      //  public  bool enviarEmail(string emailReceptor)
+       // }        
         
-        public static bool enviarEmail(string emailReceptor, User obj)
->>>>>>> 24598133af619e1f7b7ec756cb44b69ca327b204
+        public  bool enviarEmail(string emailReceptor, User obj)
         {
             try
             {

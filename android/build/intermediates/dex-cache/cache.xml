@@ -9,6 +9,13 @@
         <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\openbeans-1.0-006f6d95eca48a03c7c24cb073afe6b2ac45e2f3.jar" />
     </item>
     <item
+        jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="1c9f35e952b212c843f7bd2c7eec8e82ad95602e">
+        <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-611417ec0f8eaacebd7e03af58ef46a605f66682.jar" />
+    </item>
+    <item
         jar="C:\Users\dpedrazas\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.4\5fe28b9518e58819180a43a850fbc0dd24b7c050\commons-lang3-3.4.jar"
         jumboMode="false"
         revision="23.0.3"
@@ -23,6 +30,13 @@
         <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-bcf7018a492971e6e2c3e866dd183dfe489227b4.jar" />
     </item>
     <item
+        jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="dfecc4d835cdabcdecf7e95f0d20a3ef1e9d8ef4">
+        <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-79458124030651a4bdd4d6acc4a8006e674eb179.jar" />
+    </item>
+    <item
         jar="C:\Users\dpedrazas\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.6.2\f1bc476cc167b18e66c297df599b2377131a8947\gson-2.6.2.jar"
         jumboMode="false"
         revision="23.0.3"
@@ -35,6 +49,13 @@
         revision="23.0.3"
         sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
         <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\internal_impl-23.3.0-e3951d367977ee63383b9fcf0c1c5f2f0a9f04cc.jar" />
+    </item>
+    <item
+        jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="c54246475c1bb64ac6857d1320364bfbfeda2c46">
+        <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-6454476eed801b4c48414cfd2e6979a452589ed2.jar" />
     </item>
     <item
         jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\8.4.0\jars\classes.jar"
@@ -65,90 +86,6 @@
         <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-279c3a35ba0d70403b983f4cdadd758a7aa1b2c6.jar" />
     </item>
     <item
-        jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\8.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="9fe026fb4c7fce21bc5142f6e1bdf844f28061ac">
-        <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-89c85d0fc598ac7e19b237469b39cac3f67c6a7f.jar" />
-    </item>
-    <item
-        jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
-        <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-01379a0baeb1e37dd7ef727b07776a11f188eca1.jar" />
-    </item>
-    <item
-        jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
-        <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-5042d469e0fc266609b314659bbdc45e7ddd8122.jar" />
-    </item>
-    <item
-        jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\jars\libs\internal_impl-23.0.0.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
-        <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.0-e340afc80254bc4996f3eb9d21150b9ada12af1e.jar" />
-    </item>
-    <item
-        jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
-        <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-1f528ab29b7a9f914d05582f2804794a9b8c8c31.jar" />
-    </item>
-    <item
-        jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
-        <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-6e097304a64424ac48d3b6eaa1dab799bca0ff5a.jar" />
-    </item>
-    <item
-        jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\8.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="1a78298e7724d5440d210bcb946b3493250d354d">
-        <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-1aa4f7872e2fc2971f1635bfbd28908f2ee5024b.jar" />
-    </item>
-    <item
-        jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="04de44f90606c77f3b28cf44861f306290505aac">
-        <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-ef778224e346d856ae52b5b9c96b2e8531951c57.jar" />
-    </item>
-    <item
-        jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
-        <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-5dc5e9bf57031c5b1a525a72ea377c636a910a6d.jar" />
-    </item>
-    <item
-        jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\8.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="1c9f35e952b212c843f7bd2c7eec8e82ad95602e">
-        <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-611417ec0f8eaacebd7e03af58ef46a605f66682.jar" />
-    </item>
-    <item
-        jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\8.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="dfecc4d835cdabcdecf7e95f0d20a3ef1e9d8ef4">
-        <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-79458124030651a4bdd4d6acc4a8006e674eb179.jar" />
-    </item>
-    <item
-        jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\8.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="c54246475c1bb64ac6857d1320364bfbfeda2c46">
-        <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-6454476eed801b4c48414cfd2e6979a452589ed2.jar" />
-    </item>
-    <item
         jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\8.4.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.3"
@@ -177,6 +114,20 @@
         <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\support-annotations-23.3.0-c9723797112ee29cca98112c640d4f611fd3d97f.jar" />
     </item>
     <item
+        jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="9fe026fb4c7fce21bc5142f6e1bdf844f28061ac">
+        <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-89c85d0fc598ac7e19b237469b39cac3f67c6a7f.jar" />
+    </item>
+    <item
+        jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
+        <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-01379a0baeb1e37dd7ef727b07776a11f188eca1.jar" />
+    </item>
+    <item
         jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\8.4.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.3"
@@ -189,6 +140,13 @@
         revision="23.0.3"
         sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
         <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-152b06fb205ae18b7cfa35366f6f2204ad11d9a1.jar" />
+    </item>
+    <item
+        jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-5042d469e0fc266609b314659bbdc45e7ddd8122.jar" />
     </item>
     <item
         jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\8.4.0\jars\classes.jar"
@@ -212,6 +170,20 @@
         <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-8666a000965449389dfc8a041f97585db4a29e8e.jar" />
     </item>
     <item
+        jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
+        <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.0-e340afc80254bc4996f3eb9d21150b9ada12af1e.jar" />
+    </item>
+    <item
+        jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
+        <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-1f528ab29b7a9f914d05582f2804794a9b8c8c31.jar" />
+    </item>
+    <item
         jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.3"
@@ -231,6 +203,20 @@
         revision="23.0.3"
         sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
         <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\library-2.4.0-1daa8559cc759f6ac62c55e3a51893f1fe561dc9.jar" />
+    </item>
+    <item
+        jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-6e097304a64424ac48d3b6eaa1dab799bca0ff5a.jar" />
+    </item>
+    <item
+        jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="1a78298e7724d5440d210bcb946b3493250d354d">
+        <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-1aa4f7872e2fc2971f1635bfbd28908f2ee5024b.jar" />
     </item>
     <item
         jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\libs\ZSDK_ANDROID_API.jar"
@@ -268,11 +254,25 @@
         <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-e594c2a28e3947693e8f9de7b73c183875c56324.jar" />
     </item>
     <item
+        jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="04de44f90606c77f3b28cf44861f306290505aac">
+        <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-ef778224e346d856ae52b5b9c96b2e8531951c57.jar" />
+    </item>
+    <item
         jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.4.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.3"
         sha1="2d7fe76982677315c4dc4edfb459c8ca718a9d4c">
         <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-041201e115fc5a8d59d63c41605a3bfca8e930be.jar" />
+    </item>
+    <item
+        jar="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\android\app\build\intermediates\pre-dexed\debug\classes-5dc5e9bf57031c5b1a525a72ea377c636a910a6d.jar" />
     </item>
 
 </items>

@@ -11,8 +11,8 @@ public class Application extends android.app.Application {
     public final static String databaseName = "megasystem";
     public final static String apkName = "proforma.apk";
     public final static String excelFile = "profroma.xls";
-    public final static String webServicesPrivate = "http://192.168.1.113/pedidosnur";
-    public final static String webServicesPublic = "http://192.168.1.113/pedidosnur";
+    public final static String webServicesPrivate = "http://192.168.43.226/pedidosnur";
+    public final static String webServicesPublic = "http://192.168.43.226/pedidosnur";
     public final static String downloadUrl = "http://192.168.1.201/download";
     public final static String formatDate = "yyyy-MM-dd'T'HH:mm:ss";
     public final static String formatDateShort = "yyyy-MM-dd";

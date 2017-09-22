@@ -19,3 +19,4 @@ E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Entidades\obj\Debug\E
 E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Entidades\obj\Debug\Entidades.pdb
 E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
 >>>>>>> 24598133af619e1f7b7ec756cb44b69ca327b204
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache

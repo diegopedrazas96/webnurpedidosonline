@@ -42,7 +42,7 @@ public class Service extends Web {
     public long postUser(Usuario entity, String user, String password) throws Exception {
     return super.post("/api/usuario/insertar", entity.getClass(), entity, "", "");
     }
-    public long postRestorePass(Usuario entity, String user, String password) throws Exception {
-        return super.post("/api/recuperar", entity.getClass(), entity, "", "");
+    public Usuario getUserByEmail(Usuario entity, String user, String password) throws Exception {
+        return super.get("/api/usuario/getByEmail/" + entity.getEmail(), Usuario.class,"","");
     }
 }

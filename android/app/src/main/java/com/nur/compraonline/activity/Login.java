@@ -132,8 +132,8 @@ public class Login extends AppCompatActivity {
                 if (action == 2) {
                     Usuario user = new Usuario();
                     user.setEmail(email);
-                    long send = service.postRestorePass(user,"","");
-                    if (send > 0){
+                    Usuario send = service.getUserByEmail(user,"","");
+                    if (send != null && send.getUsuarioId() > 0){
                         return true;
                     }
 

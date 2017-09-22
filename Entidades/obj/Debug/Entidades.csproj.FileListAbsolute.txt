@@ -12,3 +12,8 @@ C:\Software3\EasyBuyWEB\Entidades\bin\Debug\Entidades.dll
 C:\Software3\EasyBuyWEB\Entidades\bin\Debug\Entidades.pdb
 C:\Software3\EasyBuyWEB\Entidades\obj\Debug\Entidades.dll
 C:\Software3\EasyBuyWEB\Entidades\obj\Debug\Entidades.pdb
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Entidades\bin\Debug\Entidades.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Entidades\bin\Debug\Entidades.pdb
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Entidades\obj\Debug\Entidades.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Entidades\obj\Debug\Entidades.pdb
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\PROYECTO FINAL\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache

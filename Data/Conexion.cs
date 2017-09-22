@@ -12,7 +12,7 @@ namespace Data
         public MySqlConnection conexion;
         public Conexion()
         {
-
+            /*
             try { 
             conexion = new MySqlConnection();
             string server = "localhost";
@@ -26,7 +26,7 @@ namespace Data
             {
 
             }
-
+            */
             
     
         }

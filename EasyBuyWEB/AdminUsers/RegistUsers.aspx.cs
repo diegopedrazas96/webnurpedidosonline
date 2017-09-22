@@ -1,14 +1,10 @@
 ﻿using Entidades.Seguridad;
 using Negocio.Seguridad;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 public partial class AdminUsers_RegistUsers : System.Web.UI.Page
 {
+    
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -16,8 +12,31 @@ public partial class AdminUsers_RegistUsers : System.Web.UI.Page
 
     protected void btnRegistrar_Click(object sender, EventArgs e)
     {
-        UserBRL userbrl = new UserBRL();
-        User usuario = userbrl.getUserByEmail("jose cadima");
-        //Registre Aquí
+        try
+        {
+            string nombre = txtNombre.Text;
+            string apellido = txtApellido.Text;
+            string email = txtEmail.Text;
+            string contraseña = txtPassword.Text;
+
+            User obj = new User();
+            {
+                obj.Nombre = nombre;
+                obj.Apellido = apellido;
+                obj.Email = email;
+                obj.Contraseña = contraseña;
+                obj.TipoUsuario = "2";
+
+            };
+            UserBRL.insertUser(obj);
+            
+
+        }
+        catch (Exception ex)
+        {
+
+        }
+        Response.Redirect("ListUsers.aspx");
+        
     }
 }

@@ -16,7 +16,7 @@ public class Usuario extends Entity {
     private String apellido;
     private String correo;
     private String contraseña;
-    private Long tipoUsuario;
+    private String tipoUsuario;
 
     public Usuario() {
     }
@@ -61,11 +61,11 @@ public class Usuario extends Entity {
         this.contraseña = contraseña;
     }
 
-    public Long getTipoUsuario() {
+    public String getTipoUsuario() {
         return tipoUsuario;
     }
 
-    public void setTipoUsuario(Long tipoUsuario) {
+    public void setTipoUsuario(String tipoUsuario) {
         this.tipoUsuario = tipoUsuario;
     }
 }

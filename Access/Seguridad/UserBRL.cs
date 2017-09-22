@@ -9,6 +9,7 @@ using Data.Seguridad;
 
 using System.Net;
 using System.Net.Mail;
+using Access.Seguridad;
 
 namespace Negocio.Seguridad
 {
@@ -47,6 +48,18 @@ namespace Negocio.Seguridad
 
         }
 
+        public static void updateUser(User obj)
+        {
+            if (obj == null)
+            {
+                throw new ArgumentException("El objeto Recuperacion a ingresar no puede ser Nulo");
+            }
+
+            UsuariosTableAdapter adapter = new UsuariosTableAdapter();
+            adapter.Update(obj.Nombre, obj.Apellido, obj.Email, obj.Contraseña, obj.UsuarioId);
+
+        }
+
         public static List<User> getUsuarios()
         {
             UsuariosTableAdapter adapter = new UsuariosTableAdapter();
@@ -70,7 +83,39 @@ namespace Negocio.Seguridad
             return listUsers;
         }
 
+<<<<<<< HEAD
         public User getUserByEmail(String correo)
+=======
+        public static User getUserById(int id)
+        {
+            if (id <= 0)
+            {
+                throw new ArgumentException("No se ha encontrado el Usuario");
+            }
+
+            UsuariosTableAdapter adapter = new UsuariosTableAdapter();
+            UserDS.UsuariosDataTable table = adapter.GetUserById(id);
+
+
+            if (table.Rows.Count == 0)
+            {
+                return null;
+            }
+            UserDS.UsuariosRow row = table[0];
+            User obj = new User();
+
+            obj.UsuarioId = row.usuarioId;
+            obj.Nombre = row.nombre;
+            obj.Apellido = row.apellido;
+            obj.Email = row.correo;
+            obj.Contraseña = row.contraseña;
+            obj.TipoUsuario = row.tipoUsuario;
+
+            return obj;
+        }
+
+        public static User getUserByEmail(string correo)
+>>>>>>> 24598133af619e1f7b7ec756cb44b69ca327b204
         {
             if (correo.Equals(""))
             {
@@ -79,8 +124,13 @@ namespace Negocio.Seguridad
 
             UsuariosTableAdapter adapter = new UsuariosTableAdapter();
             UserDS.UsuariosDataTable table = adapter.GetUsuariosByEmail(correo);
+            
+            
+            if (table.Rows.Count == 0)
+            {
+                return null;
+            }
             UserDS.UsuariosRow row = table[0];
-
             User obj = new User();
 
             obj.UsuarioId = row.usuarioId;
@@ -92,6 +142,7 @@ namespace Negocio.Seguridad
 
             return obj;
 
+<<<<<<< HEAD
         }
         public User getUserByEmailAndPassword(String correo, String password)
         {
@@ -118,9 +169,19 @@ namespace Negocio.Seguridad
         }
 
         public  bool enviarEmail(string emailReceptor)
+=======
+        }        
+        
+        public static bool enviarEmail(string emailReceptor, User obj)
+>>>>>>> 24598133af619e1f7b7ec756cb44b69ca327b204
         {
             try
             {
+                //Generador de Codigos de 12 digitos
+
+                Guid gidCode = Guid.NewGuid();
+                string code = gidCode.ToString().Substring(0, 14).Replace("-", "");
+
                 MailMessage mail = new MailMessage();
                 SmtpClient smtpCli = new SmtpClient();
 
@@ -132,7 +193,7 @@ namespace Negocio.Seguridad
                         "Hemos recibido tu solicitud para cambiar la contraseña de tu cuenta. Para cambiar de contraseña" +
                         " use el siguiente link" +
                     "</p>" +
-                    "http://localhost:55917/AdminSecurity/LoginUsers.aspx";
+                    "http://localhost:55917/AdminSecurity/ChangePassword.aspx?code=" + code;
                 mail.Body = message;
                 mail.IsBodyHtml = true;
                 mail.Subject = "Change Password";
@@ -141,20 +202,30 @@ namespace Negocio.Seguridad
                 smtpCli.Credentials = new NetworkCredential("easywebsoft3@gmail.com", "easyweb123");
                 smtpCli.EnableSsl = true;
                 smtpCli.Send(mail);
-                //Generador de Codigos de 12 digitos
-
-                Guid gidCode = Guid.NewGuid();
-                string code = gidCode.ToString().Substring(0, 14).Replace("-", "");
                 
+
+                //Creando Recuperacion de contraseña
+                DateTime fechaEnvio = DateTime.Now;
+                Recuperacion objRecup = new Recuperacion();
+                {
+                    objRecup.UsuarioId = obj.UsuarioId;
+                    objRecup.Codigo = code;
+                    objRecup.FechaGenerado = fechaEnvio;
+                    objRecup.FechaActual = new DateTime(1900, 1, 1, 0, 0, 0);
+                    objRecup.Tiempo = 2; //2 horas del link habilitado
+                    objRecup.Estado = '1'; //Link habilitado;
+                };
+                RecuperacionBRL.insertRecuperacion(objRecup);
 
                 return true;
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine("Pinshe Error: "+ e.Message);
                 return false;
             }
             
         }
+        
     }
 }

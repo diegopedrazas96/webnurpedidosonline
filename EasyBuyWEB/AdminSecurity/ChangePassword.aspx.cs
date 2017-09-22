@@ -29,6 +29,23 @@ public partial class AdminSecurity_ChangePassword : System.Web.UI.Page
             return;
         }
 
+        if (objRecup.Estado == '0')
+        {
+            txtEmail.InnerText = "El Link ha expirado o es invalido";
+            return;
+        }
+
+        TimeSpan ts = DateTime.Now - objRecup.FechaGenerado;
+        int diference = ts.Hours;
+
+        if (diference > objRecup.Tiempo)
+        {
+            txtEmail.InnerText = "El Link ha expirado o es invalido";
+            return;
+        }
+
+
+
         User objUser = UserBRL.getUserById(objRecup.UsuarioId);
         txtEmail.InnerText = "Recuperacion de contraseña de cuenta: " + objUser.Email;
         txtPassword.Visible = true;
@@ -53,10 +70,15 @@ public partial class AdminSecurity_ChangePassword : System.Web.UI.Page
             objUser.Contraseña = pass;
             UserBRL.updateUser(objUser);
             lbEstado.Text = "Se ha cambiado la contraseña correctamente";
+            lbEstado.ForeColor = System.Drawing.Color.Green;
             lbEstado.Visible = true;
+
+            Response.Redirect("LoginUsers.aspx");
+
         } else
         {
             lbEstado.Text = "Las Contraseñas no Coinciden";
+            lbEstado.ForeColor = System.Drawing.Color.Red;
             lbEstado.Visible = true;
         }
         

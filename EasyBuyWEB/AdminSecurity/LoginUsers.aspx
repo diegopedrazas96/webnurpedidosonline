@@ -18,7 +18,7 @@
         </div>
 
         <div class="form-group">
-            <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Password">
+            <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Password" TextMode="Password">
             </asp:TextBox>
         </div>
 

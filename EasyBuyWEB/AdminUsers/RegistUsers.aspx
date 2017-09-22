@@ -35,11 +35,11 @@
         <div class="form-group">
             <asp:TextBox ID="txtPassword" runat="server" 
                 CssClass="form-control" 
-                placeholder="Password">
+                placeholder="Password" TextMode="Password">
             </asp:TextBox>
  
         </div>
-        <div class="form-group">
+        <div class="form-group" runat="server" visible ="false">
             <h3>Roles de Usuario</h3>
             <asp:RadioButtonList ID="RadioButtonList1" runat="server">
                 <asp:ListItem>Administrador General</asp:ListItem>

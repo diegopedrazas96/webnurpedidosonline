@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Entidades.Seguridad;
 
 public partial class AdminSecurity_RecoveryPassword : System.Web.UI.Page
 {
@@ -15,7 +16,7 @@ public partial class AdminSecurity_RecoveryPassword : System.Web.UI.Page
 
     protected void btnEnviarCode_Click(object sender, EventArgs e)
     {
-        
+
         string emailReceptor = txtEmail.Text;
         if (String.IsNullOrEmpty(emailReceptor))
         {
@@ -24,14 +25,22 @@ public partial class AdminSecurity_RecoveryPassword : System.Web.UI.Page
             return;
         }
 
-        if (UserBRL.enviarEmail(emailReceptor))
+        User obj = UserBRL.getUserByEmail(emailReceptor);
+        if (obj == null)
+        {
+            lbValidation.Text = "El email no está registrado en el Sistema";
+            lbValidation.Visible = true;
+            return;
+        }
+
+        if (UserBRL.enviarEmail(emailReceptor, obj))
         {
             lbEstado.Text = "Codigo de Recuperación enviado correctamente";
         }
         else
         {
             lbEstado.Text = "Error al enviar Codigo de Recuperación";
-        }        
+        }
         lbValidation.Visible = false;
     }
 }

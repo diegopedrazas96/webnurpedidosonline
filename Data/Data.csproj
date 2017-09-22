@@ -69,6 +69,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Seguridad\RecuperacionDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RecuperacionDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Seguridad\UserDS.cs">
       <DependentUpon>UserDS.xsd</DependentUpon>
     </Compile>
@@ -85,6 +90,17 @@
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Seguridad\RecuperacionDS.xsc">
+      <DependentUpon>RecuperacionDS.xsd</DependentUpon>
+    </None>
+    <None Include="Seguridad\RecuperacionDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RecuperacionDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Seguridad\RecuperacionDS.xss">
+      <DependentUpon>RecuperacionDS.xsd</DependentUpon>
     </None>
     <None Include="Seguridad\UserDS.xsc">
       <DependentUpon>UserDS.xsd</DependentUpon>

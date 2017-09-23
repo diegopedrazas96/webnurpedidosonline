@@ -46,7 +46,7 @@ namespace WebNurServiciosPedidos.Controllers
         // GET api/values/5
         [HttpGet()]
         [Route("getUserByEmail/{email}")]
-        public HttpResponseMessage GetByEmail(String email)
+        public HttpResponseMessage getUserByEmail(String email)
         {
             HttpResponseMessage msg = null;
             NS.UserBRL bcUser = new NS.UserBRL();            

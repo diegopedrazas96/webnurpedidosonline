@@ -16,6 +16,7 @@ public partial class AdminSecurity_LoginUsers : System.Web.UI.Page
     protected void btnInitSesion_Click(object sender, EventArgs e)
     {
         //Hacer codigo para iniciar sesion aquí       
+        
 
         Response.Redirect("~/Productos/ListProductos.aspx");
     }

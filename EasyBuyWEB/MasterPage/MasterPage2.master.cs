@@ -9,6 +9,6 @@ public partial class MasterPage_MasterPage2 : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        Session["User"] = null;
     }
 }

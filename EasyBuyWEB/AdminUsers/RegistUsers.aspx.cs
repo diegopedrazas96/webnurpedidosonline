@@ -7,6 +7,7 @@ public partial class AdminUsers_RegistUsers : System.Web.UI.Page
     
     protected void Page_Load(object sender, EventArgs e)
     {
+        
         lbVal.Visible = false;
     }
 

@@ -11,7 +11,7 @@ public partial class AdminSecurity_LoginUsers : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        Session["User"] = null;
     }
 
     protected void btnInitSesion_Click(object sender, EventArgs e)

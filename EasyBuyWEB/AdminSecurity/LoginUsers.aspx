@@ -27,9 +27,10 @@
         </asp:HyperLink>
         <br /><br />
         <asp:Button ID="btnInitSesion" runat="server" Text="Ingresar" OnClick="btnInitSesion_Click" CssClass="btn btn-primary" />
+        <asp:Label ID="lbValidator" ForeColor="Red" runat="server" Text="" Visible ="false"></asp:Label>
         <!--<button class="btn btn-primary">Enviar</button>-->
         <br />
-        <br />
+        <br />        
         <br />
         <br />
         <br />

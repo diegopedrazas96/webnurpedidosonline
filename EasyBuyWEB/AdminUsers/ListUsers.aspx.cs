@@ -11,6 +11,7 @@ public partial class AdminUsers_ListUsers : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        
         List<User> user = UserBRL.getUsuarios();
         GridUsers.DataSource = user;
         GridUsers.DataBind();

@@ -38,8 +38,8 @@ public partial class AdminSecurity_LoginUsers : System.Web.UI.Page
             lbValidator.ForeColor = System.Drawing.Color.Red;
             return;
         }
-       
-        
+
+        Session["User"] = obj;
 
         Response.Redirect("~/Productos/ListProductos.aspx");
     }

@@ -43,6 +43,6 @@ public class Service extends Web {
     return super.post("/api/usuario/insertar", entity.getClass(), entity, "", "");
     }
     public Usuario getUserByEmail(Usuario entity, String user, String password) throws Exception {
-        return super.get("/api/usuario/getByEmail/" + entity.getEmail(), Usuario.class,"","");
+        return super.get("/api/rec/getByEmailPass/" + entity.getEmail() +"/"+password, Usuario.class,"","");
     }
 }

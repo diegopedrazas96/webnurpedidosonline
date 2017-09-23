@@ -132,7 +132,7 @@ public class Login extends AppCompatActivity {
                 if (action == 2) {
                     Usuario user = new Usuario();
                     user.setEmail(email);
-                    Usuario send = service.getUserByEmail(user,"","");
+                    Usuario send = service.getUserByEmail(user,"","123");
                     if (send != null && send.getUsuarioId() > 0){
                         return true;
                     }

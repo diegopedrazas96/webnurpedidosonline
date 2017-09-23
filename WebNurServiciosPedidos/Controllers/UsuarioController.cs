@@ -43,7 +43,39 @@ namespace WebNurServiciosPedidos.Controllers
             return lstAccount;
         }
 
-        // GET api/values/5
+        [HttpGet()]
+        [Route("getByEmail/{email}")]
+        public HttpResponseMessage GetByEmail(String email)
+        {
+            HttpResponseMessage msg = null;
+            NS.UserBRL bcUser = new NS.UserBRL();
+            ES.User beUser;
+            try
+            {
+                bcUser = new NS.UserBRL();
+                beUser = bcUser.getUserByEmail(email);
+                if (beUser != null && beUser.UsuarioId > 0)
+                {
+                    if (bcUser.enviarEmail(email, beUser) == true)
+                    {
+                        msg = Request.CreateResponse<ES.User>(HttpStatusCode.OK, beUser);
+                        return msg;
+                    }
+
+                }
+                else
+                {
+                    msg = Request.CreateResponse(HttpStatusCode.NotFound, "Usuario No Encontrado.!");
+                    return msg;
+                }
+                return msg;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         [HttpGet()]
         [Route("getUserByEmail/{email}")]
         public HttpResponseMessage getUserByEmail(String email)
@@ -74,6 +106,7 @@ namespace WebNurServiciosPedidos.Controllers
                 throw ex;
             }
         }
+
         [HttpGet()]
         [Route("getByEmailPass/{email}/{password}")]
         public HttpResponseMessage GetByEmailPass(String email, String password)

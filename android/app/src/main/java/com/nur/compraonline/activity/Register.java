@@ -141,12 +141,15 @@ public class Register extends AppCompatActivity {
                 //Sincronizacion Terminada
                 Log.i(Application.tag, "Actualizando pantalla principal");
                 if (action ==1){
-                    Toast.makeText(context, " Registradp Correctamente.!",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, " Registrado Correctamente.!",Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Register.this,Main.class);
                     startActivity(intent);
 
                 }
 
+            }else{
+                Intent intent = new Intent(Register.this,Main.class);
+                startActivity(intent);
             }
         }
 

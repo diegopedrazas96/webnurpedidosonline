@@ -57,6 +57,8 @@
             CssClass="btn btn-primary" 
             OnClick="btnRegistrar_Click" />
          
+        <asp:Label ID="lbVal" runat="server" Text="" Visible="false" ForeColor="Red"></asp:Label>
+         
     </form>
 </asp:Content>
 

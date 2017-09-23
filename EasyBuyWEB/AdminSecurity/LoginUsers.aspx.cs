@@ -1,4 +1,5 @@
 ﻿using Entidades.Seguridad;
+using Negocio.Seguridad;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,29 @@ public partial class AdminSecurity_LoginUsers : System.Web.UI.Page
 
     protected void btnInitSesion_Click(object sender, EventArgs e)
     {
-        //Hacer codigo para iniciar sesion aquí       
+        lbValidator.Visible = false;
+        string email = txtEmail.Text;
+        string password = txtPassword.Text;
+
+        User obj = UserBRL.getUserByEmail(email);
+
+        if (obj == null)
+        {
+            lbValidator.Text = "El email ingresado no está registrado en el Sistema";
+            lbValidator.Visible = true;
+            lbValidator.ForeColor = System.Drawing.Color.Red;
+
+            return;
+        }
+
+        if (!obj.Contraseña.Trim().Equals(password)) 
+        {
+            lbValidator.Text = "El Contraseña incorrecta";
+            lbValidator.Visible = true;
+            lbValidator.ForeColor = System.Drawing.Color.Red;
+            return;
+        }
+       
         
 
         Response.Redirect("~/Productos/ListProductos.aspx");

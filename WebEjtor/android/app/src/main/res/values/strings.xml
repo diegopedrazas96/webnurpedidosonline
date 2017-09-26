@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">compraonline</string>
+    <string name="not_defined">No Definido</string>
+    <string name="cliente">Cliente</string>
+    <string name="options_info_day">Opciones Dia</string>
+    <string name="day">Dia</string>
+    <string name="imei">Imei</string>
+    <string name="start_period">Inicio Periodo</string>
+    <string name="close_period">Cierre Periodo</string>
+    <string name="message_close">Esta Seguro de salir de la aplicacion?</string>
+    <string name="pedidos">Pedidos</string>
+    <string name="arduino">Arduino</string>
+    <string name="usuario">Usuario</string>
+    <string name="password">Password</string>
+    <string name="recuperar_pass">Recuperar Password</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="register">Registrarse</string>
+    <string name="login">Login</string>
+    <string name="message_save">Guardado Correctamente!</string>
+    <string name="message_no_save">No guardado</string>
+    <string name="message_required">Ingrese los datos necesarios!</string>
+    <string name="inicio">Inicio</string>
+    <string name="version">Version</string>
+    <string name="nit">Nit</string>
+    <string name="name">Nombre</string>
+    <string name="phone">Telefono</string>
+    <string name="address">Direccion</string>
+    <string name="cancel">Cancelar</string>
+    <string name="save">Guardar</string>
+    <string name="correo">Correo</string>
+    <string name="apellido">Apellido</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="enviando">Enviando</string>
+    <string name="email">Email</string>
+    <string name="procesando">Procesando</string>
+</resources>

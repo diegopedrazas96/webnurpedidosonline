@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebEjtor", "WebEjtor\WebEjtor.csproj", "{3302B73A-D088-489F-8C67-AF46C6F99244}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Access\Negocio.csproj", "{B60B9181-9D5E-4F10-897E-4997864D7674}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{663E1B7F-0E97-48D3-B733-CF7FD95949D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{4E647315-6F87-43CB-9B32-F5C798F3A8C5}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "EasyBuyWEB", "EasyBuyWEB\", "{9D80AC44-DFDA-4D4F-A5E2-89CAFBC11C13}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		ProjectReferences = "{663e1b7f-0e97-48d3-b733-cf7fd95949d0}|Entidades.dll;{4e647315-6f87-43cb-9b32-f5c798f3a8c5}|Data.dll;{b60b9181-9d5e-4f10-897e-4997864d7674}|Negocio.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_49640"
+		Debug.AspNetCompiler.PhysicalPath = "EasyBuyWEB\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49640\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_49640"
+		Release.AspNetCompiler.PhysicalPath = "EasyBuyWEB\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49640\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "49640"
+		SlnRelativePath = "EasyBuyWEB\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3302B73A-D088-489F-8C67-AF46C6F99244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3302B73A-D088-489F-8C67-AF46C6F99244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3302B73A-D088-489F-8C67-AF46C6F99244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3302B73A-D088-489F-8C67-AF46C6F99244}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B60B9181-9D5E-4F10-897E-4997864D7674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B60B9181-9D5E-4F10-897E-4997864D7674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B60B9181-9D5E-4F10-897E-4997864D7674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B60B9181-9D5E-4F10-897E-4997864D7674}.Release|Any CPU.Build.0 = Release|Any CPU
+		{663E1B7F-0E97-48D3-B733-CF7FD95949D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{663E1B7F-0E97-48D3-B733-CF7FD95949D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{663E1B7F-0E97-48D3-B733-CF7FD95949D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{663E1B7F-0E97-48D3-B733-CF7FD95949D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E647315-6F87-43CB-9B32-F5C798F3A8C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E647315-6F87-43CB-9B32-F5C798F3A8C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E647315-6F87-43CB-9B32-F5C798F3A8C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E647315-6F87-43CB-9B32-F5C798F3A8C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D80AC44-DFDA-4D4F-A5E2-89CAFBC11C13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D80AC44-DFDA-4D4F-A5E2-89CAFBC11C13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D80AC44-DFDA-4D4F-A5E2-89CAFBC11C13}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D80AC44-DFDA-4D4F-A5E2-89CAFBC11C13}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -58,3 +58,13 @@ E:\Diego\nur\Ing. Software III\PruebaGitProyec-master\PruebaGitProyec-master\Web
 E:\Diego\nur\Ing. Software III\PruebaGitProyec-master\PruebaGitProyec-master\WebEjtor\Access\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 E:\Diego\nur\Ing. Software III\PruebaGitProyec-master\PruebaGitProyec-master\WebEjtor\Access\obj\Debug\Negocio.dll
 E:\Diego\nur\Ing. Software III\PruebaGitProyec-master\PruebaGitProyec-master\WebEjtor\Access\obj\Debug\Negocio.pdb
+E:\Diego\nur\Ing. Software III\proyectofinal\webnurpedidosonline\WebEjtor\Access\bin\Debug\Negocio.dll
+E:\Diego\nur\Ing. Software III\proyectofinal\webnurpedidosonline\WebEjtor\Access\bin\Debug\Negocio.pdb
+E:\Diego\nur\Ing. Software III\proyectofinal\webnurpedidosonline\WebEjtor\Access\bin\Debug\Data.dll
+E:\Diego\nur\Ing. Software III\proyectofinal\webnurpedidosonline\WebEjtor\Access\bin\Debug\Entidades.dll
+E:\Diego\nur\Ing. Software III\proyectofinal\webnurpedidosonline\WebEjtor\Access\bin\Debug\MySql.Data.dll
+E:\Diego\nur\Ing. Software III\proyectofinal\webnurpedidosonline\WebEjtor\Access\bin\Debug\Data.pdb
+E:\Diego\nur\Ing. Software III\proyectofinal\webnurpedidosonline\WebEjtor\Access\bin\Debug\Entidades.pdb
+E:\Diego\nur\Ing. Software III\proyectofinal\webnurpedidosonline\WebEjtor\Access\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+E:\Diego\nur\Ing. Software III\proyectofinal\webnurpedidosonline\WebEjtor\Access\obj\Debug\Negocio.dll
+E:\Diego\nur\Ing. Software III\proyectofinal\webnurpedidosonline\WebEjtor\Access\obj\Debug\Negocio.pdb

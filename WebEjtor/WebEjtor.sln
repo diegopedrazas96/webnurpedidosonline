@@ -33,6 +33,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "EasyBuyWEB", "EasyBuyWEB\",
 		SlnRelativePath = "EasyBuyWEB\"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebNurServiciosPedidos", "WebNurServiciosPedidos\WebNurServiciosPedidos.csproj", "{6C5FDD49-B87C-4DFF-9283-30E8511974F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{9D80AC44-DFDA-4D4F-A5E2-89CAFBC11C13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D80AC44-DFDA-4D4F-A5E2-89CAFBC11C13}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{9D80AC44-DFDA-4D4F-A5E2-89CAFBC11C13}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{6C5FDD49-B87C-4DFF-9283-30E8511974F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C5FDD49-B87C-4DFF-9283-30E8511974F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C5FDD49-B87C-4DFF-9283-30E8511974F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C5FDD49-B87C-4DFF-9283-30E8511974F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -48,11 +48,11 @@ namespace WebNurServiciosPedidos.Controllers
         public HttpResponseMessage GetByEmail(String email)
         {
             HttpResponseMessage msg = null;
-            NS.UserBRL bcUser = new NS.UserBRL();
+            NS.UserBRLNoStatic bcUser = new NS.UserBRLNoStatic();
             ES.User beUser;
             try
             {
-                bcUser = new NS.UserBRL();
+                bcUser = new NS.UserBRLNoStatic();
                 beUser = bcUser.getUserByEmail(email);
                 if (beUser != null && beUser.UsuarioId > 0)
                 {
@@ -81,11 +81,11 @@ namespace WebNurServiciosPedidos.Controllers
         public HttpResponseMessage getUserByEmail(String email)
         {
             HttpResponseMessage msg = null;
-            NS.UserBRL bcUser = new NS.UserBRL();            
+            NS.UserBRLNoStatic bcUser = new NS.UserBRLNoStatic();            
             ES.User beUser;
             try
             {
-                bcUser = new NS.UserBRL();            
+                bcUser = new NS.UserBRLNoStatic();            
                 beUser = bcUser.getUserByEmail(email);
                 if (beUser != null && beUser.UsuarioId > 0)
                 {
@@ -112,11 +112,11 @@ namespace WebNurServiciosPedidos.Controllers
         public HttpResponseMessage GetByEmailPass(String email, String password)
         {
             HttpResponseMessage msg = null;
-            NS.UserBRL bcUser = new NS.UserBRL();
+            NS.UserBRLNoStatic bcUser = new NS.UserBRLNoStatic();
             ES.User beUser;
             try
             {
-                bcUser = new NS.UserBRL();
+                bcUser = new NS.UserBRLNoStatic();
                 beUser = bcUser.getUserByEmail(email);
                 if (beUser != null && beUser.UsuarioId > 0)
                 {
@@ -144,10 +144,10 @@ namespace WebNurServiciosPedidos.Controllers
         [HttpPost()]        
         public IHttpActionResult PostUsuario([FromBody]ES.User objUsuario)
         {
-            NS.UserBRL bcUser;
+            NS.UserBRLNoStatic bcUser;
             try
             {
-                bcUser = new NS.UserBRL();
+                bcUser = new NS.UserBRLNoStatic();
                 if (ModelState.IsValid)
                 {
                   

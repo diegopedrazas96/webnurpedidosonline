@@ -20,7 +20,7 @@ namespace Negocio.Seguridad
 
         }        
 
-        public  int insertUser(User obj)
+        public static int insertUser(User obj)
         {
             if (obj == null)
             {
@@ -48,7 +48,7 @@ namespace Negocio.Seguridad
 
         }
 
-        public  void updateUser(User obj)
+        public static void updateUser(User obj)
         {
             if (obj == null)
             {
@@ -60,7 +60,7 @@ namespace Negocio.Seguridad
 
         }
 
-        public  List<User> getUsuarios()
+        public static List<User> getUsuarios()
         {
             UsuariosTableAdapter adapter = new UsuariosTableAdapter();
             UserDS.UsuariosDataTable table = adapter.GetUsuarios();
@@ -82,7 +82,7 @@ namespace Negocio.Seguridad
             }
             return listUsers;
         }
-        public User getUserByEmailAndPassword(String correo, String password)
+        public static User getUserByEmailAndPassword(String correo, String password)
         {
             if (correo.Equals(""))
             {
@@ -106,7 +106,7 @@ namespace Negocio.Seguridad
 
         }
 
-        public  User getUserById(int id)
+        public  static User getUserById(int id)
         {
             if (id <= 0)
             {
@@ -134,7 +134,7 @@ namespace Negocio.Seguridad
             return obj;
         }
 
-        public  User getUserByEmail(string correo)
+        public static User getUserByEmail(string correo)
         {
             if (correo.Equals(""))
             {
@@ -163,7 +163,7 @@ namespace Negocio.Seguridad
 
         }        
         
-        public  bool enviarEmail(string emailReceptor, User obj)
+        public static bool enviarEmail(string emailReceptor, User obj)
         {
             try
             {

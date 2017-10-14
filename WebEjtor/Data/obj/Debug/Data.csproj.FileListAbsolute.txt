@@ -89,3 +89,18 @@ E:\Diego\nur\Ing. Software III\proyectofinal\webnurpedidosonline\WebEjtor\Data\b
 E:\Diego\nur\Ing. Software III\proyectofinal\webnurpedidosonline\WebEjtor\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
 E:\Diego\nur\Ing. Software III\proyectofinal\webnurpedidosonline\WebEjtor\Data\obj\Debug\Data.dll
 E:\Diego\nur\Ing. Software III\proyectofinal\webnurpedidosonline\WebEjtor\Data\obj\Debug\Data.pdb
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Data\bin\Debug\Data.dll.config
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Data\bin\Debug\Data.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Data\bin\Debug\Data.pdb
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Data\bin\Debug\Entidades.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Data\bin\Debug\EntityFramework.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Data\bin\Debug\MySql.Data.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Data\bin\Debug\MySql.Data.Entity.EF6.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Data\bin\Debug\MySql.Web.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Data\bin\Debug\Entidades.pdb
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Data\bin\Debug\EntityFramework.xml
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Data\obj\Debug\Data.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Data\obj\Debug\Data.pdb

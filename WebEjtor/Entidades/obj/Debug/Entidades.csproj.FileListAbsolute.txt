@@ -22,3 +22,8 @@ E:\Diego\nur\Ing. Software III\proyectofinal\webnurpedidosonline\WebEjtor\Entida
 E:\Diego\nur\Ing. Software III\proyectofinal\webnurpedidosonline\WebEjtor\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
 E:\Diego\nur\Ing. Software III\proyectofinal\webnurpedidosonline\WebEjtor\Entidades\obj\Debug\Entidades.dll
 E:\Diego\nur\Ing. Software III\proyectofinal\webnurpedidosonline\WebEjtor\Entidades\obj\Debug\Entidades.pdb
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Entidades\bin\Debug\Entidades.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Entidades\bin\Debug\Entidades.pdb
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Entidades\obj\Debug\Entidades.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Entidades\obj\Debug\Entidades.pdb

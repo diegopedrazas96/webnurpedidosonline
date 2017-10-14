@@ -26,7 +26,8 @@ namespace Data.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=bdTienda;User ID=sa;Password=avatech123*")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=JOSE-CADIMA-PC\\SQLEXPRESS;Initial Catalog=bdTienda;Integrated Securit" +
+            "y=True")]
         public string bdTiendaConnectionString {
             get {
                 return ((string)(this["bdTiendaConnectionString"]));

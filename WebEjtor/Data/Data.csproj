@@ -69,6 +69,16 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Seguridad\EmpresaDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmpresaDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\ProductoDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductoDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Seguridad\RecuperacionDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -90,6 +100,28 @@
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Seguridad\EmpresaDS.xsc">
+      <DependentUpon>EmpresaDS.xsd</DependentUpon>
+    </None>
+    <None Include="Seguridad\EmpresaDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EmpresaDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Seguridad\EmpresaDS.xss">
+      <DependentUpon>EmpresaDS.xsd</DependentUpon>
+    </None>
+    <None Include="Seguridad\ProductoDS.xsc">
+      <DependentUpon>ProductoDS.xsd</DependentUpon>
+    </None>
+    <None Include="Seguridad\ProductoDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductoDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Seguridad\ProductoDS.xss">
+      <DependentUpon>ProductoDS.xsd</DependentUpon>
     </None>
     <None Include="Seguridad\RecuperacionDS.xsc">
       <DependentUpon>RecuperacionDS.xsd</DependentUpon>

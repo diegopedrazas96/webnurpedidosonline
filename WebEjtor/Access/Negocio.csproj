@@ -44,6 +44,7 @@
     <Compile Include="Seguridad\EmpresaBRL.cs" />
     <Compile Include="Seguridad\ProductoBRL.cs" />
     <Compile Include="Seguridad\RecuperacionBRL.cs" />
+    <Compile Include="Seguridad\TipoHijoBRL.cs" />
     <Compile Include="Seguridad\UserBRLNoStatic.cs" />
     <Compile Include="Seguridad\UserBRL.cs" />
     <Compile Include="Seguridad\Usuario.cs" />

@@ -15,7 +15,6 @@ namespace Access.Seguridad
         {
 
         }
-
         public static List<Empresa> getEmpresas()
         {
             EmpresaTableAdapter adapter = new EmpresaTableAdapter();
@@ -36,6 +35,25 @@ namespace Access.Seguridad
                 listEmpresas.Add(obj);
             }
             return listEmpresas;
+        }
+
+        public static int insertEmpresa(Empresa obj)
+        {
+            if (obj == null)
+            {
+                new ArgumentException("El objeto empresa no puede ser nulo");
+            }
+
+            int? empresaId = null;
+
+            EmpresaTableAdapter adapter = new EmpresaTableAdapter();
+            adapter.Insert(obj.TipoIdc, obj.Nit, obj.Nombre, obj.Gerente, obj.Telefono, obj.Estado, ref empresaId);
+
+            if (empresaId == 0 || empresaId == null)
+            {
+                new ArgumentException("La empresaId es nula o menor que 0");
+            }
+            return empresaId.Value;
         }
     }
 }

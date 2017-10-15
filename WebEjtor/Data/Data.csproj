@@ -84,6 +84,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RecuperacionDS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Seguridad\TipoHijoDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TipoHijoDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Seguridad\UserDS.cs">
       <DependentUpon>UserDS.xsd</DependentUpon>
     </Compile>
@@ -133,6 +138,17 @@
     </None>
     <None Include="Seguridad\RecuperacionDS.xss">
       <DependentUpon>RecuperacionDS.xsd</DependentUpon>
+    </None>
+    <None Include="Seguridad\TipoHijoDS.xsc">
+      <DependentUpon>TipoHijoDS.xsd</DependentUpon>
+    </None>
+    <None Include="Seguridad\TipoHijoDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TipoHijoDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Seguridad\TipoHijoDS.xss">
+      <DependentUpon>TipoHijoDS.xsd</DependentUpon>
     </None>
     <None Include="Seguridad\UserDS.xsc">
       <DependentUpon>UserDS.xsd</DependentUpon>

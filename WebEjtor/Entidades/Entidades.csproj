@@ -46,6 +46,7 @@
     <Compile Include="Seguridad\Empresa.cs" />
     <Compile Include="Seguridad\Producto.cs" />
     <Compile Include="Seguridad\Recuperacion.cs" />
+    <Compile Include="Seguridad\TipoHijos.cs" />
     <Compile Include="Seguridad\User.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -55,5 +55,48 @@ namespace Access.Seguridad
             }
             return empresaId.Value;
         }
+
+        public static void updateEmpresa(Empresa obj)
+        {
+            if (obj == null)
+            {
+                throw new ArgumentException("El objeto Empresa no puede ser nulo");
+            }
+
+            EmpresaTableAdapter adapter = new EmpresaTableAdapter();
+            adapter.Update(obj.TipoIdc, obj.Nit, obj.Nombre, obj.Gerente, obj.Telefono, obj.EmpresaId);
+
+        }
+
+        public static Empresa getEmpresaById(int empresaId)
+        {
+            if (empresaId <= 0)
+            {
+                return null;
+            }
+
+            EmpresaTableAdapter adapter = new EmpresaTableAdapter();
+            EmpresaDS.EmpresaDataTable table = adapter.GetEmpresaById(empresaId);
+
+            if (table.Rows.Count == 0)
+            {
+                return null;
+            }
+
+            EmpresaDS.EmpresaRow row = table[0];
+
+            Empresa obj = new Empresa()
+            {
+                EmpresaId = row.empresaId,
+                TipoIdc = row.tipoIdc,
+                Nit = row.nit,
+                Nombre = row.nombre,
+                Gerente = row.gerente,
+                Telefono = row.telefono,
+                Estado = row.estado
+            };
+
+            return obj;
+        }
     }
 }

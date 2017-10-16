@@ -6,7 +6,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <form id="formRegist" class="col-md-6  col-md-offset-3" runat="server">
+    <div id="formRegist" class="col-md-6  col-md-offset-3" runat="server">
         <h2>Registrar Administradores</h2>
         <br />
         <div class="form-group">
@@ -59,6 +59,6 @@
          
         <asp:Label ID="lbVal" runat="server" Text="" Visible="false" ForeColor="Red"></asp:Label>
          
-    </form>
+    </div>
 </asp:Content>
 

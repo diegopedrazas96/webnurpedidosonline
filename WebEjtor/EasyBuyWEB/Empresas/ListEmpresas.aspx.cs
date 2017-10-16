@@ -7,10 +7,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Productos_ListProductos : System.Web.UI.Page
+public partial class Empresas_ListEmpresas : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        //Validaciones para Insertar, Editar y eliminar
         if (!IsPostBack)
         {
             cargarEmpresas();
@@ -18,17 +19,18 @@ public partial class Productos_ListProductos : System.Web.UI.Page
 
     }
 
-    protected void GridProductos_RowCommand(object sender, GridViewCommandEventArgs e)
+    protected void GridEmpresas_RowCommand(object sender, GridViewCommandEventArgs e)
     {
-        int productoId = 0;
+        int empresaId = 0;
         try
         {
-            productoId = Convert.ToInt32(e.CommandArgument);
+            empresaId = Convert.ToInt32(e.CommandArgument);
         }
         catch (Exception ex)
         {
+
         }
-        if (productoId <= 0)
+        if (empresaId <= 0)
             return;
 
         if (e.CommandName == "Eliminar")
@@ -47,15 +49,16 @@ public partial class Productos_ListProductos : System.Web.UI.Page
         }
         if (e.CommandName == "Editar")
         {
-            Response.Redirect("FormProducto.aspx?Id=" + productoId.ToString());
+            Response.Redirect("FormEmpresa.aspx?Id=" + empresaId.ToString());
             return;
         }
     }
 
+
     public void cargarEmpresas()
     {
-        List<Producto> admins = ProductoBRL.getProductos();
-        GridProductos.DataSource = admins;
-        GridProductos.DataBind();
+        List<Empresa> admins = EmpresaBRL.getEmpresas();
+        GridEmpresas.DataSource = admins;
+        GridEmpresas.DataBind();
     }
 }

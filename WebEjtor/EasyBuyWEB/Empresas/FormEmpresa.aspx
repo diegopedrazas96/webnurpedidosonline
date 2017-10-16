@@ -1,10 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/MasterPage.master" AutoEventWireup="true" CodeFile="RegistEmpresa.aspx.cs" Inherits="Empresas_RegistEmpresa" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/MasterPage.master" AutoEventWireup="true" CodeFile="FormEmpresa.aspx.cs" Inherits="Empresas_RegistEmpresa" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <form id="formRegist" class="col-md-6  col-md-offset-3" runat="server">
-        <h2>Registrar Empresas</h2>
+    <div id="formRegist" class="col-md-6  col-md-offset-3" runat="server">
+        <h2 runat="server" id="lbRist">Registrar Empresas</h2>
         <br />
         <div class="form-group">
             <label>NIT:</label>
@@ -16,7 +16,7 @@
 
         <div class="form-group">
             <label>Nombre:</label>
-            <asp:TextBox ID="txtNombre" runat="server"
+            <asp:TextBox ID="txtNombreEmp" runat="server"
                 CssClass="form-control"
                 placeholder="Ingrese Nombre de Empresa">
             </asp:TextBox>
@@ -52,6 +52,6 @@
             CssClass="btn btn-primary"
             OnClick="btnRegistrar_Click" />
 
-    </form>
+    </div>
 </asp:Content>
 

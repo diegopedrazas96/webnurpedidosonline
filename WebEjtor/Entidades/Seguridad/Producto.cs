@@ -12,7 +12,7 @@ namespace Entidades.Seguridad
         public int TipoIdc { get; set; }
         public int EmpresaId { get; set; }
         public string Nombre { get; set; }
-        public decimal precio { get; set; }
+        public decimal Precio { get; set; }
         public bool Estado { get; set; }
         public Producto()
         {

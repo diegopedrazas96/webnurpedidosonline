@@ -3,21 +3,18 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <form runat="server">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Lista de Colaboradores</h1>
-                <asp:hyperlink runat="server" navigateurl="~/AdminUsers/RegistUsers.aspx">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Lista de Colaboradores</h1>
+            <asp:HyperLink runat="server" NavigateUrl="~/AdminUsers/RegistUsers.aspx">
                 AÑADIR NUEVO COLABORADOR +
-                </asp:hyperlink>
+            </asp:HyperLink>
 
-                <asp:gridview id="GridUsers" runat="server" cssclass="table" gridlines="None">
+            <asp:GridView ID="GridUsers" runat="server" CssClass="table" GridLines="None">
+            </asp:GridView>
 
-                </asp:gridview>
-
-            </div>
         </div>
+    </div>
 
-    </form>
 </asp:Content>
 

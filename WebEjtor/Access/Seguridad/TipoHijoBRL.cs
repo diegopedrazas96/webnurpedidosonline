@@ -35,5 +35,26 @@ namespace Access.Seguridad
 
             return listHijos;
         }
+
+        public static List<TipoHijos> geTipoHijos()
+        {
+            TipoHijosTableAdapter adapter = new TipoHijosTableAdapter();
+            TipoHijoDS.TipoHijosDataTable table = adapter.GetTipoHijos();
+
+            List<TipoHijos> listHijos = new List<TipoHijos>();
+            foreach (var row in table)
+            {
+                TipoHijos obj = new TipoHijos();
+                obj.TipoHijosId = row.tipoHijosId;
+                obj.TipoMaestroId = row.tipoMaestroId;
+                obj.Nombre = row.nombre;
+                obj.Valor = row.valor;
+                obj.Estado = row.estado;
+
+                listHijos.Add(obj);
+            }
+
+            return listHijos;
+        }
     }
 }

@@ -22,6 +22,7 @@ public partial class Productos_FormProducto : System.Web.UI.Page
             EmpresaComboBox.DataBind();
             //Tipo Producto
             List<TipoHijos> tipoHijos = TipoHijoBRL.getTipoHijoByIdMaestro(2);
+            
             TipoProdComboBox.DataSource = tipoHijos;
             TipoProdComboBox.DataBind();
 

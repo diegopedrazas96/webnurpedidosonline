@@ -78,3 +78,13 @@ E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Access\bin\De
 E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Access\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Access\obj\Debug\Negocio.dll
 E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Access\obj\Debug\Negocio.pdb
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\Access\bin\Debug\Negocio.dll
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\Access\bin\Debug\Negocio.pdb
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\Access\bin\Debug\Data.dll
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\Access\bin\Debug\Entidades.dll
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\Access\bin\Debug\MySql.Data.dll
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\Access\bin\Debug\Data.pdb
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\Access\bin\Debug\Entidades.pdb
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\Access\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\Access\obj\Debug\Negocio.dll
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\Access\obj\Debug\Negocio.pdb

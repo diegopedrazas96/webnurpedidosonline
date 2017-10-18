@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <solid android:color="@color/blue" />
+
+    <corners
+            android:bottomRightRadius="7dp"
+            android:bottomLeftRadius="7dp"
+            android:topLeftRadius="7dp"
+            android:topRightRadius="7dp"/>
+
+</shape><!-- From: file:/E:/Diego/Proyectos/Web/Software3/WebNurPedidosOnline/android/app/src/main/res/drawable/menu_item_default.xml -->

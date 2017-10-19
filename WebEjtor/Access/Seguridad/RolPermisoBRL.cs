@@ -46,15 +46,15 @@ namespace Access.Seguridad
                 throw new ArgumentException("El objeto Producto no debe ser nulo");
             }
 
-            int? rolPermisoId = 0;
+            int? rolPermisoId = null;
             ROLPERMISOTableAdapter adapter = new ROLPERMISOTableAdapter();
             adapter.Insert(obj.RolId, obj.PermisoID, obj.Estado, ref rolPermisoId);
 
-            if (rolPermisoId <= 0)
+            if (rolPermisoId == null || rolPermisoId <= 0)
             {
-                throw new ArgumentException("Falla al insertar, el productoId es menor que 0");
+                throw new ArgumentException("La llave primaria no se generó correctamente");
             }
-
+            
             return rolPermisoId.Value;
         }
 

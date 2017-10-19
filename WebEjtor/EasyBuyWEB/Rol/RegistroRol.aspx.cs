@@ -29,17 +29,18 @@ public partial class Roles_RegistRol : System.Web.UI.Page
 
         int codigoRol = RolBRL.insertRol(obj);
 
-        //RolPermiso rolPermiso;
+        RolPermiso rolPermiso;
         Permisos tempPermiso;
         //Le inserto los permisos
+
 
         for (int i = 0; i < checkPermisos.Items.Count; i++)
         {
             if (checkPermisos.Items[i].Selected)
             {
-                tempPermiso = PermisosBRL.getPermisoByDescription(checkPermisos.Items[i].Text);
+                tempPermiso = PermisosBRL.getPermisoByNombre(checkPermisos.Items[i].Text);
 
-                RolPermiso rolPermiso = new RolPermiso()
+                rolPermiso = new RolPermiso()
                 {
                     RolId = codigoRol,
                     PermisoID = tempPermiso.PermisoId,
@@ -49,8 +50,8 @@ public partial class Roles_RegistRol : System.Web.UI.Page
                 RolPermisoBRL.insertRolPermiso(rolPermiso);
             }
         }
-        
-        Response.Redirect("~/RolListRol.aspx");
+
+        Response.Redirect("~/Rol/ListRol.aspx");
 
     }
 }

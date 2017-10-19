@@ -15,6 +15,8 @@ namespace Entidades.Seguridad
         public int PermisoId { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
+        public string url { get; set; }
+        public string posicion { get; set; }        
         public string Estado { get; set; }
     }
 }

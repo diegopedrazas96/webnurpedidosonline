@@ -11,10 +11,10 @@ namespace Access.Seguridad
 {
     public class PermisosBRL
     {
-        public static Permisos getPermisoByDescription(string nombre)
+        public static Permisos getPermisoByNombre(string nombre)
         {
             PERMISOTableAdapter adapter = new PERMISOTableAdapter();
-            PermisoDS.PERMISODataTable tabla = adapter.GetPermisoNombre(nombre);
+            PermisoDS.PERMISODataTable tabla = adapter.GetPermisoByNombre(nombre);
 
             if (tabla.Rows.Count == 0)
             {
@@ -24,9 +24,11 @@ namespace Access.Seguridad
             Permisos obj = new Permisos()
             {
                 PermisoId = row.permisoId,
-                Nombre = row.nombre
+                Descripcion = row.descripcion,
+                url = row.url,
+                posicion = row.posicion,
+                Estado = row.estado               
             };
-
             return obj;
         }
     }

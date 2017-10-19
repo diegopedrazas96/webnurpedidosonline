@@ -42,16 +42,15 @@ namespace Access.Seguridad
                 throw new ArgumentException("El objeto Producto no debe ser nulo");
             }
 
-            int? rolId = 0;
+            int? rolId = null;
 
             ROLTableAdapter adapter = new ROLTableAdapter();
-            adapter.Insert(obj.Nombre, obj.Descripcion, obj.Estado, ref rolId);       
+            adapter.Insert(obj.Nombre, obj.Descripcion, obj.Estado, ref rolId);
 
-            if (rolId <= 0)
+            if (rolId == null || rolId <= 0)
             {
-                throw new ArgumentException("Falla al insertar, el rolId es menor que 0");
+                throw new ArgumentException("La llave primaria no se generó correctamente");
             }
-
             return rolId.Value;
         }
 

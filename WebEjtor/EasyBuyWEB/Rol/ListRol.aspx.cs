@@ -13,6 +13,7 @@ public partial class Productos_ListProductos : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         List<Rol> roles = RolBRL.getRol();
+
         GridRol.DataSource = roles;
         GridRol.DataBind();
 

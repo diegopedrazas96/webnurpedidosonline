@@ -24,6 +24,14 @@ import com.beardedhen.androidbootstrap.FontAwesomeText;
 import com.nur.compraonline.Application;
 import com.nur.compraonline.R;
 import com.nur.compraonline.component.Menu;
+import com.nur.compraonline.data.security.DClasificadores;
+import com.nur.compraonline.data.security.DEmpresa;
+import com.nur.compraonline.data.security.DProducto;
+import com.nur.compraonline.data.security.DUser;
+import com.nur.compraonline.model.Action;
+import com.nur.compraonline.model.security.Clasificadores;
+import com.nur.compraonline.model.security.Empresa;
+import com.nur.compraonline.model.security.Producto;
 import com.nur.compraonline.model.security.Usuario;
 import com.nur.compraonline.service.Service;
 
@@ -123,8 +131,18 @@ public class Login extends AppCompatActivity {
                 Service service = new Service(Login.this);
                 //Llamada a las Dal
                 if (action == 1) {
-                    loginUser = service.getUserByEmailPass(email,password);
-                    if (loginUser != null & loginUser.getUsuarioId() > 0){
+                    loginUser = service.getUser(email,password);
+                    if (loginUser != null && loginUser.getUsuarioId() > 0){
+
+                        DUser dal  = new DUser(context);
+                        dal.clean();
+                        DEmpresa dalEmpresa = new DEmpresa(context);
+                        DProducto dalProductos = new DProducto(context);
+                        dalEmpresa.clean();
+                        dalProductos.clean();
+                        loginUser.setAction(Action.Insert);
+                        dal.save(loginUser);
+
                         return true;
                     }
 
@@ -132,8 +150,8 @@ public class Login extends AppCompatActivity {
                 if (action == 2) {
                     Usuario user = new Usuario();
                     user.setEmail(email);
-                    Usuario send = service.getUserByEmail(user,"","123");
-                    if (send != null && send.getUsuarioId() > 0){
+                    long send = service.postRestorePass(user,"","");
+                    if (send > 0){
                         return true;
                     }
 
@@ -150,13 +168,13 @@ public class Login extends AppCompatActivity {
                 //Sincronizacion Terminada
                 Log.i(Application.tag, "Actualizando pantalla principal");
                 if (action ==1){
-                    Toast.makeText(context,"Usuario y Contraseña Correctos.!",Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(Login.this,RegistroPedido.class);
-                    startActivity(intent);
+                    Toast.makeText(context,"Usuario y Contraseña Correctos.!",Toast.LENGTH_SHORT).show();
+                    LoadData callService = new LoadData(1,Login.this);
+                    callService.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 
                 }
                 if (action ==2){
-                    Toast.makeText(context,"Recuperacion Exitosa.! Se ha enviado un correo a su email.",Toast.LENGTH_LONG).show();
+                    Toast.makeText(context,"Recuperacion Exitosa.! Se ha enviado un correo a su email.",Toast.LENGTH_SHORT).show();
 
                 }
 
@@ -166,6 +184,87 @@ public class Login extends AppCompatActivity {
         }
 
     }
+    private class LoadData extends AsyncTask<Integer, Void, Boolean> {
+
+        private ProgressDialog progressDialog;
+        private int action;
+        private Context context;
+        private String email, password;
+        private int productRegistries;
+        private int countSyncronize = 0;
+
+        public LoadData(int varAction, Context cont) {
+            this.action = varAction;
+            this.context = cont;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            progressDialog = ProgressDialog.show(Login.this, null, getString(R.string.procesando));
+        }
+
+        @Override
+        protected Boolean doInBackground(Integer... arg0) {
+            try {
+                Service service = new Service(Login.this);
+                //Llamada a las Dal
+                if (action == 1) {
+                    List<Empresa> lstEmpresas= service.getEmpresas("", "");
+                    List<Producto> lstProducto= service.getProductos("", "");
+                    List<Clasificadores> lstClasificadores= service.getClasificadores("", "");
+                    DEmpresa dalEmpresa = new DEmpresa(context);
+                    for (Empresa emp : lstEmpresas) {
+                        emp.setAction(Action.Insert);
+                        dalEmpresa.save(emp);
+                    }
+                    DProducto dalProducto = new DProducto(context);
+                    for (Producto emp : lstProducto) {
+                        emp.setAction(Action.Insert);
+                        dalProducto.save(emp);
+                    }
+                    DClasificadores dalClasificadoes = new DClasificadores(context);
+                    for (Clasificadores emp : lstClasificadores) {
+                        emp.setAction(Action.Insert);
+                        dalClasificadoes.save(emp);
+                    }
+
+                    return true;
 
 
-}
+                }
+                if (action == 2) {
+                    Usuario user = new Usuario();
+                    user.setEmail(email);
+                    long send = service.postRestorePass(user, "", "");
+                    if (send > 0) {
+                        return true;
+                    }
+
+                }
+
+            } catch (Exception e) {
+                return false;
+            }
+            return false;
+        }
+
+        protected void onPostExecute(Boolean result) {
+            progressDialog.dismiss();
+            if (result) {
+                //Sincronizacion Terminada
+                Log.i(Application.tag, "Actualizando pantalla principal");
+                if (action == 1) {
+                    Toast.makeText(context, "Datos Obtenidos Correctamente.!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(Login.this,ListaEmpresas.class);
+                    startActivity(intent);
+                }
+
+
+            } else {
+                Toast.makeText(context, " Ocurrio un error al procesar los datos.!", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+
+    }

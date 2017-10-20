@@ -15,6 +15,11 @@ import com.nur.compraonline.model.Entity;
 import com.nur.compraonline.model.annotation.Ignore;
 import com.nur.compraonline.model.annotation.Key;
 import com.nur.compraonline.model.annotation.Nullable;
+import com.nur.compraonline.model.security.Clasificadores;
+import com.nur.compraonline.model.security.DetallePedido;
+import com.nur.compraonline.model.security.Empresa;
+import com.nur.compraonline.model.security.Pedido;
+import com.nur.compraonline.model.security.Producto;
 import com.nur.compraonline.model.security.Usuario;
 
 import java.lang.reflect.Field;
@@ -108,19 +113,11 @@ public abstract class Wrapper<T> extends SQLiteOpenHelper {
 
         //Security
         db.execSQL(getCreate(Usuario.class));
-       /* //Inventory
-        db.execSQL(getCreate(Product.class));
-        db.execSQL(getCreate(Stock.class));
-        db.execSQL(getCreate(Customer.class));
-        db.execSQL(getCreate(TempCustomer.class));
-        db.execSQL(getCreate(UserPath.class));
-        db.execSQL(getCreate(Count.class));
-        db.execSQL(getCreate(Proforma.class));
-        db.execSQL(getCreate(DetProformas.class));
-        db.execSQL(getCreate(InventarioMobil.class));
-        db.execSQL(getCreate(DetInventarioMobil.class));
-        db.execSQL(getCreate(ParametroMobil.class));*/
-
+        db.execSQL(getCreate(Empresa.class));
+        db.execSQL(getCreate(Producto.class));
+        db.execSQL(getCreate(Clasificadores.class));
+        db.execSQL(getCreate(Pedido.class));
+        db.execSQL(getCreate(DetallePedido.class));
     }
 
     public <T extends Entity> String extract(List<T> list, String metodo) throws QueryException {

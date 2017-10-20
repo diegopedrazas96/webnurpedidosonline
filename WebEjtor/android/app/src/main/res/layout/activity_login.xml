@@ -28,7 +28,7 @@
             android:layout_weight="0.6"
             android:padding="7dp"
             android:background="@drawable/edt_white_curve"
-            android:inputType="textEmailAddress"
+            android:inputType="text"
             android:selectAllOnFocus="true"
             android:enabled="true"
             android:gravity="right"/>
@@ -46,7 +46,6 @@
             android:gravity="left"
             android:text="@string/password"
             android:textColor="@color/dark_blue"
-
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"/>
 
         <EditText

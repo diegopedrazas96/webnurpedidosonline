@@ -1,6 +1,5 @@
 package com.nur.compraonline.model.security;
 
-import com.google.gson.annotations.SerializedName;
 import com.nur.compraonline.model.Entity;
 
 import java.util.Date;
@@ -11,66 +10,62 @@ import java.util.Date;
 
 public class Usuario extends Entity {
 
-    @SerializedName("UsuarioId")
-    private Long usuarioId;
-    @SerializedName("Nombre")
-    private String nombre;
-    @SerializedName("Apellido")
-    private String apellido;
-    @SerializedName("Email")
-    private String email;
-    @SerializedName("Contraseña")
-    private String contraseña;
-    private String tipoUsuario;
+
+    private Long UsuarioId;
+    private String Nombre;
+    private String Apellido;
+    private String Email;
+    private String Contraseña;
+    private Long TipoUsuario;
 
     public Usuario() {
     }
 
     public Long getUsuarioId() {
-        return usuarioId;
+        return UsuarioId;
     }
 
     public void setUsuarioId(Long usuarioId) {
-        this.usuarioId = usuarioId;
+        UsuarioId = usuarioId;
     }
 
     public String getNombre() {
-        return nombre;
+        return Nombre;
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        Nombre = nombre;
     }
 
     public String getApellido() {
-        return apellido;
+        return Apellido;
     }
 
     public void setApellido(String apellido) {
-        this.apellido = apellido;
+        Apellido = apellido;
     }
 
     public String getEmail() {
-        return email;
+        return Email;
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        Email = email;
     }
 
     public String getContraseña() {
-        return contraseña;
+        return Contraseña;
     }
 
     public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+        Contraseña = contraseña;
     }
 
-    public String getTipoUsuario() {
-        return tipoUsuario;
+    public Long getTipoUsuario() {
+        return TipoUsuario;
     }
 
-    public void setTipoUsuario(String tipoUsuario) {
-        this.tipoUsuario = tipoUsuario;
+    public void setTipoUsuario(Long tipoUsuario) {
+        TipoUsuario = tipoUsuario;
     }
 }

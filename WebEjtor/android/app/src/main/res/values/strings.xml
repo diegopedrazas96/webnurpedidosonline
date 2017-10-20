@@ -8,6 +8,7 @@
     <string name="start_period">Inicio Periodo</string>
     <string name="close_period">Cierre Periodo</string>
     <string name="message_close">Esta Seguro de salir de la aplicacion?</string>
+    <string name="message_close_sesion">Esta Seguro de cerrar sesion?</string>
     <string name="pedidos">Pedidos</string>
     <string name="arduino">Arduino</string>
     <string name="usuario">Usuario</string>
@@ -33,4 +34,18 @@
     <string name="enviando">Enviando</string>
     <string name="email">Email</string>
     <string name="procesando">Procesando</string>
+    <string name="search">Buscar</string>
+    <string name="pedido">Nuevo Pedido</string>
+    <string name="precio">Precio:</string>
+    <string name="cantidad">Cantidad</string>
+    <string name="add_product">Agregar Producto</string>
+    <string name="message_no_quantity">No Puede Ingresar una cantidad menor a 0.</string>
+    <string name="info">Pedido</string>
+    <string name="detallepedido">Detalle de Pedido</string>
+    <string name="enviar">Enviar</string>
+    <string name="code">Codigo</string>
+    <string name="descripcion">Descripcion</string>
+    <string name="total">Total</string>
+    <string name="subtotal">SubTotal</string>
+    <string name="cerrar">Cerrar Sesion</string>
 </resources>

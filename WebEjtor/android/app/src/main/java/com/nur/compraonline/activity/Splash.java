@@ -14,6 +14,8 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.nur.compraonline.Application;
 import com.nur.compraonline.R;
+import com.nur.compraonline.data.security.DUser;
+import com.nur.compraonline.model.security.Usuario;
 
 
 public class Splash extends Activity {
@@ -47,9 +49,15 @@ public class Splash extends Activity {
                         try {
                             Thread.sleep(2000);
                             //validamos que el usuario haya iniciado sesion
+                            Usuario objUser = new DUser(Splash.this).get();
+                            if (objUser != null && objUser.getId()!= null && objUser.getId() > 0){
+                                Intent intent = new Intent(Splash.this, ListaEmpresas.class);
+                                startActivity(intent);
+                            }else {
+                                Intent intent = new Intent(Splash.this, Inicio.class);
+                                startActivity(intent);
+                            }
 
-                            Intent intent = new Intent(Splash.this, Inicio.class);
-                            startActivity(intent);
                             finish();
                         } catch (Exception e) {
                             e.printStackTrace();

@@ -2,7 +2,6 @@ package com.nur.compraonline.activity;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -59,7 +58,7 @@ public class Register extends AppCompatActivity {
                 customer.setApellido(etApellido.getText().toString());
                 customer.setEmail(etCorreo.getText().toString());
                 customer.setContraseña(etPassword.getText().toString());
-                customer.setTipoUsuario("1");
+                customer.setTipoUsuario(1L);
 
                 if (validate()==true) {
                     Call task = new Call(1,Register.this);
@@ -106,7 +105,8 @@ public class Register extends AppCompatActivity {
         private ProgressDialog progressDialog;
         private int action;
         private Context context;
-
+        private int productRegistries;
+        private int countSyncronize = 0;
         public Call(int varAction,Context cont) {
             this.action = varAction;
             this.context= cont;
@@ -141,15 +141,10 @@ public class Register extends AppCompatActivity {
                 //Sincronizacion Terminada
                 Log.i(Application.tag, "Actualizando pantalla principal");
                 if (action ==1){
-                    Toast.makeText(context, " Registrado Correctamente.!",Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(Register.this,Main.class);
-                    startActivity(intent);
-
+                    Toast toas = Toast.makeText(context,productRegistries + " Registros Obtenidos Correctamente.!",Toast.LENGTH_SHORT);
+                    toas.show();
                 }
 
-            }else{
-                Intent intent = new Intent(Register.this,Main.class);
-                startActivity(intent);
             }
         }
 

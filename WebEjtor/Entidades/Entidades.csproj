@@ -44,10 +44,16 @@
     <Compile Include="Enumeradores.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Seguridad\Empresa.cs" />
+<<<<<<< HEAD
     <Compile Include="Seguridad\DetallePedido.cs" />
     <Compile Include="Seguridad\Pedido.cs" />
+=======
+    <Compile Include="Seguridad\Permisos.cs" />
+>>>>>>> d901cb4fb95ea4609c59f7e49c96a46872056249
     <Compile Include="Seguridad\Producto.cs" />
     <Compile Include="Seguridad\Recuperacion.cs" />
+    <Compile Include="Seguridad\Rol.cs" />
+    <Compile Include="Seguridad\RolPermiso.cs" />
     <Compile Include="Seguridad\TipoHijos.cs" />
     <Compile Include="Seguridad\User.cs" />
   </ItemGroup>

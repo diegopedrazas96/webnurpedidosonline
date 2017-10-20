@@ -88,3 +88,13 @@ E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\Access\bin\Debug\E
 E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\Access\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\Access\obj\Debug\Negocio.dll
 E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\Access\obj\Debug\Negocio.pdb
+C:\Software3\WebEjtor\Access\bin\Debug\Negocio.dll
+C:\Software3\WebEjtor\Access\bin\Debug\Negocio.pdb
+C:\Software3\WebEjtor\Access\bin\Debug\Data.dll
+C:\Software3\WebEjtor\Access\bin\Debug\Entidades.dll
+C:\Software3\WebEjtor\Access\bin\Debug\MySql.Data.dll
+C:\Software3\WebEjtor\Access\bin\Debug\Data.pdb
+C:\Software3\WebEjtor\Access\bin\Debug\Entidades.pdb
+C:\Software3\WebEjtor\Access\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Software3\WebEjtor\Access\obj\Debug\Negocio.dll
+C:\Software3\WebEjtor\Access\obj\Debug\Negocio.pdb

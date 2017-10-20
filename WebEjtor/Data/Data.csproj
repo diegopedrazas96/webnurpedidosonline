@@ -74,6 +74,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EmpresaDS.xsd</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Seguridad\DetallePedidoDS.cs">
       <DependentUpon>DetallePedidoDS.xsd</DependentUpon>
     </Compile>
@@ -89,6 +90,12 @@
       <DependentUpon>PedidoDS.xsd</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+=======
+    <Compile Include="Seguridad\PermisoDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PermisoDS.xsd</DependentUpon>
+>>>>>>> d901cb4fb95ea4609c59f7e49c96a46872056249
     </Compile>
     <Compile Include="Seguridad\ProductoDS.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -99,6 +106,19 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RecuperacionDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\RolDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RolDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\RolXPermisoDS.cs">
+      <DependentUpon>RolXPermisoDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\RolXPermisoDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RolXPermisoDS.xsd</DependentUpon>
     </Compile>
     <Compile Include="Seguridad\TipoHijoDS.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -133,6 +153,7 @@
     <None Include="Seguridad\EmpresaDS.xss">
       <DependentUpon>EmpresaDS.xsd</DependentUpon>
     </None>
+<<<<<<< HEAD
     <None Include="Seguridad\DetallePedidoDS.xsc">
       <DependentUpon>DetallePedidoDS.xsd</DependentUpon>
     </None>
@@ -154,6 +175,18 @@
     </None>
     <None Include="Seguridad\PedidoDS.xss">
       <DependentUpon>PedidoDS.xsd</DependentUpon>
+=======
+    <None Include="Seguridad\PermisoDS.xsc">
+      <DependentUpon>PermisoDS.xsd</DependentUpon>
+    </None>
+    <None Include="Seguridad\PermisoDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PermisoDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Seguridad\PermisoDS.xss">
+      <DependentUpon>PermisoDS.xsd</DependentUpon>
+>>>>>>> d901cb4fb95ea4609c59f7e49c96a46872056249
     </None>
     <None Include="Seguridad\ProductoDS.xsc">
       <DependentUpon>ProductoDS.xsd</DependentUpon>
@@ -176,6 +209,28 @@
     </None>
     <None Include="Seguridad\RecuperacionDS.xss">
       <DependentUpon>RecuperacionDS.xsd</DependentUpon>
+    </None>
+    <None Include="Seguridad\RolDS.xsc">
+      <DependentUpon>RolDS.xsd</DependentUpon>
+    </None>
+    <None Include="Seguridad\RolDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RolDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Seguridad\RolDS.xss">
+      <DependentUpon>RolDS.xsd</DependentUpon>
+    </None>
+    <None Include="Seguridad\RolXPermisoDS.xsc">
+      <DependentUpon>RolXPermisoDS.xsd</DependentUpon>
+    </None>
+    <None Include="Seguridad\RolXPermisoDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RolXPermisoDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Seguridad\RolXPermisoDS.xss">
+      <DependentUpon>RolXPermisoDS.xsd</DependentUpon>
     </None>
     <None Include="Seguridad\TipoHijoDS.xsc">
       <DependentUpon>TipoHijoDS.xsd</DependentUpon>

@@ -22,6 +22,12 @@
                 <ul class="nav nav-tabs">
                     <li role="presentation">
                         <asp:HyperLink runat="server"
+                            NavigateUrl="~/Empresas/ListEmpresas.aspx"
+                            Text="Empresas">
+                        </asp:HyperLink>
+                    </li>
+                    <li role="presentation">
+                        <asp:HyperLink runat="server"
                             NavigateUrl="~/Productos/ListProductos.aspx"
                             Text="Productos">
                         </asp:HyperLink>
@@ -52,8 +58,11 @@
         </div>
     </div>
     <div class="container">
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        </asp:ContentPlaceHolder>
+        <form id="form1" runat="server" class="container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </form>
+        
     </div>
     <br />
     <br />

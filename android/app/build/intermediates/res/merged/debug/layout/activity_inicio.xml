@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white">
+
+
+    <ListView
+            android:id="@+id/menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:choiceMode="singleChoice"
+            android:divider="@color/white"
+            android:dividerHeight="7dp"
+            android:padding="7dp"
+            android:listSelector="@drawable/menu_item"/>
+
+
+</LinearLayout>
+<!-- From: file:/E:/Diego/Proyectos/Web/Software3/WebNurPedidosOnline/android/app/src/main/res/layout/activity_inicio.xml -->

@@ -42,12 +42,12 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Seguridad\EmpresaBRL.cs" />
-<<<<<<< HEAD
+
     <Compile Include="Seguridad\DetallePedidoBRL.cs" />
     <Compile Include="Seguridad\PedidoBRL.cs" />
-=======
+
     <Compile Include="Seguridad\PermisosBRL.cs" />
->>>>>>> d901cb4fb95ea4609c59f7e49c96a46872056249
+
     <Compile Include="Seguridad\ProductoBRL.cs" />
     <Compile Include="Seguridad\RecuperacionBRL.cs" />
     <Compile Include="Seguridad\RolBRL.cs" />

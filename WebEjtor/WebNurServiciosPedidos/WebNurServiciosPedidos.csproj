@@ -235,6 +235,7 @@
     <Compile Include="Controllers\ClasificadoresController.cs" />
     <Compile Include="Controllers\RecController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\PedidoController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />

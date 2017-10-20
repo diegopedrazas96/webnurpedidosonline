@@ -37,7 +37,7 @@ namespace WebNurServiciosPedidos.Controllers
 
             try
             {
-                List<Entidades.Seguridad.TipoHijos> lstHijos = NS.TipoHijoBRL.getTipoHijoByIdMaestro(1);
+                List<Entidades.Seguridad.TipoHijos> lstHijos = NS.TipoHijoBRL.geTipoHijos();
                 msg = Request.CreateResponse<List<Entidades.Seguridad.TipoHijos>>(HttpStatusCode.OK, lstHijos);
                 return msg;
 

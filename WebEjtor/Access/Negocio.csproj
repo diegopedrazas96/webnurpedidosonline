@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Seguridad\EmpresaBRL.cs" />
+    <Compile Include="Seguridad\DetallePedidoBRL.cs" />
+    <Compile Include="Seguridad\PedidoBRL.cs" />
     <Compile Include="Seguridad\ProductoBRL.cs" />
     <Compile Include="Seguridad\RecuperacionBRL.cs" />
     <Compile Include="Seguridad\TipoHijoBRL.cs" />

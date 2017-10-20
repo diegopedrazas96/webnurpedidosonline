@@ -74,6 +74,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EmpresaDS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Seguridad\DetallePedidoDS.cs">
+      <DependentUpon>DetallePedidoDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\DetallePedidoDS.Designer.cs">
+      <DependentUpon>DetallePedidoDS.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Seguridad\PedidoDS.cs">
+      <DependentUpon>PedidoDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\PedidoDS.Designer.cs">
+      <DependentUpon>PedidoDS.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Seguridad\ProductoDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -116,6 +132,28 @@
     </None>
     <None Include="Seguridad\EmpresaDS.xss">
       <DependentUpon>EmpresaDS.xsd</DependentUpon>
+    </None>
+    <None Include="Seguridad\DetallePedidoDS.xsc">
+      <DependentUpon>DetallePedidoDS.xsd</DependentUpon>
+    </None>
+    <None Include="Seguridad\DetallePedidoDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DetallePedidoDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Seguridad\DetallePedidoDS.xss">
+      <DependentUpon>DetallePedidoDS.xsd</DependentUpon>
+    </None>
+    <None Include="Seguridad\PedidoDS.xsc">
+      <DependentUpon>PedidoDS.xsd</DependentUpon>
+    </None>
+    <None Include="Seguridad\PedidoDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PedidoDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Seguridad\PedidoDS.xss">
+      <DependentUpon>PedidoDS.xsd</DependentUpon>
     </None>
     <None Include="Seguridad\ProductoDS.xsc">
       <DependentUpon>ProductoDS.xsd</DependentUpon>

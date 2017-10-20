@@ -289,6 +289,7 @@ E:\Diego\nur\Ing. Software III\proyectofinal\webnurpedidosonline\WebEjtor\WebNur
 E:\Diego\nur\Ing. Software III\proyectofinal\webnurpedidosonline\WebEjtor\WebNurServiciosPedidos\obj\Debug\WebNurServiciosPedidos.csprojResolveAssemblyReference.cache
 E:\Diego\nur\Ing. Software III\proyectofinal\webnurpedidosonline\WebEjtor\WebNurServiciosPedidos\obj\Debug\WebNurServiciosPedidos.dll
 E:\Diego\nur\Ing. Software III\proyectofinal\webnurpedidosonline\WebEjtor\WebNurServiciosPedidos\obj\Debug\WebNurServiciosPedidos.pdb
+E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\WebNurServiciosPedidos\bin\ApplicationInsights.config
 E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\WebNurServiciosPedidos\bin\roslyn\csc.exe
 E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\WebNurServiciosPedidos\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\WebNurServiciosPedidos\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -301,7 +302,6 @@ E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\WebNurServiciosPed
 E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\WebNurServiciosPedidos\bin\roslyn\vbc.exe
 E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\WebNurServiciosPedidos\bin\roslyn\VBCSCompiler.exe
 E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\WebNurServiciosPedidos\bin\roslyn\VBCSCompiler.exe.config
-E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\WebNurServiciosPedidos\bin\ApplicationInsights.config
 E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\WebNurServiciosPedidos\bin\WebNurServiciosPedidos.dll.config
 E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\WebNurServiciosPedidos\bin\WebNurServiciosPedidos.dll
 E:\Diego\Proyectos\Web\Software3\WebNurPedidosOnline\WebEjtor\WebNurServiciosPedidos\bin\WebNurServiciosPedidos.pdb

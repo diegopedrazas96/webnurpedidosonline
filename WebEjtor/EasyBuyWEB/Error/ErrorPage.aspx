@@ -11,7 +11,7 @@
                         Text="Base de Datos no Versionada">
                     </asp:Literal>
                 </h1>
-                <asp:HyperLink runat="server" NavigateUrl="~/Index.aspx">Ir a Inicio</asp:HyperLink>
+                
             </div>
         </div>
     </div>

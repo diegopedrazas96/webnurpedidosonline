@@ -92,12 +92,7 @@ public partial class Empresas_RegistEmpresa : System.Web.UI.Page
             return;
         }
 
-        Empresa tempName = EmpresaBRL.getEmpresaByNombre(nombre);
-        if (tempName != null)
-        {
-            lbVal.Text = "Ya existe una empresa con con ese nombre";
-            return;
-        }
+        
 
         if (objSelected == null)
         {
@@ -112,6 +107,12 @@ public partial class Empresas_RegistEmpresa : System.Web.UI.Page
 
         if (objSelected.EmpresaId == 0)
         {
+            Empresa tempName = EmpresaBRL.getEmpresaByNombre(nombre);
+            if (tempName != null)
+            {
+                lbVal.Text = "Ya existe una empresa con con ese nombre";
+                return;
+            }
             EmpresaBRL.insertEmpresa(objSelected);
         }
         else

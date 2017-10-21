@@ -16,7 +16,7 @@
         GridLines="None">
         <Columns>
             <asp:BoundField DataField="Nit" HeaderText="NIT" />
-            <asp:BoundField DataField="Nombre" HeaderText="Apellido" />
+            <asp:BoundField DataField="Nombre" HeaderText="Nombre Empresa" />
             <asp:BoundField DataField="Gerente" HeaderText="Gerente" />
             <asp:BoundField DataField="Telefono" HeaderText="Telefono" />
             <asp:TemplateField HeaderText="Editar">

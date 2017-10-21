@@ -62,7 +62,7 @@ public partial class Empresas_RegistEmpresa : System.Web.UI.Page
         string nombre = txtNombreEmp.Text.Trim();
         string gerente = txtGerente.Text.Trim();
         string telefono = txtTelefono.Text.Trim();
-
+        
         if (String.IsNullOrEmpty(nit))
         {
             lbVal.Text = "La casilla Nit no debe estar Vacía";
@@ -89,6 +89,13 @@ public partial class Empresas_RegistEmpresa : System.Web.UI.Page
         if (indexSelected == 0)
         {
             lbVal.Text = "Debe Seleccionar un Tipo de Empresa";
+            return;
+        }
+
+        Empresa tempName = EmpresaBRL.getEmpresaByNombre(nombre);
+        if (tempName != null)
+        {
+            lbVal.Text = "Ya existe una empresa con con ese nombre";
             return;
         }
 

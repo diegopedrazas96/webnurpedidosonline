@@ -54,7 +54,7 @@ public partial class Productos_ListProductos : System.Web.UI.Page
 
     public void cargarEmpresas()
     {
-        List<Producto> admins = ProductoBRL.getProductos();
+        List<Producto> admins = ProductoBRL.getProductosTable();
         GridProductos.DataSource = admins;
         GridProductos.DataBind();
     }

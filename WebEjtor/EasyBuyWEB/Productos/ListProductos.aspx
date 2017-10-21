@@ -16,7 +16,7 @@
         <Columns>
             <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
             <asp:BoundField DataField="Precio" HeaderText="Precio" />
-
+            <asp:BoundField DataField="NombreEmp" HeaderText="Empresa" />
             <asp:TemplateField HeaderText="Editar">
                 <ItemTemplate>
                     <asp:LinkButton ID="EditButton" runat="server"

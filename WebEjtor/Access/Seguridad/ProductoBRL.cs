@@ -15,10 +15,35 @@ namespace Access.Seguridad
         {
         }
 
-        public static List<Producto> getProductos()
+        public static List<Producto> getProductosTable()
         {
             ProductosTableAdapter adapter = new ProductosTableAdapter();
             ProductoDS.ProductosDataTable table  = adapter.GetProductos();
+
+            List<Producto> listProducto = new List<Producto>();
+            foreach (var row in table)
+            {
+                Producto obj = new Producto();
+                obj.ProductoId = row.productoId;
+                obj.TipoIdc = row.tipoIdc;
+                obj.EmpresaId = row.empresaId;
+                obj.Nombre = row.nombre;
+                obj.Precio = row.precio;
+                obj.Estado = row.estado;
+
+                Empresa objemp = EmpresaBRL.getEmpresaById(row.empresaId);
+                obj.NombreEmp = objemp.Nombre;
+
+                listProducto.Add(obj);
+            }
+
+            return listProducto;
+        }
+
+        public static List<Producto> getProductos()
+        {
+            ProductosTableAdapter adapter = new ProductosTableAdapter();
+            ProductoDS.ProductosDataTable table = adapter.GetProductos();
 
             List<Producto> listProducto = new List<Producto>();
             foreach (var row in table)

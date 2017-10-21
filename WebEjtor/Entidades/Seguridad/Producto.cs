@@ -14,6 +14,7 @@ namespace Entidades.Seguridad
         public string Nombre { get; set; }
         public decimal Precio { get; set; }
         public bool Estado { get; set; }
+        public string NombreEmp { get; set; }
         public Producto()
         {
         }

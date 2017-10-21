@@ -74,7 +74,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EmpresaDS.xsd</DependentUpon>
     </Compile>
-
     <Compile Include="Seguridad\DetallePedidoDS.cs">
       <DependentUpon>DetallePedidoDS.xsd</DependentUpon>
     </Compile>
@@ -91,12 +90,10 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-
     <Compile Include="Seguridad\PermisoDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PermisoDS.xsd</DependentUpon>
-
     </Compile>
     <Compile Include="Seguridad\ProductoDS.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -135,6 +132,11 @@
       <DependentUpon>UserDS.xsd</DependentUpon>
     </Compile>
     <Compile Include="Seguridad\Usuario.cs" />
+    <Compile Include="Seguridad\VersionDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VersionDS.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -154,7 +156,6 @@
     <None Include="Seguridad\EmpresaDS.xss">
       <DependentUpon>EmpresaDS.xsd</DependentUpon>
     </None>
-
     <None Include="Seguridad\DetallePedidoDS.xsc">
       <DependentUpon>DetallePedidoDS.xsd</DependentUpon>
     </None>
@@ -177,7 +178,6 @@
     <None Include="Seguridad\PedidoDS.xss">
       <DependentUpon>PedidoDS.xsd</DependentUpon>
     </None>
-
     <None Include="Seguridad\PermisoDS.xsc">
       <DependentUpon>PermisoDS.xsd</DependentUpon>
     </None>
@@ -188,7 +188,6 @@
     </None>
     <None Include="Seguridad\PermisoDS.xss">
       <DependentUpon>PermisoDS.xsd</DependentUpon>
-
     </None>
     <None Include="Seguridad\ProductoDS.xsc">
       <DependentUpon>ProductoDS.xsd</DependentUpon>
@@ -255,6 +254,17 @@
     </None>
     <None Include="Seguridad\UserDS.xss">
       <DependentUpon>UserDS.xsd</DependentUpon>
+    </None>
+    <None Include="Seguridad\VersionDS.xsc">
+      <DependentUpon>VersionDS.xsd</DependentUpon>
+    </None>
+    <None Include="Seguridad\VersionDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VersionDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Seguridad\VersionDS.xss">
+      <DependentUpon>VersionDS.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

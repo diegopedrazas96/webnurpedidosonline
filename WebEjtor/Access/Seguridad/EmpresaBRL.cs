@@ -98,5 +98,36 @@ namespace Access.Seguridad
 
             return obj;
         }
+
+        public static Empresa getEmpresaByNombre(string nombreEmp)
+        {
+            if (String.IsNullOrEmpty(nombreEmp))
+            {
+                return null;
+            }
+
+            EmpresaTableAdapter adapter = new EmpresaTableAdapter();
+            EmpresaDS.EmpresaDataTable table = adapter.GetEmpresaByName(nombreEmp);
+
+            if (table.Rows.Count == 0)
+            {
+                return null;
+            }
+
+            EmpresaDS.EmpresaRow row = table[0];
+
+            Empresa obj = new Empresa()
+            {
+                EmpresaId = row.empresaId,
+                TipoIdc = row.tipoIdc,
+                Nit = row.nit,
+                Nombre = row.nombre,
+                Gerente = row.gerente,
+                Telefono = row.telefono,
+                Estado = row.estado
+            };
+
+            return obj;
+        }
     }
 }

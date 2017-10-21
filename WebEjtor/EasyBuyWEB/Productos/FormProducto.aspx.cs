@@ -62,6 +62,12 @@ public partial class Productos_FormProducto : System.Web.UI.Page
             string nombre = txtNombreProd.Text.Trim();
             decimal precio = Convert.ToDecimal(txtPrecio.Text, CultureInfo.InvariantCulture);
 
+            if (EmpresaComboBox.Items.Count == 1)
+            {
+                lbVal.Text = "Debe Registrar Empresas";
+                return;
+            }
+
             if (String.IsNullOrEmpty(nombre))
             {
                 lbVal.Text = "La Casilla nombre no debe estar Vacía";

@@ -3,3 +3,8 @@ E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Entidades\bin
 E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
 E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Entidades\obj\Debug\Entidades.dll
 E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL PROJECT\WebEjtor\Entidades\obj\Debug\Entidades.pdb
+C:\Software3\WebEjtor\Entidades\bin\Debug\Entidades.dll
+C:\Software3\WebEjtor\Entidades\bin\Debug\Entidades.pdb
+C:\Software3\WebEjtor\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\Software3\WebEjtor\Entidades\obj\Debug\Entidades.dll
+C:\Software3\WebEjtor\Entidades\obj\Debug\Entidades.pdb

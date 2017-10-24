@@ -325,3 +325,4 @@ C:\Software3\WebEjtor\WebEjtor\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Software3\WebEjtor\WebEjtor\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Software3\WebEjtor\WebEjtor\obj\Debug\WebEjtor.dll
 C:\Software3\WebEjtor\WebEjtor\obj\Debug\WebEjtor.pdb
+C:\Software3\WebEjtor\WebEjtor\obj\Debug\WebEjtor.csprojResolveAssemblyReference.cache

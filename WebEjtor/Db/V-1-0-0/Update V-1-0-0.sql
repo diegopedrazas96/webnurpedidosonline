@@ -1,3 +1,5 @@
+USE master
+go
 CREATE DATABASE [bdTienda] 
 GO
 
@@ -88,7 +90,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[tblRolPermiso](
-	[idRolPermiso] [int] NOT NULL,
+	[idRolPermiso] [int] IDENTITY(1,1) NOT NULL,
 	[rolId] [int] NOT NULL,
 	[permisoId] [int] NOT NULL,
 	[estado] [nchar](18) NULL

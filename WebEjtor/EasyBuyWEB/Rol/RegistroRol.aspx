@@ -28,10 +28,10 @@
             <asp:ListItem>Modificar Productos</asp:ListItem>
             <asp:ListItem>Registrar Usuarios</asp:ListItem>
             <asp:ListItem>Eliminar Usuarios</asp:ListItem>
-            <asp:ListItem>modificar Usuarios</asp:ListItem>
+            <asp:ListItem>Modificar Usuarios</asp:ListItem>
             <asp:ListItem>Registrar Empresa</asp:ListItem>
             <asp:ListItem>Eliminar Empresa</asp:ListItem>
-            <asp:ListItem>modificar Empresa</asp:ListItem>
+            <asp:ListItem>Modificar Empresa</asp:ListItem>
             <asp:ListItem>Ver Reportes</asp:ListItem>
         </asp:CheckBoxList>
 

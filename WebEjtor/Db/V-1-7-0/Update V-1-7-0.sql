@@ -1,3 +1,55 @@
+Use [Master]
+GO 
+
+IF  NOT EXISTS (SELECT name FROM sys.databases WHERE name = N'bdTienda')
+	RAISERROR('La base de datos ''bdTienda'' no existe. Cree la base de datos primero',16,127)
+GO
+
+USE [bdTienda]
+GO
+
+PRINT 'Actualizando a la version 1.7.0'
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_VERSION_GetVersion]') AND type in (N'P', N'PC'))
+BEGIN
+
+	RAISERROR('La base de datos no esta inicializada',16,127)
+	RETURN;
+
+END
+
+DECLARE @intVersionMayor int
+DECLARE @intVersionMenor int
+DECLARE @intPatch int
+
+EXECUTE [dbo].[usp_VERSION_GetVersion] 
+   @intVersionMayor OUTPUT
+  ,@intVersionMenor OUTPUT
+  ,@intPatch OUTPUT
+
+IF @intVersionMayor IS NULL OR @intVersionMenor IS NULL
+BEGIN
+	
+	RAISERROR('La base de datos no esta inicializada',16,127)
+	RETURN;
+
+END
+
+
+IF @intVersionMayor IS NULL OR @intVersionMenor IS NULL OR NOT (@intVersionMayor = 1 AND @intVersionMenor = 6)
+BEGIN
+	
+	RAISERROR('La base de datos no esta en la version 1.6. Este script solamente se apllica a la version 1.6',16,127)
+	RETURN;
+
+END
+ELSE
+BEGIN
+	
+	PRINT 'Version OK'
+
+END
+
 USE [bdTienda]
 GO
 /****** Object:  StoredProcedure [dbo].[tblPERMISO_selectById]    Script Date: 10/31/2017 07:27:47 ******/
@@ -18,6 +70,7 @@ BEGIN
 	FROM [dbo].[tblPermiso]
 	WHERE nombre = @Nombre
 END
+GO
 
 USE [bdTienda]
 GO
@@ -50,7 +103,7 @@ INSERT INTO [dbo].[tblRolPermiso]
            
      SET	@pIdRolPermiso = SCOPE_IDENTITY()
 END
-
+GO
 
 USE [bdTienda]
 GO
@@ -75,7 +128,7 @@ BEGIN
 	FROM [dbo].[tblRol]
 	WHERE  [rolId] = @intUsuarioId and estado = 'activo';
 END
-
+GO
 
 USE [bdTienda]
 GO
@@ -89,7 +142,7 @@ GO
 -- Create date: <19,08,2017>
 -- Description:	Mostrar Id
 -- =============================================
-ALTER PROCEDURE [dbo].[tblROLPERMISO_MostrarIdByPermRol]
+CREATE PROCEDURE [dbo].[tblROLPERMISO_MostrarIdByPermRol]
 @pRolId int,
 @pPermisoID int
 
@@ -99,6 +152,17 @@ SELECT *
   FROM [dbo].[tblRolPermiso]
 	WHERE [rolId] = @pRolId and [permisoId] = @pPermisoID
 END
+GO
 
+DELETE FROM [dbo].[tbl_Version]
+GO
 
-
+INSERT INTO [dbo].[tbl_Version]
+           ([versionMayor]
+           ,[versionMenor]
+           ,[patch])
+     VALUES
+           (1
+           ,7
+           ,0)
+GO

@@ -105,6 +105,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RecuperacionDS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Seguridad\RolDS.cs">
+      <DependentUpon>RolDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Seguridad\RolDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

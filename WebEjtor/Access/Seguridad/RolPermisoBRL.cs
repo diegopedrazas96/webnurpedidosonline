@@ -61,43 +61,13 @@ namespace Access.Seguridad
         public static Boolean tienePermiso(int rolId, int permisoId)
         {
             ROLPERMISOTableAdapter adapter = new ROLPERMISOTableAdapter();
-            RolXPermisoDS.ROLPERMISODataTable table = adapter.GetMostrarId(rolId, permisoId);
+            RolXPermisoDS.ROLPERMISODataTable table = adapter.GetIdByPerRol(rolId, permisoId);
             if (table.Rows.Count == 0)
             {
                 return false;
             }
             return true;
         }
-
-
-        //public static Producto getProductoById(int productoId)
-        //{
-        //    if (productoId <= 0)
-        //    {
-        //        new ArgumentException("Producto Id no debe ser manor o igual a 0");
-        //    }
-
-        //    ProductosTableAdapter adapter = new ProductosTableAdapter();
-        //    ProductoDS.ProductosDataTable table = adapter.GetProductoById(productoId);
-
-        //    if (table.Rows.Count == 0)
-        //    {
-        //        return null;
-        //    }
-
-        //    ProductoDS.ProductosRow row = table[0];
-        //    Producto obj = new Producto()
-        //    {
-        //        ProductoId = row.productoId,
-        //        TipoIdc = row.tipoIdc,
-        //        EmpresaId = row.empresaId,
-        //        Nombre = row.nombre,
-        //        Precio = row.precio,
-        //        Estado = row.estado
-        //    };
-
-        //    return obj;
-        //}
     }
 
 

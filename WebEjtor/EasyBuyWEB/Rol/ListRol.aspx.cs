@@ -12,10 +12,7 @@ public partial class Productos_ListProductos : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        List<Rol> roles = RolBRL.getRol();
-
-        GridRol.DataSource = roles;
-        GridRol.DataBind();
+        actualizar();
 
         //if (!IsPostBack)
         //{
@@ -26,16 +23,16 @@ public partial class Productos_ListProductos : System.Web.UI.Page
 
     protected void GridRol_RowCommand(object sender, GridViewCommandEventArgs e)
     {
-        //int productoId = 0;
-        //try
-        //{
-        //    productoId = Convert.ToInt32(e.CommandArgument);
-        //}
-        //catch (Exception ex)
-        //{
-        //}
-        //if (productoId <= 0)
-        //    return;
+        int rolId = 0;
+        try
+        {
+            rolId = Convert.ToInt32(e.CommandArgument);
+        }
+        catch (Exception ex)
+        {
+        }
+        if (rolId <= 0)
+            return;
 
         //if (e.CommandName == "Eliminar")
         //{
@@ -51,15 +48,18 @@ public partial class Productos_ListProductos : System.Web.UI.Page
         //        throw new Exception("Error al eliminar");
         //    }
         //}
-        //if (e.CommandName == "Editar")
-        //{
-        //    Response.Redirect("FormProducto.aspx?Id=" + productoId.ToString());
-        //    return;
-        //}
+        if (e.CommandName == "Editar")
+        {
+            Response.Redirect("EditarRol.aspx?Id="+rolId.ToString());
+            return;
+        }
     }
 
-    public void cargarRol()
+    public void actualizar()
     {
-        
+        List<Rol> roles = RolBRL.getRol();
+
+        GridRol.DataSource = roles;
+        GridRol.DataBind();
     }
 }

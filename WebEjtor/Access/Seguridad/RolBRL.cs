@@ -54,44 +54,32 @@ namespace Access.Seguridad
             return rolId.Value;
         }
 
-        //public static void updateProducto(Producto obj)
-        //{
-        //    if (obj == null)
-        //    {
-        //        throw new ArgumentException("El objeto Produco no debe ser nulo");
-        //    }
+        public static Rol getRolesById(int rolId)
+        {
+            if (rolId <= 0)
+            {
+                new ArgumentException("Producto Id no debe ser manor o igual a 0");
+            }
 
-        //    ProductosTableAdapter adapter = new ProductosTableAdapter();
-        //    adapter.Update(obj.TipoIdc, obj.EmpresaId, obj.Nombre, obj.Precio, obj.ProductoId);
-        //}
+            ROLTableAdapter adapter = new ROLTableAdapter();
+            RolDS.ROLDataTable table = adapter.GetRolById(rolId);
 
-        //public static Producto getProductoById(int productoId)
-        //{
-        //    if (productoId <= 0)
-        //    {
-        //        new ArgumentException("Producto Id no debe ser manor o igual a 0");
-        //    }
+            if (table.Rows.Count == 0)
+            {
+                return null;
+            }
 
-        //    ProductosTableAdapter adapter = new ProductosTableAdapter();
-        //    ProductoDS.ProductosDataTable table = adapter.GetProductoById(productoId);
+            RolDS.ROLRow row = table[0];
+            Rol obj = new Rol()
+            {
+                RolId = row.rolId,
+                Nombre = row.nombre,
+                Descripcion = row.descripcion,
+                Estado = row.estado         
+            };
+            return obj;
+        }
 
-        //    if (table.Rows.Count == 0)
-        //    {
-        //        return null;
-        //    }
-
-        //    ProductoDS.ProductosRow row = table[0];
-        //    Producto obj = new Producto()
-        //    {
-        //        ProductoId = row.productoId,
-        //        TipoIdc = row.tipoIdc,
-        //        EmpresaId = row.empresaId,
-        //        Nombre = row.nombre,
-        //        Precio = row.precio,
-        //        Estado = row.estado
-        //    };
-
-        //    return obj;
-        //}
+       
     }
 }

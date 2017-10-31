@@ -900,7 +900,7 @@ namespace Data.Seguridad.RolDSTableAdapters {
             this._commandCollection[1].CommandText = "dbo.rsp_ROL_MostrarRolId";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intRolId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intUsuarioId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -918,10 +918,10 @@ namespace Data.Seguridad.RolDSTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual RolDS.ROLDataTable GetRolById(global::System.Nullable<int> intRolId) {
+        public virtual RolDS.ROLDataTable GetRolById(global::System.Nullable<int> intUsuarioId) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((intRolId.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(intRolId.Value));
+            if ((intUsuarioId.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(intUsuarioId.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;

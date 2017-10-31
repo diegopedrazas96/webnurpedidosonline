@@ -855,11 +855,10 @@ namespace Data.Seguridad.RolDSTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "dbo.rsp_ROL_DeleteRol";
+            this._adapter.DeleteCommand.CommandText = "dbo.rsp_ROL_EliminarRol";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@varEstado", global::System.Data.SqlDbType.Char, 18, global::System.Data.ParameterDirection.Input, 0, 0, "estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@varRolId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "rolId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intRolId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "rolId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "dbo.rsp_ROL_InsertarRol";
@@ -868,7 +867,7 @@ namespace Data.Seguridad.RolDSTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombre", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estado", global::System.Data.SqlDbType.Char, 18, global::System.Data.ParameterDirection.Input, 0, 0, "estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@descripcion", global::System.Data.SqlDbType.NVarChar, 250, global::System.Data.ParameterDirection.Input, 0, 0, "descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intRolId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.InputOutput, 10, 0, "rolId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intUsuarioId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.InputOutput, 10, 0, "rolId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "dbo.rsp_ROL_UpdateRol";
@@ -877,7 +876,7 @@ namespace Data.Seguridad.RolDSTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@varNombre", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@varEstado", global::System.Data.SqlDbType.Char, 18, global::System.Data.ParameterDirection.Input, 0, 0, "estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@varDescripcion", global::System.Data.SqlDbType.NVarChar, 250, global::System.Data.ParameterDirection.Input, 0, 0, "descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@varRolId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "rolId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@varUsuarioId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "rolId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -965,18 +964,12 @@ namespace Data.Seguridad.RolDSTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string varEstado, global::System.Nullable<int> varRolId) {
-            if ((varEstado == null)) {
+        public virtual int Delete(global::System.Nullable<int> intRolId) {
+            if ((intRolId.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(intRolId.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(varEstado));
-            }
-            if ((varRolId.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(varRolId.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -998,7 +991,7 @@ namespace Data.Seguridad.RolDSTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string nombre, string estado, string descripcion, ref global::System.Nullable<int> intRolId) {
+        public virtual int Insert(string nombre, string estado, string descripcion, ref global::System.Nullable<int> intUsuarioId) {
             if ((nombre == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -1017,8 +1010,8 @@ namespace Data.Seguridad.RolDSTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(descripcion));
             }
-            if ((intRolId.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(intRolId.Value));
+            if ((intUsuarioId.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(intUsuarioId.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
@@ -1032,10 +1025,10 @@ namespace Data.Seguridad.RolDSTableAdapters {
                 int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
                 if (((this.Adapter.InsertCommand.Parameters[4].Value == null) 
                             || (this.Adapter.InsertCommand.Parameters[4].Value.GetType() == typeof(global::System.DBNull)))) {
-                    intRolId = new global::System.Nullable<int>();
+                    intUsuarioId = new global::System.Nullable<int>();
                 }
                 else {
-                    intRolId = new global::System.Nullable<int>(((int)(this.Adapter.InsertCommand.Parameters[4].Value)));
+                    intUsuarioId = new global::System.Nullable<int>(((int)(this.Adapter.InsertCommand.Parameters[4].Value)));
                 }
                 return returnValue;
             }
@@ -1050,7 +1043,7 @@ namespace Data.Seguridad.RolDSTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string varNombre, string varEstado, string varDescripcion, global::System.Nullable<int> varRolId) {
+        public virtual int Update(string varNombre, string varEstado, string varDescripcion, global::System.Nullable<int> varUsuarioId) {
             if ((varNombre == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -1069,8 +1062,8 @@ namespace Data.Seguridad.RolDSTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(varDescripcion));
             }
-            if ((varRolId.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(varRolId.Value));
+            if ((varUsuarioId.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(varUsuarioId.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;

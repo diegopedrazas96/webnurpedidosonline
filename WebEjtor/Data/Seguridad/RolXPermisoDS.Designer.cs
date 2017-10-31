@@ -811,6 +811,8 @@ namespace Data.Seguridad.RolXPermisoDSTableAdapters {
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pIdRolPermiso", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "idRolPermiso", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pRolId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "rolId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pPermisoID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "permisoId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pEstado", global::System.Data.SqlDbType.NChar, 18, global::System.Data.ParameterDirection.Input, 0, 0, "estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
@@ -820,7 +822,7 @@ namespace Data.Seguridad.RolXPermisoDSTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pRolId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "rolId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pPermisoID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "permisoId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pEstado", global::System.Data.SqlDbType.NChar, 18, global::System.Data.ParameterDirection.Input, 0, 0, "estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intRolPermiso", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.InputOutput, 10, 0, "idRolPermiso", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pIdRolPermiso", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.InputOutput, 10, 0, "idRolPermiso", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "dbo.tblROLPERMISO_update";
@@ -924,18 +926,30 @@ namespace Data.Seguridad.RolXPermisoDSTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(global::System.Nullable<int> pIdRolPermiso, string pEstado) {
+        public virtual int Delete(global::System.Nullable<int> pIdRolPermiso, global::System.Nullable<int> pRolId, global::System.Nullable<int> pPermisoID, string pEstado) {
             if ((pIdRolPermiso.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(pIdRolPermiso.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((pEstado == null)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            if ((pRolId.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(pRolId.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(pEstado));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((pPermisoID.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(pPermisoID.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((pEstado == null)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(pEstado));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -957,7 +971,7 @@ namespace Data.Seguridad.RolXPermisoDSTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> pRolId, global::System.Nullable<int> pPermisoID, string pEstado, ref global::System.Nullable<int> intRolPermiso) {
+        public virtual int Insert(global::System.Nullable<int> pRolId, global::System.Nullable<int> pPermisoID, string pEstado, ref global::System.Nullable<int> pIdRolPermiso) {
             if ((pRolId.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((int)(pRolId.Value));
             }
@@ -976,8 +990,8 @@ namespace Data.Seguridad.RolXPermisoDSTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(pEstado));
             }
-            if ((intRolPermiso.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(intRolPermiso.Value));
+            if ((pIdRolPermiso.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(pIdRolPermiso.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
@@ -991,10 +1005,10 @@ namespace Data.Seguridad.RolXPermisoDSTableAdapters {
                 int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
                 if (((this.Adapter.InsertCommand.Parameters[4].Value == null) 
                             || (this.Adapter.InsertCommand.Parameters[4].Value.GetType() == typeof(global::System.DBNull)))) {
-                    intRolPermiso = new global::System.Nullable<int>();
+                    pIdRolPermiso = new global::System.Nullable<int>();
                 }
                 else {
-                    intRolPermiso = new global::System.Nullable<int>(((int)(this.Adapter.InsertCommand.Parameters[4].Value)));
+                    pIdRolPermiso = new global::System.Nullable<int>(((int)(this.Adapter.InsertCommand.Parameters[4].Value)));
                 }
                 return returnValue;
             }

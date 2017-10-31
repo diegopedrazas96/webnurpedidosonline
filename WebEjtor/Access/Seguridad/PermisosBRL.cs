@@ -14,7 +14,7 @@ namespace Access.Seguridad
         public static Permisos getPermisoByNombre(string nombre)
         {
             PERMISOTableAdapter adapter = new PERMISOTableAdapter();
-            PermisoDS.PERMISODataTable tabla = adapter.GetPermisoByNombre(nombre);
+            PermisoDS.PERMISODataTable tabla = adapter.GetPermisoIdByNombre(nombre);
 
             if (tabla.Rows.Count == 0)
             {
@@ -23,11 +23,7 @@ namespace Access.Seguridad
             PermisoDS.PERMISORow row = tabla[0];
             Permisos obj = new Permisos()
             {
-                PermisoId = row.permisoId,
-                Descripcion = row.descripcion,
-                url = row.url,
-                posicion = row.posicion,
-                Estado = row.estado               
+                PermisoId = row.permisoId      
             };
             return obj;
         }

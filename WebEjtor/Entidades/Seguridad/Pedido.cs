@@ -11,10 +11,17 @@ namespace Entidades.Seguridad
         public int PedidoId { get; set; }
         public int ClienteId { get; set; }
         public int EmpresaId { get; set; }
-        public string UsuarioId { get; set; }
+        public int UsuarioId { get; set; }
         public DateTime Fecha { get; set; }
         public bool Atendido { get; set; }
+        public string Latitud { get; set; }
+        public string Longitud { get; set; }
+        public bool IsMovil { get; set; }
 
+        public string T_ClienteName { get; set; }
+        public string T_EmpresaName { get; set; }
+        public string T_EstadoAtencion { get; set; }
+        public string T_Dispositivo { get; set; }
         public List<DetallePedido> lstDetalle { get; set; }
         public Pedido()
         {

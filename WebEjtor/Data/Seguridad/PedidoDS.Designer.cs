@@ -291,6 +291,12 @@ namespace Data.Seguridad {
             
             private global::System.Data.DataColumn columnAtendido;
             
+            private global::System.Data.DataColumn columnlatitud;
+            
+            private global::System.Data.DataColumn columnlongitud;
+            
+            private global::System.Data.DataColumn columnisMovil;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public PedidosDataTable() {
@@ -374,6 +380,30 @@ namespace Data.Seguridad {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn latitudColumn {
+                get {
+                    return this.columnlatitud;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn longitudColumn {
+                get {
+                    return this.columnlongitud;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn isMovilColumn {
+                get {
+                    return this.columnisMovil;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -409,7 +439,7 @@ namespace Data.Seguridad {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PedidosRow AddPedidosRow(int clienteId, int empresaId, int usuarioId, System.DateTime fecha, bool Atendido) {
+            public PedidosRow AddPedidosRow(int clienteId, int empresaId, int usuarioId, System.DateTime fecha, bool Atendido, string latitud, string longitud, bool isMovil) {
                 PedidosRow rowPedidosRow = ((PedidosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -417,7 +447,10 @@ namespace Data.Seguridad {
                         empresaId,
                         usuarioId,
                         fecha,
-                        Atendido};
+                        Atendido,
+                        latitud,
+                        longitud,
+                        isMovil};
                 rowPedidosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPedidosRow);
                 return rowPedidosRow;
@@ -453,6 +486,9 @@ namespace Data.Seguridad {
                 this.columnusuarioId = base.Columns["usuarioId"];
                 this.columnfecha = base.Columns["fecha"];
                 this.columnAtendido = base.Columns["Atendido"];
+                this.columnlatitud = base.Columns["latitud"];
+                this.columnlongitud = base.Columns["longitud"];
+                this.columnisMovil = base.Columns["isMovil"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -470,6 +506,12 @@ namespace Data.Seguridad {
                 base.Columns.Add(this.columnfecha);
                 this.columnAtendido = new global::System.Data.DataColumn("Atendido", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAtendido);
+                this.columnlatitud = new global::System.Data.DataColumn("latitud", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlatitud);
+                this.columnlongitud = new global::System.Data.DataColumn("longitud", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlongitud);
+                this.columnisMovil = new global::System.Data.DataColumn("isMovil", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnisMovil);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnpedidoId}, true));
                 this.columnpedidoId.AutoIncrement = true;
@@ -482,6 +524,8 @@ namespace Data.Seguridad {
                 this.columnempresaId.AllowDBNull = false;
                 this.columnfecha.AllowDBNull = false;
                 this.columnAtendido.AllowDBNull = false;
+                this.columnlatitud.MaxLength = 15;
+                this.columnlongitud.MaxLength = 15;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -695,6 +739,54 @@ namespace Data.Seguridad {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string latitud {
+                get {
+                    try {
+                        return ((string)(this[this.tablePedidos.latitudColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'latitud\' in table \'Pedidos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePedidos.latitudColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string longitud {
+                get {
+                    try {
+                        return ((string)(this[this.tablePedidos.longitudColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'longitud\' in table \'Pedidos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePedidos.longitudColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool isMovil {
+                get {
+                    try {
+                        return ((bool)(this[this.tablePedidos.isMovilColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'isMovil\' in table \'Pedidos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePedidos.isMovilColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsusuarioIdNull() {
                 return this.IsNull(this.tablePedidos.usuarioIdColumn);
             }
@@ -703,6 +795,42 @@ namespace Data.Seguridad {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetusuarioIdNull() {
                 this[this.tablePedidos.usuarioIdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IslatitudNull() {
+                return this.IsNull(this.tablePedidos.latitudColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetlatitudNull() {
+                this[this.tablePedidos.latitudColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IslongitudNull() {
+                return this.IsNull(this.tablePedidos.longitudColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetlongitudNull() {
+                this[this.tablePedidos.longitudColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsisMovilNull() {
+                return this.IsNull(this.tablePedidos.isMovilColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetisMovilNull() {
+                this[this.tablePedidos.isMovilColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -871,6 +999,9 @@ namespace Data.Seguridad.PedidoDSTableAdapters {
             tableMapping.ColumnMappings.Add("usuarioId", "usuarioId");
             tableMapping.ColumnMappings.Add("fecha", "fecha");
             tableMapping.ColumnMappings.Add("Atendido", "Atendido");
+            tableMapping.ColumnMappings.Add("latitud", "latitud");
+            tableMapping.ColumnMappings.Add("longitud", "longitud");
+            tableMapping.ColumnMappings.Add("isMovil", "isMovil");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
@@ -882,6 +1013,9 @@ namespace Data.Seguridad.PedidoDSTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuarioId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "usuarioId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, "fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Atendido", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 1, 0, "Atendido", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@latitud", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "latitud", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@longitud", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "longitud", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@isMovil", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 1, 0, "isMovil", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intPedidoId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.InputOutput, 10, 0, "pedidoId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -895,12 +1029,24 @@ namespace Data.Seguridad.PedidoDSTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "dbo.PED_GetPedidos";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "dbo.PED_AtenderPedido";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pedidoId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "dbo.PED_GetPedidoById";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pedidoId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -909,6 +1055,40 @@ namespace Data.Seguridad.PedidoDSTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual PedidoDS.PedidosDataTable GetPedido() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            PedidoDS.PedidosDataTable dataTable = new PedidoDS.PedidosDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual PedidoDS.PedidosDataTable AtenderPedido(global::System.Nullable<int> pedidoId) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((pedidoId.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(pedidoId.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            PedidoDS.PedidosDataTable dataTable = new PedidoDS.PedidosDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual PedidoDS.PedidosDataTable GetPedidoById(global::System.Nullable<int> pedidoId) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((pedidoId.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(pedidoId.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
             PedidoDS.PedidosDataTable dataTable = new PedidoDS.PedidosDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -947,7 +1127,7 @@ namespace Data.Seguridad.PedidoDSTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> clienteId, global::System.Nullable<int> empresaId, global::System.Nullable<int> usuarioId, global::System.Nullable<global::System.DateTime> fecha, global::System.Nullable<bool> Atendido, ref global::System.Nullable<int> intPedidoId) {
+        public virtual int Insert(global::System.Nullable<int> clienteId, global::System.Nullable<int> empresaId, global::System.Nullable<int> usuarioId, global::System.Nullable<global::System.DateTime> fecha, global::System.Nullable<bool> Atendido, string latitud, string longitud, global::System.Nullable<bool> isMovil, ref global::System.Nullable<int> intPedidoId) {
             if ((clienteId.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((int)(clienteId.Value));
             }
@@ -978,11 +1158,29 @@ namespace Data.Seguridad.PedidoDSTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((intPedidoId.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(intPedidoId.Value));
+            if ((latitud == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(latitud));
+            }
+            if ((longitud == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(longitud));
+            }
+            if ((isMovil.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((bool)(isMovil.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((intPedidoId.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(intPedidoId.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -991,12 +1189,12 @@ namespace Data.Seguridad.PedidoDSTableAdapters {
             }
             try {
                 int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                if (((this.Adapter.InsertCommand.Parameters[6].Value == null) 
-                            || (this.Adapter.InsertCommand.Parameters[6].Value.GetType() == typeof(global::System.DBNull)))) {
+                if (((this.Adapter.InsertCommand.Parameters[9].Value == null) 
+                            || (this.Adapter.InsertCommand.Parameters[9].Value.GetType() == typeof(global::System.DBNull)))) {
                     intPedidoId = new global::System.Nullable<int>();
                 }
                 else {
-                    intPedidoId = new global::System.Nullable<int>(((int)(this.Adapter.InsertCommand.Parameters[6].Value)));
+                    intPedidoId = new global::System.Nullable<int>(((int)(this.Adapter.InsertCommand.Parameters[9].Value)));
                 }
                 return returnValue;
             }

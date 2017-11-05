@@ -36,10 +36,10 @@ namespace Negocio.Seguridad
         }
 
 
-        public static List<Detalle> getDatallesByPedido(int pedidoId)
-        {
+        //public static List<Detalle> getDatallesByPedido(int pedidoId)
+        //{
 
-        }
+        //}
       
     }
 }

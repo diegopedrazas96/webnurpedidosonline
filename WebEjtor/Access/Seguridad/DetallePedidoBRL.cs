@@ -35,6 +35,11 @@ namespace Negocio.Seguridad
             return productoId.Value;
         }
 
+
+        public static List<Detalle> getDatallesByPedido(int pedidoId)
+        {
+
+        }
       
     }
 }

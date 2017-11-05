@@ -71,4 +71,9 @@ public partial class Pedido_FormPedido : System.Web.UI.Page
             " <google-map-marker latitude='" + objSelected.Latitud + "' longitude='" + objSelected.Longitud + "' draggable='false'></google-map-marker>" +
                          "</google-map>";
     }
+
+    protected void btnDetalle_Click(object sender, EventArgs e)
+    {
+
+    }
 }

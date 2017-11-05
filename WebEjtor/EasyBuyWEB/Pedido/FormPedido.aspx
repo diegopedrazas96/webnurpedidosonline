@@ -52,8 +52,15 @@
                     CssClass="form-control" Enabled="false">
                 </asp:TextBox>
             </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <asp:Button ID="btnAtender" runat="server" Text="Atender Pedido" CssClass="btn btn-primary btn-block" OnClick="btnAtender_Click" />
+                </div>
+                <div class="col-md-6">
+                    <asp:Button class="btn btn-primary btn-block" data-target="#detalleModal" data-toggle="modal">Ver Detalle</asp:Button>
+                </div>
+            </div>
 
-            <asp:Button ID="btnAtender" runat="server" Text="Atender Pedido" CssClass="btn btn-primary btn-block" OnClick="btnAtender_Click"/>
         </div>
 
         <div class="col-md-8">
@@ -63,5 +70,28 @@
         </div>
     </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">                
+                <div class="modal" id="detalleModal" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button class="close" data-dismiss="modal">&times;</button>
+                                <h4>Detalle de Pedido</h4>
+                            </div>
+                            <div class="modal-body">
+                                <h1>PONER LISTA</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap.js"s></script>
 </asp:Content>
 

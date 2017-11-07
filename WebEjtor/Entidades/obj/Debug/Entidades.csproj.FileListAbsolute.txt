@@ -7,3 +7,7 @@ C:\Software3\WebEjtor\Entidades\bin\Debug\Entidades.dll
 C:\Software3\WebEjtor\Entidades\bin\Debug\Entidades.pdb
 C:\Software3\WebEjtor\Entidades\obj\Debug\Entidades.dll
 C:\Software3\WebEjtor\Entidades\obj\Debug\Entidades.pdb
+C:\Sofware3\WebEjtor\Entidades\bin\Debug\Entidades.dll
+C:\Sofware3\WebEjtor\Entidades\bin\Debug\Entidades.pdb
+C:\Sofware3\WebEjtor\Entidades\obj\Debug\Entidades.dll
+C:\Sofware3\WebEjtor\Entidades\obj\Debug\Entidades.pdb

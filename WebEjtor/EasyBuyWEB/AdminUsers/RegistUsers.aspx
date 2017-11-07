@@ -39,18 +39,27 @@
             </asp:TextBox>
  
         </div>
-        <div class="form-group" runat="server" visible ="false">
-            <h3>Roles de Usuario</h3>
-            <asp:RadioButtonList ID="RadioButtonList1" runat="server">
-                <asp:ListItem>Administrador General</asp:ListItem>
-                <asp:ListItem>Editor</asp:ListItem>
-                <asp:ListItem>Vendedor</asp:ListItem>
-                <asp:ListItem>Analista</asp:ListItem>
-            </asp:RadioButtonList>
-            <asp:HyperLink runat="server" NavigateUrl="~/Roles/RegistRol.aspx">
+        <div class="form-group" runat="server" visible ="true">
+            <h4>Roles de Administrador</h4>
+
+            
+            <asp:DropDownList ID="ComboListaRoles" runat="server" CssClass="form-control"
+                OnDataBound ="ComboListaRoles_DataBound"
+                DataValueField="RolId"
+                DataTextField="Nombre">
+
+                <asp:ListItem Value="" Text="Seleccione un Rol"></asp:ListItem>
+
+            </asp:DropDownList>
+
+            <br />
+
+
+            <asp:HyperLink runat="server" NavigateUrl="~/Rol/RegistroRol.aspx">
                 AÑADIR NUEVO ROL +
             </asp:HyperLink>
         </div>
+
 
         <asp:Button ID="btnRegistrar" runat="server" 
             Text="Registrar" 

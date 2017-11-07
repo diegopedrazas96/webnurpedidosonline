@@ -135,6 +135,11 @@
       <DependentUpon>UserDS.xsd</DependentUpon>
     </Compile>
     <Compile Include="Seguridad\Usuario.cs" />
+    <Compile Include="Seguridad\UsuarioRolDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UsuarioRolDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Seguridad\VersionDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -257,6 +262,17 @@
     </None>
     <None Include="Seguridad\UserDS.xss">
       <DependentUpon>UserDS.xsd</DependentUpon>
+    </None>
+    <None Include="Seguridad\UsuarioRolDS.xsc">
+      <DependentUpon>UsuarioRolDS.xsd</DependentUpon>
+    </None>
+    <None Include="Seguridad\UsuarioRolDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UsuarioRolDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Seguridad\UsuarioRolDS.xss">
+      <DependentUpon>UsuarioRolDS.xsd</DependentUpon>
     </None>
     <None Include="Seguridad\VersionDS.xsc">
       <DependentUpon>VersionDS.xsd</DependentUpon>

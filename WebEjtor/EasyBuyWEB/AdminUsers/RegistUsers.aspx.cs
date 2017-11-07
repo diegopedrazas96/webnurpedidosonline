@@ -71,6 +71,8 @@ public partial class AdminUsers_RegistUsers : System.Web.UI.Page
                 objUserRol.Estado = "activo";
             };
             UsuarioRolBRL.insertUserRol(objUserRol);
+
+            ComboListaRoles.ClearSelection();
         }
 
         catch (Exception ex)

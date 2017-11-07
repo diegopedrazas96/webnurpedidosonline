@@ -169,7 +169,7 @@ GO
 
 USE [bdTienda]
 GO
-/****** Object:  StoredProcedure [dbo].[ursp_USUARIOROL_InsertarUsuarioRol]    Script Date: 11/07/2017 17:05:08 ******/
+/****** Object:  StoredProcedure [dbo].[ursp_USUARIOROL_InsertarUsuarioRol]    Script Date: 11/07/2017 17:20:57 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -181,23 +181,23 @@ GO
 -- =============================================
 ALTER PROCEDURE [dbo].[ursp_USUARIOROL_InsertarUsuarioRol]
 
-	@varEstado		nvarchar(10),
-	@varRolId		int,
 	@varUsuarioId	int,
+	@varRolId		int,	
+	@varEstado		nvarchar(10),
 
 	@intUsuarioRolId	int OUTPUT
 AS
 BEGIN
 	SET NOCOUNT ON;
-	INSERT INTO [bdTienda].[dbo].[tblUsuarioRol]
+	INSERT INTO [dbo].[tblUsuarioRol]
            ([usuarioId]
            ,[rolId]
            ,[estado])
     VALUES
            (
-			@varEstado,
+			@varUsuarioId,			
 			@varRolId,
-			@varUsuarioId
+			@varEstado			
            )          
 	SET	@intUsuarioRolId = SCOPE_IDENTITY()
 END

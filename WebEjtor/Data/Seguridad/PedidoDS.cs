@@ -6,3 +6,12 @@
     {
     }
 }
+
+namespace Data.Seguridad.PedidoDSTableAdapters
+{
+
+
+    public partial class PedidosAdapter
+    {
+    }
+}

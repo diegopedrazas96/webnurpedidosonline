@@ -14,7 +14,8 @@ namespace Entidades.Seguridad
         public decimal Precio { get; set; }
         public decimal Cantidad { get; set; }
         public decimal SubTotal { get; set; }
-        
+
+        public string  NombreProducto { get; set; }
         public DetallePedido()
         {
         }

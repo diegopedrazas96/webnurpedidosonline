@@ -297,6 +297,16 @@ namespace Data.Seguridad {
             
             private global::System.Data.DataColumn columnisMovil;
             
+            private global::System.Data.DataColumn columnnombreEmpresa;
+            
+            private global::System.Data.DataColumn columnnombreCliente;
+            
+            private global::System.Data.DataColumn columncorreo;
+            
+            private global::System.Data.DataColumn columnDispositivo;
+            
+            private global::System.Data.DataColumn columntotalPago;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public PedidosDataTable() {
@@ -404,6 +414,46 @@ namespace Data.Seguridad {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nombreEmpresaColumn {
+                get {
+                    return this.columnnombreEmpresa;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nombreClienteColumn {
+                get {
+                    return this.columnnombreCliente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn correoColumn {
+                get {
+                    return this.columncorreo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DispositivoColumn {
+                get {
+                    return this.columnDispositivo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn totalPagoColumn {
+                get {
+                    return this.columntotalPago;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -439,7 +489,7 @@ namespace Data.Seguridad {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PedidosRow AddPedidosRow(int clienteId, int empresaId, int usuarioId, System.DateTime fecha, bool Atendido, string latitud, string longitud, bool isMovil) {
+            public PedidosRow AddPedidosRow(int clienteId, int empresaId, int usuarioId, System.DateTime fecha, bool Atendido, string latitud, string longitud, bool isMovil, string nombreEmpresa, string nombreCliente, string correo, string Dispositivo, decimal totalPago) {
                 PedidosRow rowPedidosRow = ((PedidosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -450,7 +500,12 @@ namespace Data.Seguridad {
                         Atendido,
                         latitud,
                         longitud,
-                        isMovil};
+                        isMovil,
+                        nombreEmpresa,
+                        nombreCliente,
+                        correo,
+                        Dispositivo,
+                        totalPago};
                 rowPedidosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPedidosRow);
                 return rowPedidosRow;
@@ -489,6 +544,11 @@ namespace Data.Seguridad {
                 this.columnlatitud = base.Columns["latitud"];
                 this.columnlongitud = base.Columns["longitud"];
                 this.columnisMovil = base.Columns["isMovil"];
+                this.columnnombreEmpresa = base.Columns["nombreEmpresa"];
+                this.columnnombreCliente = base.Columns["nombreCliente"];
+                this.columncorreo = base.Columns["correo"];
+                this.columnDispositivo = base.Columns["Dispositivo"];
+                this.columntotalPago = base.Columns["totalPago"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -512,6 +572,16 @@ namespace Data.Seguridad {
                 base.Columns.Add(this.columnlongitud);
                 this.columnisMovil = new global::System.Data.DataColumn("isMovil", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnisMovil);
+                this.columnnombreEmpresa = new global::System.Data.DataColumn("nombreEmpresa", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombreEmpresa);
+                this.columnnombreCliente = new global::System.Data.DataColumn("nombreCliente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombreCliente);
+                this.columncorreo = new global::System.Data.DataColumn("correo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncorreo);
+                this.columnDispositivo = new global::System.Data.DataColumn("Dispositivo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDispositivo);
+                this.columntotalPago = new global::System.Data.DataColumn("totalPago", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntotalPago);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnpedidoId}, true));
                 this.columnpedidoId.AutoIncrement = true;
@@ -526,6 +596,14 @@ namespace Data.Seguridad {
                 this.columnAtendido.AllowDBNull = false;
                 this.columnlatitud.MaxLength = 15;
                 this.columnlongitud.MaxLength = 15;
+                this.columnnombreEmpresa.AllowDBNull = false;
+                this.columnnombreEmpresa.MaxLength = 50;
+                this.columnnombreCliente.ReadOnly = true;
+                this.columnnombreCliente.MaxLength = 101;
+                this.columncorreo.MaxLength = 50;
+                this.columnDispositivo.ReadOnly = true;
+                this.columnDispositivo.MaxLength = 14;
+                this.columntotalPago.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -787,6 +865,81 @@ namespace Data.Seguridad {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nombreEmpresa {
+                get {
+                    return ((string)(this[this.tablePedidos.nombreEmpresaColumn]));
+                }
+                set {
+                    this[this.tablePedidos.nombreEmpresaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nombreCliente {
+                get {
+                    try {
+                        return ((string)(this[this.tablePedidos.nombreClienteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'nombreCliente\' in table \'Pedidos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePedidos.nombreClienteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string correo {
+                get {
+                    try {
+                        return ((string)(this[this.tablePedidos.correoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'correo\' in table \'Pedidos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePedidos.correoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Dispositivo {
+                get {
+                    try {
+                        return ((string)(this[this.tablePedidos.DispositivoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Dispositivo\' in table \'Pedidos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePedidos.DispositivoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal totalPago {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablePedidos.totalPagoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'totalPago\' in table \'Pedidos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePedidos.totalPagoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsusuarioIdNull() {
                 return this.IsNull(this.tablePedidos.usuarioIdColumn);
             }
@@ -831,6 +984,54 @@ namespace Data.Seguridad {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetisMovilNull() {
                 this[this.tablePedidos.isMovilColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsnombreClienteNull() {
+                return this.IsNull(this.tablePedidos.nombreClienteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetnombreClienteNull() {
+                this[this.tablePedidos.nombreClienteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IscorreoNull() {
+                return this.IsNull(this.tablePedidos.correoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetcorreoNull() {
+                this[this.tablePedidos.correoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDispositivoNull() {
+                return this.IsNull(this.tablePedidos.DispositivoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDispositivoNull() {
+                this[this.tablePedidos.DispositivoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IstotalPagoNull() {
+                return this.IsNull(this.tablePedidos.totalPagoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SettotalPagoNull() {
+                this[this.tablePedidos.totalPagoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1002,6 +1203,11 @@ namespace Data.Seguridad.PedidoDSTableAdapters {
             tableMapping.ColumnMappings.Add("latitud", "latitud");
             tableMapping.ColumnMappings.Add("longitud", "longitud");
             tableMapping.ColumnMappings.Add("isMovil", "isMovil");
+            tableMapping.ColumnMappings.Add("nombreEmpresa", "nombreEmpresa");
+            tableMapping.ColumnMappings.Add("nombreCliente", "nombreCliente");
+            tableMapping.ColumnMappings.Add("correo", "correo");
+            tableMapping.ColumnMappings.Add("Dispositivo", "Dispositivo");
+            tableMapping.ColumnMappings.Add("totalPago", "totalPago");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
@@ -1029,7 +1235,7 @@ namespace Data.Seguridad.PedidoDSTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "dbo.PED_GetPedidos";
@@ -1047,6 +1253,12 @@ namespace Data.Seguridad.PedidoDSTableAdapters {
             this._commandCollection[2].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pedidoId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "dbo.PED_GetTotalPedido";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PedidoId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1085,6 +1297,23 @@ namespace Data.Seguridad.PedidoDSTableAdapters {
             this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((pedidoId.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(pedidoId.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            PedidoDS.PedidosDataTable dataTable = new PedidoDS.PedidosDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual PedidoDS.PedidosDataTable GetTotalPago(global::System.Nullable<int> PedidoId) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((PedidoId.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(PedidoId.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;

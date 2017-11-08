@@ -1,4 +1,5 @@
-﻿using Data.Seguridad;
+﻿using Access.Seguridad;
+using Data.Seguridad;
 using Data.Seguridad.DetallePedidoDSTableAdapters;
 using Data.Seguridad.PedidoDSTableAdapters;
 using Data.Seguridad.ProductoDSTableAdapters;
@@ -16,9 +17,7 @@ namespace Negocio.Seguridad
         public DetallePedidoBRL()
         {
         }
-
-       
-
+        
         public static int insertDetallePedido(DetallePedido obj)
         {
             if (obj == null)
@@ -30,16 +29,37 @@ namespace Negocio.Seguridad
             DetallePedidoAdapter adapter = new DetallePedidoAdapter();
             adapter.Insert(obj.PedidoId,obj.ProductoId,obj.Precio,obj.Cantidad,obj.SubTotal);
 
-            
-
             return productoId.Value;
         }
 
 
-        //public static List<Detalle> getDatallesByPedido(int pedidoId)
-        //{
+        public static List<DetallePedido> getDatallesByPedidoId(int pedidoId)
+        {
+            DetallePedidoAdapter adapter = new DetallePedidoAdapter();            
+            DetallePedidoDS.DetallePedidoDataTable table = adapter.GetDetalle(pedidoId);
 
-        //}
-      
+            List<DetallePedido> listDetalles = new List<DetallePedido>();
+            DetallePedido objTemp;
+            Producto productoTemp;
+            foreach (var row in table)
+            {
+                objTemp = new DetallePedido();
+                objTemp.DetallePedidoId = row.DetallePedidoId;
+                objTemp.PedidoId = row.PedidoId;
+                objTemp.ProductoId = row.ProductoId;
+                objTemp.Precio = row.Precio;
+                objTemp.Cantidad = row.Cantidad;
+                objTemp.SubTotal = row.SubTotal;                
+                //objTemp.NombreProducto = row.Ta
+
+                productoTemp = ProductoBRL.getProductoById(row.ProductoId);
+                objTemp.NombreProducto = productoTemp.Nombre;
+
+                listDetalles.Add(objTemp);
+            }
+
+            return listDetalles;
+        }
+
     }
 }

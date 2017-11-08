@@ -154,19 +154,6 @@ SELECT *
 END
 GO
 
-DELETE FROM [dbo].[tbl_Version]
-GO
-
-INSERT INTO [dbo].[tbl_Version]
-           ([versionMayor]
-           ,[versionMenor]
-           ,[patch])
-     VALUES
-           (1
-           ,7
-           ,0)
-GO
-
 USE [bdTienda]
 GO
 /****** Object:  StoredProcedure [dbo].[ursp_USUARIOROL_InsertarUsuarioRol]    Script Date: 11/07/2017 17:20:57 ******/
@@ -201,3 +188,15 @@ BEGIN
            )          
 	SET	@intUsuarioRolId = SCOPE_IDENTITY()
 END
+
+GO
+
+INSERT INTO [dbo].[tbl_Version]
+           ([versionMayor]
+           ,[versionMenor]
+           ,[patch])
+     VALUES
+           (1
+           ,7
+           ,0)
+GO

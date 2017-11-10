@@ -35,7 +35,7 @@ namespace Negocio.Seguridad
             {
                 throw new ArgumentException("Falla al insertar, el pedidoId es menor que 0");
             }
-
+            enviarPedido(productoId.Value);
             return productoId.Value;
         }
         public static bool enviarPedido(int pedidoId)

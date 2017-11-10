@@ -291,6 +291,8 @@ namespace Data.Seguridad {
             
             private global::System.Data.DataColumn columnSubTotal;
             
+            private global::System.Data.DataColumn columnnombreProducto;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public DetallePedidoDataTable() {
@@ -374,6 +376,14 @@ namespace Data.Seguridad {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nombreProductoColumn {
+                get {
+                    return this.columnnombreProducto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -409,7 +419,7 @@ namespace Data.Seguridad {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DetallePedidoRow AddDetallePedidoRow(int PedidoId, int ProductoId, decimal Precio, decimal Cantidad, decimal SubTotal) {
+            public DetallePedidoRow AddDetallePedidoRow(int PedidoId, int ProductoId, decimal Precio, decimal Cantidad, decimal SubTotal, string nombreProducto) {
                 DetallePedidoRow rowDetallePedidoRow = ((DetallePedidoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -417,7 +427,8 @@ namespace Data.Seguridad {
                         ProductoId,
                         Precio,
                         Cantidad,
-                        SubTotal};
+                        SubTotal,
+                        nombreProducto};
                 rowDetallePedidoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDetallePedidoRow);
                 return rowDetallePedidoRow;
@@ -453,6 +464,7 @@ namespace Data.Seguridad {
                 this.columnPrecio = base.Columns["Precio"];
                 this.columnCantidad = base.Columns["Cantidad"];
                 this.columnSubTotal = base.Columns["SubTotal"];
+                this.columnnombreProducto = base.Columns["nombreProducto"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -470,6 +482,8 @@ namespace Data.Seguridad {
                 base.Columns.Add(this.columnCantidad);
                 this.columnSubTotal = new global::System.Data.DataColumn("SubTotal", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSubTotal);
+                this.columnnombreProducto = new global::System.Data.DataColumn("nombreProducto", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombreProducto);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnDetallePedidoId}, true));
                 this.columnDetallePedidoId.AutoIncrement = true;
@@ -483,6 +497,8 @@ namespace Data.Seguridad {
                 this.columnPrecio.AllowDBNull = false;
                 this.columnCantidad.AllowDBNull = false;
                 this.columnSubTotal.AllowDBNull = false;
+                this.columnnombreProducto.AllowDBNull = false;
+                this.columnnombreProducto.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -688,6 +704,17 @@ namespace Data.Seguridad {
                     this[this.tableDetallePedido.SubTotalColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nombreProducto {
+                get {
+                    return ((string)(this[this.tableDetallePedido.nombreProductoColumn]));
+                }
+                set {
+                    this[this.tableDetallePedido.nombreProductoColumn] = value;
+                }
+            }
         }
         
         /// <summary>
@@ -855,6 +882,7 @@ namespace Data.Seguridad.DetallePedidoDSTableAdapters {
             tableMapping.ColumnMappings.Add("Precio", "Precio");
             tableMapping.ColumnMappings.Add("Cantidad", "Cantidad");
             tableMapping.ColumnMappings.Add("SubTotal", "SubTotal");
+            tableMapping.ColumnMappings.Add("nombreProducto", "nombreProducto");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
@@ -881,17 +909,24 @@ namespace Data.Seguridad.DetallePedidoDSTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.PEDDET_GetDetallePedido";
+            this._commandCollection[0].CommandText = "dbo.PEDDET_GetDetallePedidoByPedidoId";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PedidoId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DetallePedidoDS.DetallePedidoDataTable GetData() {
+        public virtual DetallePedidoDS.DetallePedidoDataTable GetDetalle(global::System.Nullable<int> PedidoId) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((PedidoId.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(PedidoId.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
             DetallePedidoDS.DetallePedidoDataTable dataTable = new DetallePedidoDS.DetallePedidoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

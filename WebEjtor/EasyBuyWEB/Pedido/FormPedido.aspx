@@ -53,11 +53,15 @@
                 </asp:TextBox>
             </div>
             <div class="row">
-                <div class="col-md-6">
-                    <asp:Button ID="btnAtender" runat="server" Text="Atender Pedido" CssClass="btn btn-primary btn-block" OnClick="btnAtender_Click" />
+                <div class="col-md-4">
+                    <asp:Button ID="btnAtender" runat="server" Text="Atender" CssClass="btn btn-primary btn-block" OnClick="btnAtender_Click" />
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <asp:Button class="btn btn-primary btn-block" data-target="#detalleModal" data-toggle="modal">Ver Detalle</asp:Button>
+                </div>
+
+                <div class="col-md-4">
+                    <asp:Button ID="Imprimir" runat="server" Text="Imprimir" CssClass="btn btn-primary btn-block" OnClick="Imprimir_Click" />
                 </div>
             </div>
 
@@ -70,9 +74,9 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" runat="server">
         <div class="row">
-            <div class="col-md-8">                
+            <div class="col-md-8">
                 <div class="modal" id="detalleModal" tabindex="-1">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -81,7 +85,20 @@
                                 <h4>Detalle de Pedido</h4>
                             </div>
                             <div class="modal-body">
-                                <h1>PONER LISTA</h1>
+                                <asp:GridView ID="GridPedido" runat="server"
+                                    OnRowCommand="GridPedido_RowCommand"
+                                    AutoGenerateColumns="false"
+                                    CssClass="table"
+                                    GridLines="None">
+                                    <Columns>
+                                        <asp:BoundField DataField="NombreProducto" HeaderText="Nombre de Producto" />
+                                        <asp:BoundField DataField="Precio" HeaderText="Precio de Producto" />
+                                        <asp:BoundField DataField="Cantidad" HeaderText="Cantidad" />                                        
+                                        <asp:BoundField DataField="SubTotal" HeaderText="Subtotal" />                                        
+                                    </Columns>
+                                </asp:GridView>
+                                <asp:Label ID="Label1" runat="server" Text="Total a Pagar:" Font-Bold="true"></asp:Label>
+                                <asp:CheckBox ID="txtPagoFinal" runat="server" Enabled="false"/>
                             </div>
                         </div>
                     </div>
@@ -92,6 +109,6 @@
     </div>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script type="text/javascript" src="../Scripts/bootstrap.js"s></script>
+    <script type="text/javascript" src="../Scripts/bootstrap.js" s></script>
 </asp:Content>
 

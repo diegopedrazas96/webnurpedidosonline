@@ -13,21 +13,21 @@ public partial class Pedido_FormPedido : System.Web.UI.Page
     Pedido objSelected;
     protected void Page_Load(object sender, EventArgs e)
     {
-        string cadIdEmpresa = Request.Params["Id"];
-        if (String.IsNullOrEmpty(cadIdEmpresa))
+        string cadIdPedido = Request.Params["Id"];
+        if (String.IsNullOrEmpty(cadIdPedido))
         {
             return;
         }
 
         int pedidoId = 0;
-        pedidoId = Convert.ToInt32(cadIdEmpresa);
+        pedidoId = Convert.ToInt32(cadIdPedido);
 
         objSelected = PedidoBRL.GetPedidoByID(pedidoId);
 
         if (!IsPostBack)
         {
-            cargarDatos(pedidoId);            
-            
+            cargarDatos(pedidoId);
+            cargarPedidos(pedidoId);
         }
         
     }
@@ -72,8 +72,22 @@ public partial class Pedido_FormPedido : System.Web.UI.Page
                          "</google-map>";
     }
 
-    protected void btnDetalle_Click(object sender, EventArgs e)
+
+    protected void GridPedido_RowCommand(object sender, GridViewCommandEventArgs e)
     {
 
+    }
+
+    public void cargarPedidos(int pedidoId)
+    {
+        txtPagoFinal.Text = objSelected.TotalPago.ToString();
+        List<DetallePedido> listDetalle = DetallePedidoBRL.getDatallesByPedidoId(pedidoId);
+        GridPedido.DataSource = listDetalle;
+        GridPedido.DataBind();
+    }
+
+    protected void Imprimir_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Pedido/ImpReportPedido.aspx?Id=" + objSelected.PedidoId);
     }
 }

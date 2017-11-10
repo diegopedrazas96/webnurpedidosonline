@@ -154,7 +154,41 @@ SELECT *
 END
 GO
 
-DELETE FROM [dbo].[tbl_Version]
+USE [bdTienda]
+GO
+/****** Object:  StoredProcedure [dbo].[ursp_USUARIOROL_InsertarUsuarioRol]    Script Date: 11/07/2017 17:20:57 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		Julio Agreda
+-- Create date: 12-09-2016
+-- Description:	Insertar un UsuarioRol
+-- =============================================
+ALTER PROCEDURE [dbo].[ursp_USUARIOROL_InsertarUsuarioRol]
+
+	@varUsuarioId	int,
+	@varRolId		int,	
+	@varEstado		nvarchar(10),
+
+	@intUsuarioRolId	int OUTPUT
+AS
+BEGIN
+	SET NOCOUNT ON;
+	INSERT INTO [dbo].[tblUsuarioRol]
+           ([usuarioId]
+           ,[rolId]
+           ,[estado])
+    VALUES
+           (
+			@varUsuarioId,			
+			@varRolId,
+			@varEstado			
+           )          
+	SET	@intUsuarioRolId = SCOPE_IDENTITY()
+END
+
 GO
 
 INSERT INTO [dbo].[tbl_Version]

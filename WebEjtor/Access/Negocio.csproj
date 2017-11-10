@@ -53,6 +53,7 @@
     <Compile Include="Seguridad\UserBRLNoStatic.cs" />
     <Compile Include="Seguridad\UserBRL.cs" />
     <Compile Include="Seguridad\Usuario.cs" />
+    <Compile Include="Seguridad\UsuarioRolBRL.cs" />
     <Compile Include="Seguridad\VersionBRL.cs" />
   </ItemGroup>
   <ItemGroup>

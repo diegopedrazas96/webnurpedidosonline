@@ -98,3 +98,13 @@ C:\Software3\WebEjtor\Access\bin\Debug\Entidades.pdb
 C:\Software3\WebEjtor\Access\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 C:\Software3\WebEjtor\Access\obj\Debug\Negocio.dll
 C:\Software3\WebEjtor\Access\obj\Debug\Negocio.pdb
+C:\Sofware3\WebEjtor\Access\bin\Debug\Negocio.dll
+C:\Sofware3\WebEjtor\Access\bin\Debug\Negocio.pdb
+C:\Sofware3\WebEjtor\Access\bin\Debug\Data.dll
+C:\Sofware3\WebEjtor\Access\bin\Debug\Entidades.dll
+C:\Sofware3\WebEjtor\Access\bin\Debug\MySql.Data.dll
+C:\Sofware3\WebEjtor\Access\bin\Debug\Data.pdb
+C:\Sofware3\WebEjtor\Access\bin\Debug\Entidades.pdb
+C:\Sofware3\WebEjtor\Access\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Sofware3\WebEjtor\Access\obj\Debug\Negocio.dll
+C:\Sofware3\WebEjtor\Access\obj\Debug\Negocio.pdb

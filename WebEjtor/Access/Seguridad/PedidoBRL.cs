@@ -127,6 +127,7 @@ namespace Negocio.Seguridad
             obj.Latitud = row.latitud;
             obj.Longitud = row.longitud;
             obj.IsMovil = row.isMovil;
+            obj.TotalPago = row.totalPago;
 
             return obj;
 
@@ -154,6 +155,7 @@ namespace Negocio.Seguridad
                 objPedido.Latitud = row.latitud;
                 objPedido.Longitud = row.longitud;
                 objPedido.IsMovil = row.isMovil;
+                objPedido.TotalPago = row.totalPago;
 
                 objUser = UserBRL.getUserById(row.clienteId);
                 objPedido.T_ClienteName = objUser.Nombre + " " + objUser.Apellido;

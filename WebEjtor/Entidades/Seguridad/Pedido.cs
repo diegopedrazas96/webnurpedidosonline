@@ -22,6 +22,8 @@ namespace Entidades.Seguridad
         public string T_EmpresaName { get; set; }
         public string T_EstadoAtencion { get; set; }
         public string T_Dispositivo { get; set; }
+
+        public decimal TotalPago { get; set; }         
         public List<DetallePedido> lstDetalle { get; set; }
         public Pedido()
         {

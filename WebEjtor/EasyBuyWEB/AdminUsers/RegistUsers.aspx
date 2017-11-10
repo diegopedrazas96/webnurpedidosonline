@@ -14,6 +14,14 @@
                 CssClass="form-control" 
                 placeholder="Nombre">
             </asp:TextBox>
+            <asp:RequiredFieldValidator runat="server"
+                ControlToValidate="txtNombre"
+                Display="Dynamic"
+                ErrorMessage="Debe ingresar su nombre"
+                ForeColor="Red"
+                ValidationGroup="AddRoles">
+            </asp:RequiredFieldValidator>
+
         </div>
 
         <div class="form-group">
@@ -21,6 +29,14 @@
                 CssClass="form-control" 
                 placeholder="Apellidos">
             </asp:TextBox>
+            <asp:RequiredFieldValidator runat="server"
+                ControlToValidate="txtApellido"
+                Display="Dynamic"
+                ErrorMessage="Debe ingresar su Apellido"
+                ForeColor="Red"
+                ValidationGroup="AddRoles">
+
+            </asp:RequiredFieldValidator>
      
         </div>
 
@@ -29,33 +45,64 @@
                 CssClass="form-control" 
                 placeholder="Email">
             </asp:TextBox>
+            <asp:RequiredFieldValidator runat="server"
+                ControlToValidate="txtEmail"
+                Display="Dynamic"
+                ErrorMessage="Debe ingresar su Apellido"
+                ForeColor="Red"
+                ValidationGroup="AddRoles">
+            </asp:RequiredFieldValidator>
+
  
         </div>
 
         <div class="form-group">
             <asp:TextBox ID="txtPassword" runat="server" 
                 CssClass="form-control" 
-                placeholder="Password" TextMode="Password">
+                placeholder="Password" 
+                TextMode="Password">
             </asp:TextBox>
+            <asp:RequiredFieldValidator runat="server"
+                ControlToValidate="txtPassword"
+                Display="Dynamic"
+                ErrorMessage="Debe ingresar su Constraseña"
+                ForeColor="Red"
+                ValidationGroup="AddRoles">
+            </asp:RequiredFieldValidator>
  
         </div>
-        <div class="form-group" runat="server" visible ="false">
-            <h3>Roles de Usuario</h3>
-            <asp:RadioButtonList ID="RadioButtonList1" runat="server">
-                <asp:ListItem>Administrador General</asp:ListItem>
-                <asp:ListItem>Editor</asp:ListItem>
-                <asp:ListItem>Vendedor</asp:ListItem>
-                <asp:ListItem>Analista</asp:ListItem>
-            </asp:RadioButtonList>
-            <asp:HyperLink runat="server" NavigateUrl="~/Roles/RegistRol.aspx">
+        <div class="form-group" runat="server" visible ="true">
+            <h4>Roles de Administrador</h4>
+
+            
+            <asp:DropDownList ID="ComboListaRoles" runat="server" CssClass="form-control"
+                OnDataBound ="ComboListaRoles_DataBound"
+                DataValueField="RolId"
+                DataTextField="Nombre">
+                <asp:ListItem Value="" Text="Seleccione un Rol"></asp:ListItem>
+            </asp:DropDownList>
+            
+            <asp:RequiredFieldValidator runat="server" ControlToValidate="ComboListaRoles"
+                ErrorMessage ="Debe seleccionar un producto"
+                Display="Dynamic"
+                ForeColor="Red"
+                ValidationGroup="AddRoles">
+            </asp:RequiredFieldValidator>
+
+            <br />
+
+
+            <asp:HyperLink runat="server" NavigateUrl="~/Rol/RegistroRol.aspx">
                 AÑADIR NUEVO ROL +
             </asp:HyperLink>
         </div>
 
+
         <asp:Button ID="btnRegistrar" runat="server" 
             Text="Registrar" 
             CssClass="btn btn-primary" 
-            OnClick="btnRegistrar_Click" />
+            OnClick="btnRegistrar_Click" 
+            ValidationGroup="AddRoles"/>
          
         <asp:Label ID="lbVal" runat="server" Text="" Visible="false" ForeColor="Red"></asp:Label>
          

@@ -15,7 +15,7 @@ public partial class Pedido_PruebaPedido : System.Web.UI.Page
 
     protected void btnSendPedido_Click(object sender, EventArgs e)
     {
-        if (PedidoBRL.enviarPedido(1))
+        if (PedidoBRL.enviarPedido(4))
         {
             lbRes.Text = "Pedido enviado";
         } else

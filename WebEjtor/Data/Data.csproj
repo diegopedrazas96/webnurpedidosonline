@@ -69,6 +69,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Seguridad\DashDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DashDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Seguridad\EmpresaDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -135,11 +140,6 @@
       <DependentUpon>UserDS.xsd</DependentUpon>
     </Compile>
     <Compile Include="Seguridad\Usuario.cs" />
-    <Compile Include="Seguridad\UsuarioRolDS.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UsuarioRolDS.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Seguridad\VersionDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -152,6 +152,17 @@
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Seguridad\DashDS.xsc">
+      <DependentUpon>DashDS.xsd</DependentUpon>
+    </None>
+    <None Include="Seguridad\DashDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DashDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Seguridad\DashDS.xss">
+      <DependentUpon>DashDS.xsd</DependentUpon>
     </None>
     <None Include="Seguridad\EmpresaDS.xsc">
       <DependentUpon>EmpresaDS.xsd</DependentUpon>
@@ -262,17 +273,6 @@
     </None>
     <None Include="Seguridad\UserDS.xss">
       <DependentUpon>UserDS.xsd</DependentUpon>
-    </None>
-    <None Include="Seguridad\UsuarioRolDS.xsc">
-      <DependentUpon>UsuarioRolDS.xsd</DependentUpon>
-    </None>
-    <None Include="Seguridad\UsuarioRolDS.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>UsuarioRolDS.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Seguridad\UsuarioRolDS.xss">
-      <DependentUpon>UsuarioRolDS.xsd</DependentUpon>
     </None>
     <None Include="Seguridad\VersionDS.xsc">
       <DependentUpon>VersionDS.xsd</DependentUpon>

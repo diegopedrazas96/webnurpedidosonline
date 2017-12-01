@@ -108,3 +108,13 @@ C:\Sofware3\WebEjtor\Access\bin\Debug\Entidades.pdb
 C:\Sofware3\WebEjtor\Access\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 C:\Sofware3\WebEjtor\Access\obj\Debug\Negocio.dll
 C:\Sofware3\WebEjtor\Access\obj\Debug\Negocio.pdb
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL SOFTWARE 3\WebEjtor\Access\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL SOFTWARE 3\WebEjtor\Access\obj\Debug\Negocio.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL SOFTWARE 3\WebEjtor\Access\obj\Debug\Negocio.pdb
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL SOFTWARE 3\WebEjtor\Access\bin\Debug\Negocio.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL SOFTWARE 3\WebEjtor\Access\bin\Debug\Negocio.pdb
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL SOFTWARE 3\WebEjtor\Access\bin\Debug\Data.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL SOFTWARE 3\WebEjtor\Access\bin\Debug\Entidades.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL SOFTWARE 3\WebEjtor\Access\bin\Debug\MySql.Data.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL SOFTWARE 3\WebEjtor\Access\bin\Debug\Data.pdb
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL SOFTWARE 3\WebEjtor\Access\bin\Debug\Entidades.pdb

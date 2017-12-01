@@ -11,3 +11,8 @@ C:\Sofware3\WebEjtor\Entidades\bin\Debug\Entidades.dll
 C:\Sofware3\WebEjtor\Entidades\bin\Debug\Entidades.pdb
 C:\Sofware3\WebEjtor\Entidades\obj\Debug\Entidades.dll
 C:\Sofware3\WebEjtor\Entidades\obj\Debug\Entidades.pdb
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL SOFTWARE 3\WebEjtor\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL SOFTWARE 3\WebEjtor\Entidades\obj\Debug\Entidades.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL SOFTWARE 3\WebEjtor\Entidades\obj\Debug\Entidades.pdb
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL SOFTWARE 3\WebEjtor\Entidades\bin\Debug\Entidades.dll
+E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL SOFTWARE 3\WebEjtor\Entidades\bin\Debug\Entidades.pdb

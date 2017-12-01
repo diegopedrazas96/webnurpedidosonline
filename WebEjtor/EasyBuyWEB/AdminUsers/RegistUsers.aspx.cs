@@ -64,13 +64,13 @@ public partial class AdminUsers_RegistUsers : System.Web.UI.Page
             int UserId = UserBRL.insertUser(obj);
 
 
-            UserRol objUserRol = new UserRol();
-            {
-                objUserRol.UsuarioId = UserId;
-                objUserRol.RolId = rolId;
-                objUserRol.Estado = "activo";
-            };
-            UsuarioRolBRL.insertUserRol(objUserRol);
+            //UserRol objUserRol = new UserRol();
+            //{
+            //    objUserRol.UsuarioId = UserId;
+            //    objUserRol.RolId = rolId;
+            //    objUserRol.Estado = "activo";
+            //};
+            //UsuarioRolBRL.insertUserRol(objUserRol);
 
             ComboListaRoles.ClearSelection();
         }

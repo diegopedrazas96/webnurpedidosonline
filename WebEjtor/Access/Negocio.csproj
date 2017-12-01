@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Seguridad\ConfigDashBRL.cs" />
     <Compile Include="Seguridad\DashBRL.cs" />
     <Compile Include="Seguridad\EmpresaBRL.cs" />
     <Compile Include="Seguridad\DetallePedidoBRL.cs" />

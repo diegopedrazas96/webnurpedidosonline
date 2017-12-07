@@ -15,6 +15,8 @@ namespace Entidades.Seguridad
         public int EmpresaId { get; set; }
         public decimal Cantidad { get; set; }
         public DateTime Fecha { get; set; }
+        public string Latitud { get; set; }
+        public string Longitud { get; set; }
         public ConfigDash() { }
     }
 }

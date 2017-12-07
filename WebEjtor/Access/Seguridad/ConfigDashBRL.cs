@@ -1,4 +1,5 @@
 ﻿using Data.Seguridad;
+using Data.Seguridad.ConfigDashDSTableAdapters;
 using Data.Seguridad.DashDSTableAdapters;
 using Entidades.Seguridad;
 using System;
@@ -23,7 +24,7 @@ namespace Access.Seguridad
             int? ConfigId = 0;
 
             ConfigDashTableAdapter adapter = new ConfigDashTableAdapter();
-            adapter.Insert(obj.DashId, obj.UserId, obj.ProductoId, obj.EmpresaId, obj.Cantidad, obj.Fecha, ref ConfigId);
+            adapter.Insert(obj.DashId, obj.UserId, obj.ProductoId, obj.EmpresaId, obj.Cantidad, obj.Fecha, obj.Latitud, obj.Longitud, ref ConfigId);
             if (ConfigId <= 0)
             {
                 throw new ArgumentException("El Id de ConfigDash debe ser mayor a 0");
@@ -40,7 +41,7 @@ namespace Access.Seguridad
             }
 
             ConfigDashTableAdapter adapter = new ConfigDashTableAdapter();
-            adapter.Update(obj.ConfigDashId, obj.DashId, obj.UserId, obj.ProductoId, obj.EmpresaId, obj.Cantidad, obj.Fecha);
+            adapter.Update(obj.ConfigDashId, obj.DashId, obj.UserId, obj.ProductoId, obj.EmpresaId, obj.Cantidad, obj.Fecha, obj.Latitud, obj.Longitud);
         }
 
         public void DeleteConfigDash(int ConfigDashID)
@@ -61,14 +62,14 @@ namespace Access.Seguridad
             }
 
             ConfigDashTableAdapter adapter = new ConfigDashTableAdapter();
-            DashDS.ConfigDashDataTable table = adapter.GetConfigDashByDashID(DashId);
+            ConfigDashDS.ConfigDashDataTable table = adapter.GetConfigDashByDashID(DashId);
 
             if (table.Rows.Count <= 0)
             {
                 return null;
             }
 
-            DashDS.ConfigDashRow row = table[0];
+            ConfigDashDS.ConfigDashRow row = table[0];
             ConfigDash obj = new ConfigDash()
             {
                 ConfigDashId = row.configId,
@@ -78,6 +79,8 @@ namespace Access.Seguridad
                 EmpresaId = row.empresaId,
                 Cantidad = row.cantidad,
                 Fecha = row.fecha,
+                Latitud = row.latitud,
+                Longitud = row.longitud
             };
 
             return obj;

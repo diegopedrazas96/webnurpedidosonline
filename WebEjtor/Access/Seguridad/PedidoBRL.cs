@@ -26,18 +26,18 @@ namespace Negocio.Seguridad
                 throw new ArgumentException("El objeto Pedido no debe ser nulo");
             }
 
-            int? productoId = 0;
+            int? pedidoId = 0;
             PedidosAdapter adapter = new PedidosAdapter();
-            adapter.Insert(obj.ClienteId, obj.EmpresaId, null, obj.Fecha, obj.Atendido, obj.Latitud, obj.Longitud, obj.IsMovil, ref productoId);
+            adapter.Insert(obj.ClienteId, obj.EmpresaId, null, obj.Fecha, obj.Atendido, obj.Latitud, obj.Longitud, obj.IsMovil, ref pedidoId);
             //adapter.Insert(obj.ClienteId, obj.EmpresaId,null, obj.Fecha, obj.Atendido, ref productoId);
 
-            if (productoId <= 0)
+            if (pedidoId <= 0)
             {
                 throw new ArgumentException("Falla al insertar, el pedidoId es menor que 0");
             }
-            enviarPedido(productoId.Value);
+            enviarPedido(pedidoId.Value);
 
-            return productoId.Value;
+            return pedidoId.Value;
         }
         public static bool enviarPedido(int pedidoId)
         {

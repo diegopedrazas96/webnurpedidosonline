@@ -69,6 +69,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Seguridad\ConfigDashDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConfigDashDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Seguridad\DashDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -152,6 +157,17 @@
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Seguridad\ConfigDashDS.xsc">
+      <DependentUpon>ConfigDashDS.xsd</DependentUpon>
+    </None>
+    <None Include="Seguridad\ConfigDashDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConfigDashDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Seguridad\ConfigDashDS.xss">
+      <DependentUpon>ConfigDashDS.xsd</DependentUpon>
     </None>
     <None Include="Seguridad\DashDS.xsc">
       <DependentUpon>DashDS.xsd</DependentUpon>

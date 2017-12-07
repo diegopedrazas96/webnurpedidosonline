@@ -18,20 +18,14 @@ using WebNurServiciosPedidos.Results;
 using ES = Entidades.Seguridad;
 using NS = Negocio.Seguridad;
 using System.Net;
+using Access.Seguridad;
 
 namespace WebNurServiciosPedidos.Controllers
 {
     
     [RoutePrefix("api/pedido")]
     public class PedidoController : ApiController
-    {
-       
-
-        
-
-       
-
-        
+    {        
         // POST api/values
         [HttpPost()]        
         public IHttpActionResult PostPedido([FromBody]ES.Pedido objPedido)
@@ -59,6 +53,34 @@ namespace WebNurServiciosPedidos.Controllers
             return BadRequest();
         }
 
-      
+
+        [HttpGet()]
+        [Route("pedidoDash/{DashId}")]
+        public HttpResponseMessage GetByEmail(String DashId)
+        {
+            HttpResponseMessage msg = null;
+            //Console.Write(DashId);
+
+            int idDash = 0;
+            idDash = Convert.ToInt32(DashId);
+
+            ES.ConfigDash objConfig = ConfigDashBRL.GetConfigDashByDashID(idDash);
+
+            ES.Pedido objPedido = new ES.Pedido() {
+                ClienteId = objConfig.UserId,
+                EmpresaId = objConfig.EmpresaId,
+                Fecha = DateTime.Now,
+                Atendido = false,
+                Latitud = objConfig.Latitud,
+                Longitud = objConfig.Longitud,
+                IsMovil = false,
+
+            };
+
+
+            NS.PedidoBRL.insertPedido(objPedido);
+            msg = Request.CreateResponse(HttpStatusCode.NotFound, "Dash Selecc: " + DashId);
+            return msg;            
+        }
     }
 }

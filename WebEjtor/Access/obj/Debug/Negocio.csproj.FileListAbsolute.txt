@@ -118,3 +118,13 @@ E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL SOFTWARE 3\WebEjtor\Access\bin
 E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL SOFTWARE 3\WebEjtor\Access\bin\Debug\MySql.Data.dll
 E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL SOFTWARE 3\WebEjtor\Access\bin\Debug\Data.pdb
 E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL SOFTWARE 3\WebEjtor\Access\bin\Debug\Entidades.pdb
+C:\webnurpedidosonline\WebEjtor\Access\bin\Debug\Negocio.dll
+C:\webnurpedidosonline\WebEjtor\Access\bin\Debug\Negocio.pdb
+C:\webnurpedidosonline\WebEjtor\Access\bin\Debug\Data.dll
+C:\webnurpedidosonline\WebEjtor\Access\bin\Debug\Entidades.dll
+C:\webnurpedidosonline\WebEjtor\Access\bin\Debug\MySql.Data.dll
+C:\webnurpedidosonline\WebEjtor\Access\bin\Debug\Data.pdb
+C:\webnurpedidosonline\WebEjtor\Access\bin\Debug\Entidades.pdb
+C:\webnurpedidosonline\WebEjtor\Access\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\webnurpedidosonline\WebEjtor\Access\obj\Debug\Negocio.dll
+C:\webnurpedidosonline\WebEjtor\Access\obj\Debug\Negocio.pdb

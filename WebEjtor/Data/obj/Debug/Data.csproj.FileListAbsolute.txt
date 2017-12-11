@@ -164,3 +164,18 @@ E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL SOFTWARE 3\WebEjtor\Data\bin\D
 E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL SOFTWARE 3\WebEjtor\Data\bin\Debug\Entidades.pdb
 E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL SOFTWARE 3\WebEjtor\Data\bin\Debug\EntityFramework.xml
 E:\Carpetas Joc 7u7\6to SEMESTRE\Software 3\FINAL SOFTWARE 3\WebEjtor\Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\webnurpedidosonline\WebEjtor\Data\bin\Debug\Data.dll.config
+C:\webnurpedidosonline\WebEjtor\Data\bin\Debug\Data.dll
+C:\webnurpedidosonline\WebEjtor\Data\bin\Debug\Data.pdb
+C:\webnurpedidosonline\WebEjtor\Data\bin\Debug\Entidades.dll
+C:\webnurpedidosonline\WebEjtor\Data\bin\Debug\EntityFramework.dll
+C:\webnurpedidosonline\WebEjtor\Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\webnurpedidosonline\WebEjtor\Data\bin\Debug\MySql.Data.dll
+C:\webnurpedidosonline\WebEjtor\Data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\webnurpedidosonline\WebEjtor\Data\bin\Debug\MySql.Web.dll
+C:\webnurpedidosonline\WebEjtor\Data\bin\Debug\Entidades.pdb
+C:\webnurpedidosonline\WebEjtor\Data\bin\Debug\EntityFramework.xml
+C:\webnurpedidosonline\WebEjtor\Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\webnurpedidosonline\WebEjtor\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+C:\webnurpedidosonline\WebEjtor\Data\obj\Debug\Data.dll
+C:\webnurpedidosonline\WebEjtor\Data\obj\Debug\Data.pdb

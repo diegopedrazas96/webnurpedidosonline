@@ -48,14 +48,12 @@ namespace Access.Seguridad
         public static Boolean mostrarSiTienePermisos(int usuarioId, int permisoId)
         {
             USUARIOPERMISOTableAdapter adapter = new USUARIOPERMISOTableAdapter();
-            UsuarioPermisoDS.USUARIOPERMISODataTable table = adapter.GetUsuarioPermisoById(usuarioId, permisoId);
-            
-
-                if (table.Rows.Count == 0)
-                {
-                    return false;
-                }
-                return true;
+            UsuarioPermisoDS.USUARIOPERMISODataTable table = adapter.GetMostrarSiTienePermiso(usuarioId, permisoId);
+            if (table.Rows.Count == 0)
+            {
+                return false;
+            }
+            return true;
         }
 
         public static void eliminarUsuarioPermisoByUsuarioIdPermisoId(int usuarioId, int rolPermisoId)

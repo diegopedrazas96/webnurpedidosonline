@@ -24,26 +24,19 @@ public partial class AdminUsers_ListUsers : System.Web.UI.Page
     public void revisarPermiso()
     {
         User objCurrent = (User)Session["User"];
-        try
+
+        agregar.Visible = false;
+        GridUsers.Columns[4].Visible = false;
+
+        if (UsuarioPermisoBRL.mostrarSiTienePermisos(objCurrent.UsuarioId, 4))
         {
-            agregar.Visible = false;
-            GridUsers.Columns[4].Visible = false;
-            GridUsers.Columns[5].Visible = false;
-
-            if (UsuarioPermisoBRL.mostrarSiTienePermisos(objCurrent.UsuarioId, 5))
-            {
-                agregar.Visible = true;
-            }
-
-            if (UsuarioPermisoBRL.mostrarSiTienePermisos(objCurrent.UsuarioId, 6))
-            {
-                GridUsers.Columns[5].Visible = true;
-            }            
+            agregar.Visible = true;
         }
-        catch (Exception ex)
-        {
 
-        }       
+        if (UsuarioPermisoBRL.mostrarSiTienePermisos(objCurrent.UsuarioId, 6))
+        {
+            GridUsers.Columns[4].Visible = true;
+        }
     }
 
     protected void GridUser_RowCommand(object sender, GridViewCommandEventArgs e)

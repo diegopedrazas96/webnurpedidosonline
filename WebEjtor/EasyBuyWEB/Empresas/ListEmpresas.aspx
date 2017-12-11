@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <h2>Lista de Empresas</h2>
-    <asp:HyperLink runat="server" NavigateUrl="~/Empresas/FormEmpresa.aspx">
+    <asp:HyperLink runat="server" ID="agregar" NavigateUrl="~/Empresas/FormEmpresa.aspx">
                 AÑADIR NUEVA EMPRESA +
     </asp:HyperLink>
 

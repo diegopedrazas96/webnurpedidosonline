@@ -14,9 +14,39 @@ public partial class Empresas_ListEmpresas : System.Web.UI.Page
         //Validaciones para Insertar, Editar y eliminar
         if (!IsPostBack)
         {
+            revisarPermiso();
             cargarEmpresas();
         }
 
+    }
+
+    public void revisarPermiso()
+    {
+        User objCurrent = (User)Session["User"];
+        try
+        {
+            agregar.Visible = false;
+            GridEmpresas.Columns[4].Visible = false;
+            GridEmpresas.Columns[5].Visible = false;
+
+            if (UsuarioPermisoBRL.mostrarSiTienePermisos(objCurrent.UsuarioId, 7))
+            {
+                agregar.Visible = true;
+            }
+
+            if (UsuarioPermisoBRL.mostrarSiTienePermisos(objCurrent.UsuarioId, 8))
+            {
+                GridEmpresas.Columns[4].Visible = true;
+            }
+            if (UsuarioPermisoBRL.mostrarSiTienePermisos(objCurrent.UsuarioId, 9))
+            {
+                GridEmpresas.Columns[5].Visible = true;
+            }
+        }
+        catch (Exception ex)
+        {
+
+        }
     }
 
     protected void GridEmpresas_RowCommand(object sender, GridViewCommandEventArgs e)

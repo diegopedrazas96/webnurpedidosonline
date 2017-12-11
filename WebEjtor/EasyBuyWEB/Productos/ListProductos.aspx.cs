@@ -13,9 +13,40 @@ public partial class Productos_ListProductos : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
+            revisarPermiso();
             cargarEmpresas();
         }
 
+    }
+
+
+    public void revisarPermiso()
+    {
+        User objCurrent = (User)Session["User"];
+        try
+        {
+            agregar.Visible = false;
+            GridProductos.Columns[3].Visible = false;
+            GridProductos.Columns[4].Visible = false;
+
+            if (UsuarioPermisoBRL.mostrarSiTienePermisos(objCurrent.UsuarioId, 1))
+            {
+                agregar.Visible = true;
+            }
+
+            if (UsuarioPermisoBRL.mostrarSiTienePermisos(objCurrent.UsuarioId, 2))
+            {
+                GridProductos.Columns[3].Visible = true;
+            }
+            if (UsuarioPermisoBRL.mostrarSiTienePermisos(objCurrent.UsuarioId, 3))
+            {
+                GridProductos.Columns[4].Visible = true;
+            }
+        }
+        catch (Exception ex)
+        {
+
+        }
     }
 
     protected void GridProductos_RowCommand(object sender, GridViewCommandEventArgs e)

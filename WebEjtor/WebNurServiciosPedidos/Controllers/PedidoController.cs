@@ -35,6 +35,7 @@ namespace WebNurServiciosPedidos.Controllers
             {
                 if (ModelState.IsValid)
                 {
+                    objPedido.IsMovil = true;
                     objPedido.PedidoId = NS.PedidoBRL.insertPedido(objPedido);
                     foreach( Entidades.Seguridad.DetallePedido detallePedido in objPedido.lstDetalle)
                     {
@@ -78,9 +79,50 @@ namespace WebNurServiciosPedidos.Controllers
             };
 
 
-            NS.PedidoBRL.insertPedido(objPedido);
+            int pedidoID = NS.PedidoBRL.insertPedido(objPedido);
+            ES.Producto objProd = ProductoBRL.getProductoById(objConfig.ProductoId);
+
+            ES.DetallePedido objDetalle = new ES.DetallePedido() {
+                PedidoId = pedidoID,
+                ProductoId = objProd.ProductoId,
+                Precio = objProd.Precio,
+                Cantidad = objConfig.Cantidad,
+                SubTotal = (objProd.Precio * objConfig.Cantidad)
+            };
+
+            NS.DetallePedidoBRL.insertDetallePedido(objDetalle);
+
             msg = Request.CreateResponse(HttpStatusCode.NotFound, "Dash Selecc: " + DashId);
             return msg;            
         }
+
+
+        [HttpPost()]
+        [Route("pedidoDash/dush")]
+        public IHttpActionResult POSTDASH([FromBody]ES.ConfigDash objConfig)
+        {
+
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    ES.ConfigDash objConf = ConfigDashBRL.GetConfigDashByDashID(objConfig.DashId);
+                    if (objConf != null)
+                    {
+                        ConfigDashBRL.DeleteConfigDash(objConf.ConfigDashId);
+                    }
+                    int conf = ConfigDashBRL.InsertConfigDash(objConfig);
+                    
+                    //bcUser.insertUser(objUsuario);
+                    return CreatedAtRoute("PostDash", new { id = conf }, objConfig);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return BadRequest();
+        }
+
     }
 }

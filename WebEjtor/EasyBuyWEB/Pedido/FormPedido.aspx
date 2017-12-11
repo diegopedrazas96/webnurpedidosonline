@@ -98,7 +98,7 @@
                                     </Columns>
                                 </asp:GridView>
                                 <asp:Label ID="Label1" runat="server" Text="Total a Pagar:" Font-Bold="true"></asp:Label>
-                                <asp:CheckBox ID="txtPagoFinal" runat="server" Enabled="false"/>
+                                <asp:Label ID="txtPagoFinal" runat="server" Enabled="false" Font-Bold="true"/>
                             </div>
                         </div>
                     </div>

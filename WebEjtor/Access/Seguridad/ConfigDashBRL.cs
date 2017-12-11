@@ -33,7 +33,7 @@ namespace Access.Seguridad
             return ConfigId.Value;
         }
         
-        public void UpdateConfigDash(ConfigDash obj)
+        public static void UpdateConfigDash(ConfigDash obj)
         {
             if (obj == null)
             {
@@ -44,7 +44,7 @@ namespace Access.Seguridad
             adapter.Update(obj.ConfigDashId, obj.DashId, obj.UserId, obj.ProductoId, obj.EmpresaId, obj.Cantidad, obj.Fecha, obj.Latitud, obj.Longitud);
         }
 
-        public void DeleteConfigDash(int ConfigDashID)
+        public static void DeleteConfigDash(int ConfigDashID)
         {
             if (ConfigDashID <= 0)
             {

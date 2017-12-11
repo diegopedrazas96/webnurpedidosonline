@@ -49,7 +49,7 @@ namespace Negocio.Seguridad
                 mail.From = new MailAddress("easywebsoft3@gmail.com");
                 mail.To.Add(new MailAddress("jose75684847@gmail.com"));
 
-                Pedido objPedido = PedidoBRL.GetPedidoByID(pedidoId);
+                Pedido objPedido = GetPedidoByID(pedidoId);
                 User objCliente = UserBRL.getUserById(objPedido.ClienteId);
                 Empresa objEmpresa = EmpresaBRL.getEmpresaById(objPedido.EmpresaId);
                 string dispositivo;
@@ -128,7 +128,15 @@ namespace Negocio.Seguridad
             obj.Latitud = row.latitud;
             obj.Longitud = row.longitud;
             obj.IsMovil = row.isMovil;
-            obj.TotalPago = row.totalPago;
+            
+            try
+            {
+                obj.TotalPago = row.totalPago;
+            }
+            catch (Exception)
+            {
+                obj.TotalPago = 0;
+            }
 
             return obj;
 

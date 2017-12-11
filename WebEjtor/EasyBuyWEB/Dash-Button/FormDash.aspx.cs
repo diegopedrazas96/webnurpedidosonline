@@ -47,5 +47,7 @@ public partial class Dash_Dash : System.Web.UI.Page
         DashBRL.InsertDash(obj);
         lbValidator.Text = "";
         lbValidator.Visible = false;
+
+        Response.Redirect("ListDash.aspx");
     }
 }

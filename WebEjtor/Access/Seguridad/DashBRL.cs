@@ -61,5 +61,28 @@ namespace Access.Seguridad
 
             return obj;
         }
+
+        public static List<DashButton> GetAllDash()
+        {
+            DashTableAdapter adapter = new DashTableAdapter();
+            DashDS.DashDataTable table = adapter.GetAllDash();
+
+            List<DashButton> listDash = new List<DashButton>();
+
+            DashButton obj;
+            foreach (var row in table)
+            {
+                obj = new DashButton()
+                {
+                    DashId = row.dashId,
+                    Codigo = row.codigo,
+                    Estado = row.estado
+                };
+
+                listDash.Add(obj);
+            }
+
+            return listDash;
+        }
     }
 }

@@ -39,7 +39,7 @@ END
 IF @intVersionMayor IS NULL OR @intVersionMenor IS NULL OR NOT (@intVersionMayor = 1 AND @intVersionMenor = 11)
 BEGIN
 	
-	RAISERROR('La base de datos no esta en la version 1.8. Este script solamente se apllica a la version 1.11',16,127)
+	RAISERROR('La base de datos no esta en la version 1.11. Este script solamente se apllica a la version 1.11',16,127)
 	RETURN;
 
 END
@@ -51,6 +51,28 @@ BEGIN
 END
 GO
 
+
+USE [bdTienda]
+GO
+/****** Object:  User [IIS APPPOOL\.NET v4.5]    Script Date: 10/12/2017 21:22:42 ******/
+CREATE USER [IIS APPPOOL\.NET v4.5] FOR LOGIN [IIS APPPOOL\.NET v4.5]
+GO
+/****** Object:  User [IIS APPPOOL\.NET v4.5 Classic]    Script Date: 10/12/2017 21:22:42 ******/
+CREATE USER [IIS APPPOOL\.NET v4.5 Classic] FOR LOGIN [IIS APPPOOL\.NET v4.5 Classic]
+GO
+/****** Object:  User [IIS APPPOOL\DefaultAppPool]    Script Date: 10/12/2017 21:22:42 ******/
+CREATE USER [IIS APPPOOL\DefaultAppPool] FOR LOGIN [IIS APPPOOL\DefaultAppPool]
+GO
+ALTER ROLE [db_owner] ADD MEMBER [IIS APPPOOL\.NET v4.5]
+GO
+ALTER ROLE [db_owner] ADD MEMBER [IIS APPPOOL\.NET v4.5 Classic]
+GO
+/****** Object:  Schema [IIS APPPOOL\.NET v4.5 Classic]    Script Date: 10/12/2017 21:22:43 ******/
+CREATE SCHEMA [IIS APPPOOL\.NET v4.5 Classic]
+GO
+/****** Object:  Schema [IIS APPPOOL\DefaultAppPool]    Script Date: 10/12/2017 21:22:43 ******/
+CREATE SCHEMA [IIS APPPOOL\DefaultAppPool]
+GO
 
 USE [bdTienda]
 GO

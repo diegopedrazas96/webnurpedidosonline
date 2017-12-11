@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <h2>Lista de Roles</h2>
-    <asp:HyperLink runat="server" NavigateUrl="~/Rol/RegistroRol.aspx">
+    <asp:HyperLink ID="agregar" runat="server" NavigateUrl="~/Rol/RegistroRol.aspx">
                 AÑADIR NUEVO ROL +
     </asp:HyperLink>
 
@@ -26,6 +26,7 @@
                     </asp:LinkButton>
                 </ItemTemplate>
             </asp:TemplateField>
+
             <asp:TemplateField HeaderText="Eliminar">
                 <ItemTemplate>
                     <asp:LinkButton ID="DeleteButton" runat="server"
@@ -36,7 +37,6 @@
                     </asp:LinkButton>
                 </ItemTemplate>
             </asp:TemplateField>
-
         </Columns>
     </asp:GridView>
 </asp:Content>

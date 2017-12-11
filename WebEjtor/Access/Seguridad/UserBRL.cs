@@ -54,10 +54,8 @@ namespace Negocio.Seguridad
             {
                 throw new ArgumentException("El objeto Recuperacion a ingresar no puede ser Nulo");
             }
-
             UsuariosTableAdapter adapter = new UsuariosTableAdapter();
-            adapter.Update(obj.Nombre, obj.Apellido, obj.Email, obj.Contraseña, obj.UsuarioId);
-
+            adapter.Update(obj.Nombre, obj.Apellido, obj.UsuarioId);
         }
 
         public static List<User> getUsuarios()
@@ -215,7 +213,7 @@ namespace Negocio.Seguridad
                 return false;
             }
             
-        }
-        
+        }        
+
     }
 }

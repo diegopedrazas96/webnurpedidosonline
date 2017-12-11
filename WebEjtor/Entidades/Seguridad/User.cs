@@ -13,7 +13,6 @@ namespace Entidades.Seguridad
         public string Apellido { get; set; }
         public string Email { get; set; }
         public string Contraseña { get; set; }
-
         public string TipoUsuario { get; set; } //Tipo de Admi en nuestro caso
         public User()
         {

@@ -38,7 +38,26 @@ namespace Access.Seguridad
 
             return listRolPermiso;
         }
+        public static List<RolPermiso> getPermisoIdByRolId(int rolId)
+        {
+            ROLPERMISOTableAdapter adapter = new ROLPERMISOTableAdapter();
+            RolXPermisoDS.ROLPERMISODataTable table = adapter.GetRolPermisoIdByRolId(rolId);
 
+            List<RolPermiso> listRolPermisos = new List<RolPermiso>();
+
+            foreach (var row in table)
+            {
+                RolPermiso obj = new RolPermiso();
+
+                obj.PermisoID = row.permisoId;
+                obj.RolId = row.rolId;
+                obj.Estado = row.estado;
+
+                listRolPermisos.Add(obj);
+            }
+
+            return listRolPermisos;
+        }
         public static int insertRolPermiso(RolPermiso obj)
         {
             if (obj == null)
@@ -57,7 +76,6 @@ namespace Access.Seguridad
             
             return rolPermisoId.Value;
         }
-
         public static Boolean tienePermiso(int rolId, int permisoId)
         {
             ROLPERMISOTableAdapter adapter = new ROLPERMISOTableAdapter();
@@ -68,6 +86,26 @@ namespace Access.Seguridad
             }
             return true;
         }
+        public static void eliminarUsuarioRolById(int rolPermisoId)
+        {
+            ROLPERMISOTableAdapter adapter = new ROLPERMISOTableAdapter();
+            adapter.GetRolPermisoTotalDelete(rolPermisoId);
+        }
+        public static void eliminarUsuarioPermisoByRolIdPermisoId(int usuarioId, int permisoId)
+        {
+            ROLPERMISOTableAdapter adapter = new ROLPERMISOTableAdapter();
+            RolXPermisoDS.ROLPERMISODataTable table = adapter.GetIdByPerRol(usuarioId, permisoId);
+
+            var row = table[0];
+
+            RolPermiso obj = new RolPermiso();
+
+            obj.RolPermisoId = row.idRolPermiso;
+
+            eliminarUsuarioRolById(obj.RolPermisoId);
+        }
+
+
     }
 
 

@@ -12,14 +12,14 @@ namespace Access.Seguridad
         public RolBRL()
         {
 
-        }
-
+        }        
         public static List<Rol> getRol()
         {
             ROLTableAdapter adapter = new ROLTableAdapter();
             RolDS.ROLDataTable table = adapter.GetRol();
          
             List<Rol> listRol = new List<Rol>();
+
             foreach (var row in table)
             {
                 Rol obj = new Rol();
@@ -34,7 +34,6 @@ namespace Access.Seguridad
 
             return listRol;
         }
-
         public static int insertRol(Rol obj)
         {
             if (obj == null)
@@ -53,7 +52,6 @@ namespace Access.Seguridad
             }
             return rolId.Value;
         }
-
         public static Rol getRolesById(int rolId)
         {
             if (rolId <= 0)
@@ -78,8 +76,39 @@ namespace Access.Seguridad
                 Estado = row.estado         
             };
             return obj;
-        }
+        }                
+        public static void updateRol(Rol obj)
+        {
+            if (obj == null)
+            {
+                throw new ArgumentException("El objeto Recuperacion a ingresar no puede ser Nulo");
+            }
 
-       
+            ROLTableAdapter adapter = new ROLTableAdapter();
+            adapter.Update(obj.Nombre, obj.Descripcion, obj.Estado, obj.RolId);
+        }
+        public static Rol getRolByNombre(string nombre)
+        {
+            ROLTableAdapter adapter = new ROLTableAdapter();
+            RolDS.ROLDataTable tabla = adapter.GetRolByNombre(nombre);
+                        
+            RolDS.ROLRow row = tabla[0];
+
+            Rol obj = new Rol()
+            {
+                RolId = row.rolId
+            };
+            return obj;
+        }
+        public static void eliminarRol(int rolId)
+        {
+            if (rolId == 0)
+            {
+                throw new ArgumentException("El objeto Recuperacion a ingresar no puede ser Nulo");
+            }
+            string estado = "inactivo";
+            ROLTableAdapter adapter = new ROLTableAdapter();
+            adapter.Delete(estado, rolId);
+        }
     }
 }

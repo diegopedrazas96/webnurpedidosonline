@@ -5,6 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
         <h2>Registrar Roles</h2>
         <br />
+        <asp:HiddenField ID="RolID" runat="server" Value="0" />
         <div class="col-md-6">
             <div class="form-group">
             <asp:TextBox ID="txtNombre" runat="server" 

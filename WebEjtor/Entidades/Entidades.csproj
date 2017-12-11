@@ -49,6 +49,8 @@
     <Compile Include="Seguridad\DashButton.cs" />
     <Compile Include="Seguridad\Empresa.cs" />
     <Compile Include="Seguridad\DetallePedido.cs" />
+    <Compile Include="Seguridad\UserRol.cs" />
+    <Compile Include="Seguridad\UsuarioPermiso.cs" />
     <Compile Include="Seguridad\VersionInfo.cs" />
     <Compile Include="Seguridad\Pedido.cs" />
     <Compile Include="Seguridad\Permisos.cs" />

@@ -9,6 +9,7 @@
     <div id="formRegist" class="col-md-6  col-md-offset-3" runat="server">
         <h2>Registrar Administradores</h2>
         <br />
+        <asp:HiddenField ID="UserID" runat="server" Value="0" />
         <div class="form-group">
             <asp:TextBox ID="txtNombre" runat="server" 
                 CssClass="form-control" 
@@ -21,7 +22,6 @@
                 ForeColor="Red"
                 ValidationGroup="AddRoles">
             </asp:RequiredFieldValidator>
-
         </div>
 
         <div class="form-group">
@@ -35,9 +35,7 @@
                 ErrorMessage="Debe ingresar su Apellido"
                 ForeColor="Red"
                 ValidationGroup="AddRoles">
-
-            </asp:RequiredFieldValidator>
-     
+            </asp:RequiredFieldValidator>     
         </div>
 
         <div class="form-group">
@@ -74,23 +72,11 @@
         <div class="form-group" runat="server" visible ="true">
             <h4>Roles de Administrador</h4>
 
-            
-            <asp:DropDownList ID="ComboListaRoles" runat="server" CssClass="form-control"
-                OnDataBound ="ComboListaRoles_DataBound"
-                DataValueField="RolId"
-                DataTextField="Nombre">
-                <asp:ListItem Value="" Text="Seleccione un Rol"></asp:ListItem>
-            </asp:DropDownList>
-            
-            <asp:RequiredFieldValidator runat="server" ControlToValidate="ComboListaRoles"
-                ErrorMessage ="Debe seleccionar un producto"
-                Display="Dynamic"
-                ForeColor="Red"
-                ValidationGroup="AddRoles">
-            </asp:RequiredFieldValidator>
+            <asp:CheckBoxList ID="CheckBoxListRoles" style="padding-left:35px" runat="server" CssClass="checkbox-inline">
 
+            </asp:CheckBoxList>
             <br />
-
+            <br />
 
             <asp:HyperLink runat="server" NavigateUrl="~/Rol/RegistroRol.aspx">
                 AÑADIR NUEVO ROL +

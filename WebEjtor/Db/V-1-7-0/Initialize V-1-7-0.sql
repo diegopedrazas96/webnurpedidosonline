@@ -108,3 +108,103 @@ INSERT INTO [bdTienda].[dbo].[tblPermiso]
            ,'activo'
            )
 GO
+
+INSERT INTO [bdTienda].[dbo].[tblUsuarioPermiso]
+           ([usuarioId]
+           ,[permisoId]
+           ,[estado])
+     VALUES
+           (1
+           ,1
+           ,'activo')
+GO
+
+INSERT INTO [bdTienda].[dbo].[tblUsuarioPermiso]
+           ([usuarioId]
+           ,[permisoId]
+           ,[estado])
+     VALUES
+           (1
+           ,2
+           ,'activo')
+GO
+
+INSERT INTO [bdTienda].[dbo].[tblUsuarioPermiso]
+           ([usuarioId]
+           ,[permisoId]
+           ,[estado])
+     VALUES
+           (1
+           ,3
+           ,'activo')
+GO
+
+INSERT INTO [bdTienda].[dbo].[tblUsuarioPermiso]
+           ([usuarioId]
+           ,[permisoId]
+           ,[estado])
+     VALUES
+           (1
+           ,4
+           ,'activo')
+GO
+
+INSERT INTO [bdTienda].[dbo].[tblUsuarioPermiso]
+           ([usuarioId]
+           ,[permisoId]
+           ,[estado])
+     VALUES
+           (1
+           ,5
+           ,'activo')
+GO
+
+INSERT INTO [bdTienda].[dbo].[tblUsuarioPermiso]
+           ([usuarioId]
+           ,[permisoId]
+           ,[estado])
+     VALUES
+           (1
+           ,6
+           ,'activo')
+GO
+
+INSERT INTO [bdTienda].[dbo].[tblUsuarioPermiso]
+           ([usuarioId]
+           ,[permisoId]
+           ,[estado])
+     VALUES
+           (1
+           ,7
+           ,'activo')
+GO
+
+INSERT INTO [bdTienda].[dbo].[tblUsuarioPermiso]
+           ([usuarioId]
+           ,[permisoId]
+           ,[estado])
+     VALUES
+           (1
+           ,8
+           ,'activo')
+GO
+
+INSERT INTO [bdTienda].[dbo].[tblUsuarioPermiso]
+           ([usuarioId]
+           ,[permisoId]
+           ,[estado])
+     VALUES
+           (1
+           ,9
+           ,'activo')
+GO
+
+INSERT INTO [bdTienda].[dbo].[tblUsuarioPermiso]
+           ([usuarioId]
+           ,[permisoId]
+           ,[estado])
+     VALUES
+           (1
+           ,10
+           ,'activo')
+GO

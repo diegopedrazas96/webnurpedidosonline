@@ -12,13 +12,37 @@ public partial class Productos_ListProductos : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        //revisarPermiso();
         actualizar();
+    }
 
-        //if (!IsPostBack)
-        //{
-        //    cargarRol();
-        //}
+    public void revisarPermiso()
+    {
+        User objCurrent = (User)Session["User"];
+        try
+        {
+            //agregar.Visible = false;
+            GridRol.Columns[3].Visible = false;
+            GridRol.Columns[4].Visible = false;
 
+            if (UsuarioPermisoBRL.mostrarSiTienePermisos(objCurrent.UsuarioId, 7))
+            {
+                agregar.Visible = true;
+            }
+
+            if (UsuarioPermisoBRL.mostrarSiTienePermisos(objCurrent.UsuarioId, 8))
+            {
+                GridRol.Columns[3].Visible = true;
+            }
+            if (UsuarioPermisoBRL.mostrarSiTienePermisos(objCurrent.UsuarioId, 8))
+            {
+                GridRol.Columns[4].Visible = true;
+            }
+        }
+        catch (Exception ex)
+        {
+
+        }
     }
 
     protected void GridRol_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -34,23 +58,22 @@ public partial class Productos_ListProductos : System.Web.UI.Page
         if (rolId <= 0)
             return;
 
-        //if (e.CommandName == "Eliminar")
-        //{
-        //    try
-        //    {
-        //        //AdmiPermiso_BRL.deleteAdmiPermisAll(UserAdmId);
-        //        //UserADM_BRL.deleteUserADM(UserAdmId);
-        //        //cargarAdmins();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.Write(ex.Message);
-        //        throw new Exception("Error al eliminar");
-        //    }
-        //}
+        if (e.CommandName == "Eliminar")
+        {
+            try
+            {
+                RolBRL.eliminarRol(rolId);
+                actualizar();
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex.Message);
+                throw new Exception("Error al eliminar");
+            }
+        }
         if (e.CommandName == "Editar")
         {
-            Response.Redirect("EditarRol.aspx?Id="+rolId.ToString());
+            Response.Redirect("RegistroRol.aspx?Id="+rolId.ToString());
             return;
         }
     }
@@ -58,7 +81,6 @@ public partial class Productos_ListProductos : System.Web.UI.Page
     public void actualizar()
     {
         List<Rol> roles = RolBRL.getRol();
-
         GridRol.DataSource = roles;
         GridRol.DataBind();
     }

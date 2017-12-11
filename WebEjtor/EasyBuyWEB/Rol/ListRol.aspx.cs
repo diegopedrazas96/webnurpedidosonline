@@ -12,7 +12,7 @@ public partial class Productos_ListProductos : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //revisarPermiso();
+        revisarPermiso();
         actualizar();
     }
 
@@ -21,22 +21,22 @@ public partial class Productos_ListProductos : System.Web.UI.Page
         User objCurrent = (User)Session["User"];
         try
         {
-            //agregar.Visible = false;
+            agregar.Visible = false;
+            GridRol.Columns[2].Visible = false;
             GridRol.Columns[3].Visible = false;
-            GridRol.Columns[4].Visible = false;
 
-            if (UsuarioPermisoBRL.mostrarSiTienePermisos(objCurrent.UsuarioId, 7))
+            if (UsuarioPermisoBRL.mostrarSiTienePermisos(objCurrent.UsuarioId, 4))
             {
                 agregar.Visible = true;
             }
 
-            if (UsuarioPermisoBRL.mostrarSiTienePermisos(objCurrent.UsuarioId, 8))
+            if (UsuarioPermisoBRL.mostrarSiTienePermisos(objCurrent.UsuarioId, 4))
+            {
+                GridRol.Columns[2].Visible = true;
+            }
+            if (UsuarioPermisoBRL.mostrarSiTienePermisos(objCurrent.UsuarioId, 4))
             {
                 GridRol.Columns[3].Visible = true;
-            }
-            if (UsuarioPermisoBRL.mostrarSiTienePermisos(objCurrent.UsuarioId, 8))
-            {
-                GridRol.Columns[4].Visible = true;
             }
         }
         catch (Exception ex)

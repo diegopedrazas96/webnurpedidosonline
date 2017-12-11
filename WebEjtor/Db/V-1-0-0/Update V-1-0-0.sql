@@ -79,7 +79,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[tblUsuarioPermiso](
-	[usuarioId] [int] IDENTITY(1,1) NOT NULL,
+	[usuarioId] [int] NOT NULL,
 	[permisoId] [int] NOT NULL,
 	[estado] [nchar](18) NULL
 ) ON [PRIMARY]

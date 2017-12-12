@@ -442,7 +442,6 @@ END
 
 
 
-
 GO
 USE [bdTienda]
 GO
@@ -464,6 +463,35 @@ DELETE FROM [dbo].[tblRolPermiso]
  WHERE [idRolPermiso] = @pIdRolPermiso
 END
 Go
+
+
+USE [bdTienda]
+GO
+DROP TABLE tblUsuarioPermiso;
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[tblUsuarioPermiso](
+	[usuarioId] [int] NOT NULL,
+	[permisoId] [int] NOT NULL,
+	[estado] [nchar](18) NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[tblUsuarioPermiso]  WITH CHECK ADD  CONSTRAINT [FK_tblUsuarioPermiso_tblPermiso] FOREIGN KEY([permisoId])
+REFERENCES [dbo].[tblPermiso] ([permisoId])
+GO
+ALTER TABLE [dbo].[tblUsuarioPermiso] CHECK CONSTRAINT [FK_tblUsuarioPermiso_tblPermiso]
+GO
+/****** Object:  ForeignKey [FK_tblUsuarioPermiso_tblUsuario]    Script Date: 09/23/2017 17:45:21 ******/
+ALTER TABLE [dbo].[tblUsuarioPermiso]  WITH CHECK ADD  CONSTRAINT [FK_tblUsuarioPermiso_tblUsuario] FOREIGN KEY([usuarioId])
+REFERENCES [dbo].[tblUsuario] ([usuarioId])
+GO
+ALTER TABLE [dbo].[tblUsuarioPermiso] CHECK CONSTRAINT [FK_tblUsuarioPermiso_tblUsuario]
+GO
+
+
+
 DELETE FROM [dbo].[tbl_Version]
 GO
 
